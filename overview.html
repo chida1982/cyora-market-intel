@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孕嬰選品｜市場聲量總覽 2025.05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Noto Sans TC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════
+   SLIDE SHELL — 100vw × 100vh, no scroll
+══════════════════════════════════════ */
+.slide {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0c1929 0%, #152845 55%, #0d2140 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══ HEADER ══ */
+.slide-header {
+  height: 9vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.0vw;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: rgba(0,0,0,0.22);
+}
+
+.h-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9vw;
+}
+
+.h-orb {
+  width: 3.0vh; height: 3.0vh;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8834a 30%, #f5a66a 100%);
+  box-shadow: 0 0 10px rgba(232,131,74,0.45);
+  flex-shrink: 0;
+}
+
+.h-title {
+  font-size: 2.1vh;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.07em;
+}
+
+.h-pipe {
+  color: rgba(255,255,255,0.2);
+  font-weight: 300;
+  font-size: 1.6vh;
+}
+
+.h-subtitle {
+  font-size: 1.25vh;
+  color: rgba(255,255,255,0.42);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.h-right {
+  display: flex;
+  align-items: center;
+  gap: 1.6vw;
+}
+
+.h-legend {
+  font-size: 1.05vh;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.h-divider {
+  width: 1px;
+  height: 2.2vh;
+  background: rgba(255,255,255,0.12);
+}
+
+.h-brand {
+  font-size: 1.1vh;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.h-date {
+  font-size: 1.2vh;
+  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+  background: rgba(232,131,74,0.18);
+  border: 1px solid rgba(232,131,74,0.35);
+  border-radius: 20px;
+  padding: 0.3vh 0.9vw;
+  letter-spacing: 0.05em;
+}
+
+/* ══ GRID ══ */
+.slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.65vw;
+  padding: 0.65vw 0.9vw 0.75vw;
+  overflow: hidden;
+}
+
+/* ══ CATEGORY PANEL ══ */
+.cat-panel {
+  background: #fff;
+  border-radius: 0.75vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+}
+
+/* colored accent bar at top */
+.cat-panel::before {
+  content: '';
+  display: block;
+  height: 0.38vh;
+  flex-shrink: 0;
+}
+.moon::before    { background: linear-gradient(90deg, #e8834a, #f5a66a); }
+.socks::before   { background: linear-gradient(90deg, #3db8c4, #62d4df); }
+.cream::before   { background: linear-gradient(90deg, #c48fdf, #d8a8f0); }
+.mat::before     { background: linear-gradient(90deg, #3abfb1, #5dd9ca); }
+.oil::before     { background: linear-gradient(90deg, #7cb87c, #95cf95); }
+.massage::before { background: linear-gradient(90deg, #8b7fd4, #a99ee6); }
+
+/* panel header */
+.cat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55vw;
+  padding: 0.65vh 1.1vw 0.55vh;
+  border-bottom: 1px solid #f0f2f5;
+  flex-shrink: 0;
+}
+
+.cat-icon {
+  font-size: 1.85vh;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cat-info { flex: 1; min-width: 0; }
+
+.cat-name {
+  font-size: 1.4vh;
+  font-weight: 900;
+  color: #0f1b35;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cat-en {
+  font-size: 0.92vh;
+  color: #b0b8c8;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+.cat-link {
+  flex-shrink: 0;
+  font-size: 0.95vh;
+  color: #b0b8c8;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e8ecf2;
+  border-radius: 20px;
+  padding: 0.2vh 0.6vw;
+  letter-spacing: 0.03em;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+.cat-link:hover { color: #0f1b35; border-color: #b0b8c8; }
+
+/* ══ BRAND LIST ══ */
+.brand-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.brand-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.55vw;
+  padding: 0 1.1vw;
+  border-bottom: 1px solid #f5f7fa;
+}
+.brand-row:last-child { border-bottom: none; }
+
+/* rank badge */
+.rb-badge {
+  width: 2.35vh; height: 2.35vh;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95vh; font-weight: 900; color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+.rb-badge.r1 { background: #e8834a; }
+.rb-badge.r2 { background: #3db8c4; }
+.rb-badge.r3 { background: #8b7fd4; }
+
+/* brand info */
+.rb-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rb-name {
+  font-size: 1.3vh;
+  font-weight: 800;
+  color: #1a1a2e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+}
+
+.rb-sub {
+  font-size: 0.95vh;
+  color: #a0a8b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+}
+
+/* score (bar + number) */
+.rb-score {
+  display: flex;
+  align-items: center;
+  gap: 0.45vw;
+  flex-shrink: 0;
+}
+
+.rb-bar-track {
+  width: 5.8vw;
+  height: 0.42vh;
+  background: #eef0f4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rb-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.r1-fill { background: #e8834a; }
+.r2-fill { background: #3db8c4; }
+.r3-fill { background: #8b7fd4; }
+
+.rb-num {
+  font-size: 1.65vh;
+  font-weight: 900;
+  color: #1a1a2e;
+  line-height: 1;
+  width: 2.5ch;
+  text-align: right;
+}
+
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- ══ HEADER ══ -->
+  <header class="slide-header">
+    <div class="h-left">
+      <div class="h-orb"></div>
+      <span class="h-title">孕嬰選品</span>
+      <span class="h-pipe">｜</span>
+      <span class="h-subtitle">市場聲量總覽報告 · 6 大品類 · 18 個品牌</span>
+    </div>
+    <div class="h-right">
+      <span class="h-legend">聲量指數 / 最高 100</span>
+      <div class="h-divider"></div>
+      <span class="h-brand">CYORA · Market Intel</span>
+      <span class="h-date">2025.05</span>
+    </div>
+  </header>
+
+  <!-- ══ GRID ══ -->
+  <main class="slide-body">
+
+    <!-- 🌙 月亮枕 -->
+    <div class="cat-panel moon">
+      <div class="cat-head">
+        <div class="cat-icon">🌙</div>
+        <div class="cat-info">
+          <div class="cat-name">月亮枕 / 孕婦枕</div>
+          <div class="cat-en">Pregnancy Pillow</div>
+        </div>
+        <a class="cat-link" href="月亮枕_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">Hugsie 好喜</div>
+            <div class="rb-sub">涼感・台灣製・SGS認證 · NT$1,980–$2,580</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:88%"></div></div>
+            <div class="rb-num">88</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">mamaway 媽媽餵</div>
+            <div class="rb-sub">耐用・透氣・四段安全扣 · NT$2,380–$2,880</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:75%"></div></div>
+            <div class="rb-num">75</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">六甲村 Mammy Village</div>
+            <div class="rb-sub">高CP值・10種功能 · NT$1,800–$2,480</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:68%"></div></div>
+            <div class="rb-num">68</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🧦 壓力襪 -->
+    <div class="cat-panel socks">
+      <div class="cat-head">
+        <div class="cat-icon">🧦</div>
+        <div class="cat-info">
+          <div class="cat-name">壓力襪 / 彈性機能襪</div>
+          <div class="cat-en">Compression Socks</div>
+        </div>
+        <a class="cat-link" href="壓力襪_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">瑪榭 MarCella</div>
+            <div class="rb-sub">台灣製・30年老牌 · NT$149–$399</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:82%"></div></div>
+            <div class="rb-num">82</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">途安 Thuasne</div>
+            <div class="rb-sub">法國醫療級・RAL認證 · NT$880–$1,490</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:75%"></div></div>
+            <div class="rb-num">75</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">康護你 KOOLFREE</div>
+            <div class="rb-sub">台灣製・孕婦保養款 · NT$200–$450</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:70%"></div></div>
+            <div class="rb-num">70</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌿 舒緩霜 -->
+    <div class="cat-panel cream">
+      <div class="cat-head">
+        <div class="cat-icon">🌿</div>
+        <div class="cat-info">
+          <div class="cat-name">舒緩霜（腿部 / 身體）</div>
+          <div class="cat-en">Soothing Cream / Body Care</div>
+        </div>
+        <a class="cat-link" href="舒緩霜_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">Mustela 慕之恬廊</div>
+            <div class="rb-sub">法國・孕婦保養專業品牌 · NT$495–$1,200</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:85%"></div></div>
+            <div class="rb-num">85</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">Clarins 克蘭詩</div>
+            <div class="rb-sub">美腿舒倦活力乳 · NT$900–$1,800</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:72%"></div></div>
+            <div class="rb-num">72</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">Bio-Oil 百洛</div>
+            <div class="rb-sub">妊娠紋・疤痕護理 · NT$350–$780</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:68%"></div></div>
+            <div class="rb-num">68</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🛡️ 隔尿墊 -->
+    <div class="cat-panel mat">
+      <div class="cat-head">
+        <div class="cat-icon">🛡️</div>
+        <div class="cat-info">
+          <div class="cat-name">涼感防水隔尿墊</div>
+          <div class="cat-en">Waterproof Cool Mat</div>
+        </div>
+        <a class="cat-link" href="涼感防水墊_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">lolbaby Hi Jell-O</div>
+            <div class="rb-sub">韓國・蒟蒻涼感・防水 · NT$2,280</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:78%"></div></div>
+            <div class="rb-num">78</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">Jellymat 果凍床墊</div>
+            <div class="rb-sub">有機棉・Hisobead 涼珠 · NT$2,500–$3,500</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:72%"></div></div>
+            <div class="rb-num">72</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">GIO Pillow</div>
+            <div class="rb-sub">超透氣排汗・可機洗 · NT$3,200–$5,800</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:65%"></div></div>
+            <div class="rb-num">65</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💧 精油 -->
+    <div class="cat-panel oil">
+      <div class="cat-head">
+        <div class="cat-icon">💧</div>
+        <div class="cat-info">
+          <div class="cat-name">孕婦精油 / 芳療</div>
+          <div class="cat-en">Essential Oil / Aromatherapy</div>
+        </div>
+        <a class="cat-link" href="孕婦精油_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">沐禾 AromaHarvest</div>
+            <div class="rb-sub">台灣唯一 Ecocert 有機認證 · NT$280–$1,800</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:72%"></div></div>
+            <div class="rb-num">72</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">香草魔法學苑</div>
+            <div class="rb-sub">台灣老牌・孕婦指南完整 · NT$350–$1,500</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:68%"></div></div>
+            <div class="rb-num">68</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">普羅芳 Pranarom</div>
+            <div class="rb-sub">法國有機・孕婦寶寶線 · NT$500–$2,500</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:62%"></div></div>
+            <div class="rb-num">62</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💆 腿部按摩 -->
+    <div class="cat-panel massage">
+      <div class="cat-head">
+        <div class="cat-icon">💆</div>
+        <div class="cat-info">
+          <div class="cat-name">腿部按摩器 / 美腿機</div>
+          <div class="cat-en">Leg Massager</div>
+        </div>
+        <a class="cat-link" href="腿部按摩_市場聲量報告_2025-05.html" target="_blank">報告 →</a>
+      </div>
+      <div class="brand-list">
+        <div class="brand-row">
+          <div class="rb-badge r1">#1</div>
+          <div class="rb-info">
+            <div class="rb-name">FUJI 愛膝足 FG-366</div>
+            <div class="rb-sub">台灣龍頭・膝腿腳三合一 · NT$12,720</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r1-fill" style="width:85%"></div></div>
+            <div class="rb-num">85</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r2">#2</div>
+          <div class="rb-info">
+            <div class="rb-name">OSIM 傲勝</div>
+            <div class="rb-sub">國際品牌・設計感強 · NT$8,000–$15,000</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r2-fill" style="width:78%"></div></div>
+            <div class="rb-num">78</div>
+          </div>
+        </div>
+        <div class="brand-row">
+          <div class="rb-badge r3">#3</div>
+          <div class="rb-info">
+            <div class="rb-name">輝葉 Hylum HY-702</div>
+            <div class="rb-sub">台灣製・深捏 3D・高好評 · NT$8,000–$12,800</div>
+          </div>
+          <div class="rb-score">
+            <div class="rb-bar-track"><div class="rb-bar-fill r3-fill" style="width:65%"></div></div>
+            <div class="rb-num">65</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

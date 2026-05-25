@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孕嬰選品｜市場聲量總覽 2025.05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --navy:   #0f1b35;
+  --navy2:  #1a2d52;
+  --accent: #e8834a;
+  --teal:   #3db8c4;
+  --purple: #8b7fd4;
+  --green:  #7cb87c;
+  --gold:   #f0c040;
+  --light:  #f5f7fa;
+  --white:  #ffffff;
+  --text:   #1a1a2e;
+  --muted:  #6b7280;
+
+  /* 品類主色 */
+  --c-moon:    #e8834a;
+  --c-socks:   #3db8c4;
+  --c-cream:   #c48fdf;
+  --c-mat:     #3db8c4;
+  --c-oil:     #7cb87c;
+  --c-massage: #8b7fd4;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #e8edf5;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════
+   HERO
+══════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 55%, #1e3a6e 100%);
+  color: var(--white);
+  padding: 64px 80px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; right: -80px; top: -80px;
+  width: 520px; height: 520px; border-radius: 50%;
+  background: rgba(232,131,74,0.10);
+}
+.hero::after {
+  content: '';
+  position: absolute; left: 40%; bottom: -120px;
+  width: 320px; height: 320px; border-radius: 50%;
+  background: rgba(61,184,196,0.08);
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  position: relative; z-index: 1;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 4px 18px; font-size: 11px;
+  font-weight: 600; letter-spacing: 2px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: 52px; font-weight: 900;
+  line-height: 1.1; margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero-sub {
+  font-size: 15px; color: rgba(255,255,255,0.55);
+  font-weight: 300; max-width: 520px;
+}
+.hero-stats {
+  display: flex; gap: 32px; flex-shrink: 0;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-size: 40px; font-weight: 900;
+  color: var(--accent); line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 11px; color: rgba(255,255,255,0.5);
+  font-weight: 500; letter-spacing: 0.5px;
+}
+
+/* ══════════════════════════
+   RAINBOW BAR
+══════════════════════════ */
+.rainbow-bar {
+  height: 5px;
+  background: linear-gradient(90deg,
+    var(--c-moon) 0%, var(--c-moon) 16.6%,
+    var(--c-socks) 16.6%, var(--c-socks) 33.3%,
+    var(--c-cream) 33.3%, var(--c-cream) 50%,
+    var(--c-mat) 50%, var(--c-mat) 66.6%,
+    var(--c-oil) 66.6%, var(--c-oil) 83.3%,
+    var(--c-massage) 83.3%, var(--c-massage) 100%
+  );
+}
+
+/* ══════════════════════════
+   NAV PILLS
+══════════════════════════ */
+.nav-wrap {
+  background: var(--white);
+  border-bottom: 1px solid #e8edf5;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 14px 80px;
+  display: flex; gap: 10px; align-items: center; overflow-x: auto;
+}
+.nav-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px; font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: all .2s;
+  cursor: pointer;
+  color: var(--text);
+  background: var(--light);
+}
+.nav-pill:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.10); }
+.nav-pill.moon    { border-color: var(--c-moon);    color: var(--c-moon);    background: #fff4ee; }
+.nav-pill.socks   { border-color: var(--c-socks);   color: #2a9aa6;          background: #edfbfc; }
+.nav-pill.cream   { border-color: var(--c-cream);   color: #8b5db8;          background: #f5f0ff; }
+.nav-pill.mat     { border-color: #28a0b0;           color: #28a0b0;          background: #e0f7fa; }
+.nav-pill.oil     { border-color: var(--c-oil);     color: #4a8a4a;          background: #f0f8f0; }
+.nav-pill.massage { border-color: var(--c-massage); color: #6b5ad4;          background: #f3f0ff; }
+
+/* ══════════════════════════
+   SUMMARY TABLE
+══════════════════════════ */
+.section-wrap {
+  max-width: 1200px; margin: 0 auto; padding: 56px 80px;
+}
+.section-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 2.5px; color: var(--accent);
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.section-title {
+  font-size: 28px; font-weight: 900;
+  color: var(--navy); margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #eef0f4;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.summary-card {
+  border-radius: 14px;
+  border: 1.5px solid #eef0f4;
+  overflow: hidden;
+  background: var(--white);
+  transition: box-shadow .2s, transform .2s;
+  text-decoration: none;
+  display: block;
+}
+.summary-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+.summary-card-top {
+  padding: 18px 20px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.summary-cat {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.summary-card-top .vol-chip {
+  font-size: 11px; font-weight: 700;
+  padding: 3px 10px; border-radius: 10px;
+  background: rgba(0,0,0,0.06); color: var(--text);
+}
+.summary-brand { font-size: 20px; font-weight: 800; color: var(--navy); padding: 0 20px 6px; }
+.summary-tagline { font-size: 12px; color: var(--muted); padding: 0 20px 16px; }
+.summary-divider { height: 1px; background: #eef0f4; margin: 0 20px; }
+.summary-reasons {
+  padding: 14px 20px 18px;
+  list-style: none;
+}
+.summary-reasons li {
+  font-size: 12px; color: var(--text);
+  line-height: 1.7;
+}
+.summary-reasons li::before { content: '· '; color: var(--muted); }
+.summary-link {
+  display: flex; align-items: center; justify-content: flex-end; gap: 4px;
+  padding: 10px 20px;
+  font-size: 11px; font-weight: 600;
+  border-top: 1px solid #eef0f4;
+}
+
+/* card accent per category */
+.sc-moon    .summary-card-top { background: linear-gradient(135deg,#fff4ee,#ffeee0); border-bottom: 3px solid var(--c-moon); }
+.sc-moon    .summary-cat { color: var(--c-moon); }
+.sc-moon    .summary-link { color: var(--c-moon); }
+.sc-socks   .summary-card-top { background: linear-gradient(135deg,#edfbfc,#d6f5f7); border-bottom: 3px solid var(--c-socks); }
+.sc-socks   .summary-cat { color: #2a9aa6; }
+.sc-socks   .summary-link { color: #2a9aa6; }
+.sc-cream   .summary-card-top { background: linear-gradient(135deg,#f5f0ff,#e8e2fb); border-bottom: 3px solid var(--c-cream); }
+.sc-cream   .summary-cat { color: #8b5db8; }
+.sc-cream   .summary-link { color: #8b5db8; }
+.sc-mat     .summary-card-top { background: linear-gradient(135deg,#e0f7fa,#b2ebf2); border-bottom: 3px solid #28a0b0; }
+.sc-mat     .summary-cat { color: #28a0b0; }
+.sc-mat     .summary-link { color: #28a0b0; }
+.sc-oil     .summary-card-top { background: linear-gradient(135deg,#f0f8f0,#dff0df); border-bottom: 3px solid var(--c-oil); }
+.sc-oil     .summary-cat { color: #4a8a4a; }
+.sc-oil     .summary-link { color: #4a8a4a; }
+.sc-massage .summary-card-top { background: linear-gradient(135deg,#f3f0ff,#e8e2fb); border-bottom: 3px solid var(--c-massage); }
+.sc-massage .summary-cat { color: #6b5ad4; }
+.sc-massage .summary-link { color: #6b5ad4; }
+
+/* ══════════════════════════
+   CATEGORY SECTIONS
+══════════════════════════ */
+.cat-section {
+  border-top: 1px solid #e0e4ec;
+  padding: 56px 0;
+}
+.cat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 32px;
+}
+.cat-title-group { display: flex; align-items: center; gap: 16px; }
+.cat-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.cat-icon.moon    { background: #fff4ee; }
+.cat-icon.socks   { background: #edfbfc; }
+.cat-icon.cream   { background: #f5f0ff; }
+.cat-icon.mat     { background: #e0f7fa; }
+.cat-icon.oil     { background: #f0f8f0; }
+.cat-icon.massage { background: #f3f0ff; }
+
+.cat-title { font-size: 24px; font-weight: 800; color: var(--navy); }
+.cat-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.report-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: all .2s;
+  flex-shrink: 0;
+}
+.report-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+.report-btn.moon    { background: var(--c-moon);    color: var(--white); }
+.report-btn.socks   { background: var(--c-socks);   color: var(--white); }
+.report-btn.cream   { background: var(--c-cream);   color: var(--white); }
+.report-btn.mat     { background: #28a0b0;           color: var(--white); }
+.report-btn.oil     { background: var(--c-oil);     color: var(--white); }
+.report-btn.massage { background: var(--c-massage); color: var(--white); }
+
+/* rank row */
+.rank-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px; margin-bottom: 24px;
+}
+.rank-card {
+  border-radius: 12px; overflow: hidden;
+  border: 1.5px solid #eef0f4;
+  background: var(--white);
+}
+.rank-card-head {
+  padding: 14px 18px 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.badge {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 900; color: var(--white);
+  flex-shrink: 0;
+}
+.badge.r1  { background: var(--accent); }
+.badge.r2  { background: var(--teal); }
+.badge.r3  { background: var(--purple); }
+.rk-brand  { font-size: 15px; font-weight: 800; color: var(--navy); }
+.rk-sub    { font-size: 11px; color: var(--muted); }
+.vol-bar-wrap { padding: 0 18px 14px; }
+.vol-bar-track { background: #f0f2f5; border-radius: 4px; height: 7px; margin: 6px 0 3px; overflow: hidden; }
+.vol-bar-fill { height: 100%; border-radius: 4px; }
+.vf-r1 { background: linear-gradient(90deg,var(--accent),#f0a070); }
+.vf-r2 { background: linear-gradient(90deg,var(--teal),#70d8e0); }
+.vf-r3 { background: linear-gradient(90deg,var(--purple),#b0a0e8); }
+.vol-nums {
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: var(--muted); font-weight: 500;
+}
+.vol-score-big { font-size: 20px; font-weight: 800; }
+.vs-r1 { color: var(--accent); }
+.vs-r2 { color: var(--teal); }
+.vs-r3 { color: var(--purple); }
+
+/* spotlight */
+.spotlight {
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; align-items: start;
+  margin-top: 8px;
+}
+.spotlight-left {}
+.spotlight-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.spotlight-brand { font-size: 24px; font-weight: 900; color: var(--white); margin-bottom: 4px; }
+.spotlight-sub   { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+.spotlight-price {
+  font-size: 28px; font-weight: 900; margin-bottom: 16px;
+}
+.spotlight-price span { font-size: 13px; font-weight: 400; opacity: .5; margin-left: 4px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.stag {
+  font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 10px;
+  background: rgba(255,255,255,0.10); color: rgba(255,255,255,0.8);
+}
+.stag.accent { background: var(--accent); color: var(--white); }
+.spotlight-right {}
+.reason-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  color: rgba(255,255,255,0.4); text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.reason-list { list-style: none; }
+.reason-list li {
+  font-size: 13px; color: rgba(255,255,255,0.85);
+  line-height: 1.8; padding-left: 20px; position: relative;
+}
+.reason-list li::before {
+  content: '→';
+  position: absolute; left: 0;
+  font-weight: 700;
+}
+.caveat-box {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.06);
+  border-left: 3px solid rgba(255,255,255,0.2);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  font-size: 12px; color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+.caveat-box strong { color: rgba(255,255,255,0.7); }
+
+/* spotlight accent per cat */
+.sp-moon    .spotlight-label { color: var(--c-moon); }
+.sp-moon    .spotlight-price { color: var(--c-moon); }
+.sp-moon    .reason-list li::before { color: var(--c-moon); }
+.sp-socks   .spotlight-label { color: var(--teal); }
+.sp-socks   .spotlight-price { color: var(--teal); }
+.sp-socks   .reason-list li::before { color: var(--teal); }
+.sp-cream   .spotlight-label { color: #c48fdf; }
+.sp-cream   .spotlight-price { color: #c48fdf; }
+.sp-cream   .reason-list li::before { color: #c48fdf; }
+.sp-mat     .spotlight-label { color: #6de8f0; }
+.sp-mat     .spotlight-price { color: #6de8f0; }
+.sp-mat     .reason-list li::before { color: #6de8f0; }
+.sp-oil     .spotlight-label { color: #a8d8a8; }
+.sp-oil     .spotlight-price { color: #a8d8a8; }
+.sp-oil     .reason-list li::before { color: #a8d8a8; }
+.sp-massage .spotlight-label { color: #b0a0e8; }
+.sp-massage .spotlight-price { color: #b0a0e8; }
+.sp-massage .reason-list li::before { color: #b0a0e8; }
+
+/* ══════════════════════════
+   FOOTER
+══════════════════════════ */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.4);
+  padding: 24px 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 11px; letter-spacing: 0.3px;
+  max-width: 100%;
+}
+.footer strong { color: rgba(255,255,255,0.7); }
+
+/* ══════════════════════════
+   BUY BTN
+══════════════════════════ */
+.buy-btn {
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  padding: 9px 16px;
+  border-top: 1px solid #eef0f4;
+  font-size: 11px; font-weight: 700;
+  text-decoration: none; color: var(--muted);
+  background: var(--light);
+  transition: all .18s; letter-spacing: 0.3px;
+}
+.buy-btn:hover { color: var(--white); }
+.buy-btn.r1:hover { background: var(--accent); }
+.buy-btn.r2:hover { background: var(--teal); }
+.buy-btn.r3:hover { background: var(--purple); }
+
+/* ══════════════════════════
+   RESPONSIVE
+══════════════════════════ */
+@media (max-width: 900px) {
+  .hero { padding: 40px 24px; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+  .nav-inner { padding: 12px 24px; }
+  .section-wrap { padding: 40px 24px; }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .rank-row { grid-template-columns: 1fr; }
+  .spotlight { grid-template-columns: 1fr; }
+  .footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">MARKET INTELLIGENCE HUB · 2025.05</div>
+      <h1>孕嬰選品<br><em>市場聲量</em>總覽</h1>
+      <div class="hero-sub">六大品類・過去12個月台灣網路社群聲量調查<br>PTT・Dcard・媒體排行・購物平台評論數 加權分析</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">調查品類</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">18</div>
+        <div class="stat-label">品牌深度分析</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2025<br><span style="font-size:22px">05</span></div>
+        <div class="stat-label">最後更新</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rainbow-bar"></div>
+
+<!-- ══ NAV ══ -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <a class="nav-pill moon"    href="#moon">🌙 月亮枕</a>
+    <a class="nav-pill socks"   href="#socks">🧦 壓力襪</a>
+    <a class="nav-pill cream"   href="#cream">🧴 舒緩霜</a>
+    <a class="nav-pill mat"     href="#mat">❄️ 涼感防水墊</a>
+    <a class="nav-pill oil"     href="#oil">🌿 孕婦精油</a>
+    <a class="nav-pill massage" href="#massage">💆 腿部按摩</a>
+  </div>
+</div>
+
+<!-- ══ SUMMARY ══ -->
+<div style="background:var(--white)">
+<div class="section-wrap">
+  <div class="section-label">QUICK OVERVIEW</div>
+  <div class="section-title">各品類首推商品一覽</div>
+
+  <div class="summary-grid">
+
+    <!-- 月亮枕 -->
+    <a class="summary-card sc-moon" href="#moon">
+      <div class="summary-card-top">
+        <div class="summary-cat">月亮枕 / 孕婦枕</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">Hugsie 好喜</div>
+      <div class="summary-tagline">涼感孕婦枕・台灣製・SGS認證</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>市場聲量最高（88/100），20萬媽咪口碑</li>
+        <li>8種功能孕哺兩用，涼感枕套可機洗</li>
+        <li>口碑穩定首選：mamaway（耐用不塌陷）</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+    <!-- 壓力襪 -->
+    <a class="summary-card sc-socks" href="#socks">
+      <div class="summary-card-top">
+        <div class="summary-cat">壓力襪 / 彈性機能襪</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">途安 Thuasne</div>
+      <div class="summary-tagline">法國醫療級・RAL 認證・孕婦首推</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>孕婦社群口碑最強（好評率 83%）</li>
+        <li>RAL 國際壓力認證，醫師也推薦</li>
+        <li>大眾品牌首選：瑪榭（聲量最高 CP 最佳）</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+    <!-- 舒緩霜 -->
+    <a class="summary-card sc-cream" href="#cream">
+      <div class="summary-card-top">
+        <div class="summary-cat">舒緩霜（腿部 / 身體）</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">Mustela 慕之恬廊</div>
+      <div class="summary-tagline">法國孕婦保養・撫紋修護菁萃</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>孕婦社群提名率最高（好評率 84%）</li>
+        <li>Passioline 專利成分，預防妊娠紋</li>
+        <li>腿部消腫首選：Clarins 美腿舒倦活力乳</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+    <!-- 涼感防水墊 -->
+    <a class="summary-card sc-mat" href="#mat">
+      <div class="summary-card-top">
+        <div class="summary-cat">涼感防水隔尿墊</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">Jellymat 果凍床墊</div>
+      <div class="summary-tagline">有機棉・Hisobead 涼珠・防水背面</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>涼感 + 透氣雙優，評比中勝過 lolbaby</li>
+        <li>有機棉面層，敏感肌嬰兒適用</li>
+        <li>社群聲量首選：lolbaby（最多媽媽討論）</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+    <!-- 精油 -->
+    <a class="summary-card sc-oil" href="#oil">
+      <div class="summary-card-top">
+        <div class="summary-cat">孕婦精油 / 芳療</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">沐禾 AromaHarvest</div>
+      <div class="summary-tagline">台灣唯一 Ecocert 完全有機認證</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>最高好評率（88%），芳療師圈首推</li>
+        <li>Ecocert 有機認證，履歷溯源透明</li>
+        <li>指南資源最完整：香草魔法學苑</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+    <!-- 按摩 -->
+    <a class="summary-card sc-massage" href="#massage">
+      <div class="summary-card-top">
+        <div class="summary-cat">腿部按摩器 / 美腿機</div>
+        <div class="vol-chip">聲量 #1</div>
+      </div>
+      <div class="summary-brand">FUJI 愛膝足 FG-366</div>
+      <div class="summary-tagline">台灣按摩龍頭・膝腿腳三合一</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>台灣聲量最高（85/100），mybest #1</li>
+        <li>唯一覆蓋膝蓋＋小腿＋腳底全部位</li>
+        <li>成長最快品牌：輝葉 Hylum（高好評率）</li>
+      </ul>
+      <div class="summary-link">查看完整報告 →</div>
+    </a>
+
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════
+     各品類詳細區塊
+══════════════════════════════════ -->
+
+<!-- ── 月亮枕 ── -->
+<div id="moon" style="background:#fafbfd;">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none; padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon moon">🌙</div>
+        <div>
+          <div class="cat-title">月亮枕 / 孕婦枕</div>
+          <div class="cat-subtitle">孕期睡眠支撐・哺乳枕・孕哺兩用</div>
+        </div>
+      </div>
+      <a class="report-btn moon" href="月亮枕_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">Hugsie 好喜</div><div class="rk-sub">涼感・台灣製・SGS認證</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:88%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$1,980–$2,580</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://hugsie.com.tw/shop/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">mamaway 媽媽餵</div><div class="rk-sub">耐用・透氣・四段安全扣</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">75</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:75%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$2,380–$2,880</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.mamaway.com.tw/products/accessorie/baby-bedding/NursingPillow/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">六甲村 Mammy Village</div><div class="rk-sub">高CP值・10種功能</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">68</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:68%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$1,800–$2,480</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/search/Mammy%20Village%20%E5%85%AD%E7%94%B2%E6%9D%91%20%E5%AD%95%E5%A9%A6%E6%9E%95" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-moon">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 編輯首推</div>
+        <div class="spotlight-brand">mamaway 媽媽餵</div>
+        <div class="spotlight-sub">智慧調溫月亮枕・耐用首選</div>
+        <div class="spotlight-price">NT$2,380–$2,880 <span>/ 智慧調溫款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">耐用6年+實測</span>
+          <span class="stag">透氣不悶熱</span>
+          <span class="stag">好評率78%</span>
+          <span class="stag">四段安全扣</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>耐用口碑三品牌最強，有網友使用 6 年仍不塌陷</li>
+          <li>好評率（78%）比聲量最高的 Hugsie（62%）穩定</li>
+          <li>透氣設計不蓄熱，台灣悶熱氣候也適合</li>
+          <li>四段安全扣，哺乳時調整靈活</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>補充：</strong>Hugsie 雖然聲量最高（88），但塌陷問題被多人提及；若追求話題品牌或涼感功能，Hugsie 仍是首選。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 壓力襪 ── -->
+<div id="socks" style="background:var(--white);">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon socks">🧦</div>
+        <div>
+          <div class="cat-title">壓力襪 / 彈性機能襪</div>
+          <div class="cat-subtitle">孕婦水腫・靜脈曲張・久站族群</div>
+        </div>
+      </div>
+      <a class="report-btn socks" href="壓力襪_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">瑪榭 MarCella</div><div class="rk-sub">台灣製・30年老牌</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">82</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:82%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$149–$399</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.momoshop.com.tw/TP/TP0000986/goodsDetail/TP00009860000504" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">途安 Thuasne</div><div class="rk-sub">法國醫療級・RAL認證</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">75</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:75%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$880–$1,490</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.momoshop.com.tw/search/Thuasne%20%E9%80%94%E5%AE%89%20%E5%A3%93%E5%8A%9B%E8%A5%AA" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">康護你 KOOLFREE</div><div class="rk-sub">台灣製・孕婦保養款</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">70</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:70%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$200–$450</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/search/%E6%97%85%E8%A1%8C%E5%AE%B6koolfree" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-socks">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 孕婦族群首推</div>
+        <div class="spotlight-brand">途安 Thuasne</div>
+        <div class="spotlight-sub">法國醫療級・漸進減壓</div>
+        <div class="spotlight-price">NT$880–$1,490 <span>/ 大腿款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">RAL 認證</span>
+          <span class="stag">好評率 83%</span>
+          <span class="stag">孕婦靜脈曲張</span>
+          <span class="stag">醫師也推薦</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>RAL 國際醫療認證，孕婦靜脈曲張討論首推品牌</li>
+          <li>好評率 83%，三品牌中孕婦社群滿意度最高</li>
+          <li>漸進式壓力設計，大腿款覆蓋範圍最完整</li>
+          <li>PTT BabyMother 孕婦彈性襪討論常被點名</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>補充：</strong>若只需日常保養，瑪榭（聲量 82，NT$149 起）CP 值最高，是「國民制服」等級的入門選擇。孕婦建議先諮詢醫師確認所需壓力等級（mmHg）。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 舒緩霜 ── -->
+<div id="cream" style="background:#fafbfd;">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon cream">🧴</div>
+        <div>
+          <div class="cat-title">舒緩霜（腿部 / 身體）</div>
+          <div class="cat-subtitle">妊娠紋預防・腿部消水腫・孕期身體保養</div>
+        </div>
+      </div>
+      <a class="report-btn cream" href="舒緩霜_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">Mustela 慕之恬廊</div><div class="rk-sub">法國・孕婦保養專業品牌</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:85%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$495–$1,200</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.mustela.tw/maternity" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">Clarins 克蘭詩</div><div class="rk-sub">美腿舒倦活力乳</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">72</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:72%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$900–$1,800</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://m.momoshop.com.tw/goods.momo?i_code=10090837" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">Bio-Oil 百洛</div><div class="rk-sub">妊娠紋・疤痕護理</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">68</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:68%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$350–$780</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/TP/TP0004786/goodsDetail/TP00047860000079" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-cream">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 編輯首推</div>
+        <div class="spotlight-brand">Mustela 慕之恬廊</div>
+        <div class="spotlight-sub">撫紋修護菁萃・孕媽保養首選</div>
+        <div class="spotlight-price">NT$495–$1,200 <span>/ 款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">好評率 84%</span>
+          <span class="stag">Passioline 專利</span>
+          <span class="stag">輕盈不黏膩</span>
+          <span class="stag">屈臣氏有售</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>孕婦保養社群討論必提品牌，信任度三品牌最高</li>
+          <li>質地輕盈、吸收快、不黏膩，孕期使用體感佳</li>
+          <li>Passioline 專利成分主打預防妊娠紋</li>
+          <li>屈臣氏、momo 均有售，入手門檻最低</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>分場景補充：</strong>若主訴求是「腿部消水腫 + 即時涼感」，Clarins 美腿舒倦活力乳更對症（洋甘菊 + 絲柏配方）。妊娠紋已形成後，Bio-Oil 百洛 CP 值更高。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 涼感防水墊 ── -->
+<div id="mat" style="background:var(--white);">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon mat">❄️</div>
+        <div>
+          <div class="cat-title">涼感防水隔尿墊</div>
+          <div class="cat-subtitle">嬰兒夏季降溫・防水隔尿・涼感蒟蒻 / 凝膠</div>
+        </div>
+      </div>
+      <a class="report-btn mat" href="涼感防水墊_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">lolbaby Hi Jell-O</div><div class="rk-sub">韓國・蒟蒻涼感・防水</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">78</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:78%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$2,280</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://m.momoshop.com.tw/goods.momo?i_code=8964230" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">Jellymat 果凍床墊</div><div class="rk-sub">有機棉・Hisobead 涼珠</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">72</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:72%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$2,500–$3,500</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.momoshop.com.tw/search/Jellymat%20%E6%9E%9C%E5%87%8D%E5%BA%8A%E5%A2%8A" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">GIO Pillow</div><div class="rk-sub">超透氣排汗・可機洗</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">65</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:65%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$3,200–$5,800</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://m.momoshop.com.tw/goods.momo?i_code=5662916" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-mat">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 品質評比首推</div>
+        <div class="spotlight-brand">Jellymat 果凍床墊</div>
+        <div class="spotlight-sub">有機棉涼感・透氣勝出</div>
+        <div class="spotlight-price">NT$2,500–$3,500 <span>/ 款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">好評率 80%</span>
+          <span class="stag">有機棉面層</span>
+          <span class="stag">降溫 3–5°C</span>
+          <span class="stag">防水背面</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>7 款床墊評比中，部落客實測推薦「勝過 lolbaby」</li>
+          <li>有機棉面層透氣度更佳，長時間使用不悶熱</li>
+          <li>Hisobead 第四代智慧涼珠，降溫 3–5°C 實測有感</li>
+          <li>防水 PVC 背面兼作隔尿墊，一物二用</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>補充：</strong>lolbaby（聲量最高，NT$2,280）是社群最多媽媽討論的選擇，預算有限或想試用涼感的入門首選。若不需要接觸涼感、只想徹底解決悶熱，GIO 的透氣結構更根本。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 孕婦精油 ── -->
+<div id="oil" style="background:#fafbfd;">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon oil">🌿</div>
+        <div>
+          <div class="cat-title">孕婦精油 / 芳療</div>
+          <div class="cat-subtitle">孕期安全芳香療法・情緒舒緩・有機認證</div>
+        </div>
+      </div>
+      <a class="report-btn oil" href="孕婦精油_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">沐禾 AromaHarvest</div><div class="rk-sub">台灣唯一 Ecocert 有機認證</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">72</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:72%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$280–$1,800</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.aromaharvest.com/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+<div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">香草魔法學苑</div><div class="rk-sub">台灣老牌・孕婦指南完整</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">68</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:68%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$350–$1,500</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.momoshop.com.tw/search/%E9%A6%99%E8%8D%89%E9%AD%94%E6%B3%95%E5%AD%B8%E8%8B%91" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">普羅芳 Pranarom</div><div class="rk-sub">法國有機・孕婦寶寶線</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">62</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:62%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$500–$2,500</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/search/Pranarom%20%E6%99%AE%E7%BE%85%E8%8A%B3" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-oil">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 安全品質首推</div>
+        <div class="spotlight-brand">沐禾 AromaHarvest</div>
+        <div class="spotlight-sub">Ecocert 有機認證・芳療師圈最高評</div>
+        <div class="spotlight-price">NT$280–$1,800 <span>/ 款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">好評率 88%</span>
+          <span class="stag">Ecocert 認證</span>
+          <span class="stag">台灣品牌</span>
+          <span class="stag">履歷溯源</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>台灣唯一 Ecocert 完全有機認證，品質透明可追溯</li>
+          <li>好評率 88%，三品牌中最高，芳療師首推</li>
+          <li>台灣品牌，購買與諮詢便利</li>
+          <li>恆溫保存，原料到成品品管嚴格</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>⚠️ 孕婦使用精油重要提醒：</strong>薰衣草、甜橙、洋甘菊為孕婦較安全選項；薄荷、迷迭香、鼠尾草應避免。建議 12 週後、稀釋 1% 以下使用，並先諮詢醫師。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 腿部按摩 ── -->
+<div id="massage" style="background:var(--white);">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon massage">💆</div>
+        <div>
+          <div class="cat-title">腿部按摩器 / 美腿機</div>
+          <div class="cat-subtitle">小腿・膝部・足底・水腫紓緩</div>
+        </div>
+      </div>
+      <a class="report-btn massage" href="腿部按摩_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">FUJI 愛膝足 FG-366</div><div class="rk-sub">台灣龍頭・膝腿腳三合一</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:85%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$12,720</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.efuji.com.tw/SalePage/Index/7581946" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">OSIM 傲勝</div><div class="rk-sub">國際品牌・設計感強</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">78</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:78%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$8,000–$15,000</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.osim.com.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">輝葉 Hylum HY-702</div><div class="rk-sub">台灣製・深捏 3D・高好評</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">65</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:65%"></div></div>
+          <div class="vol-nums"><span>聲量指數</span><span>NT$8,000–$12,800</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2123800000" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-massage">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 功能最完整首推</div>
+        <div class="spotlight-brand">FUJI 愛膝足 FG-366</div>
+        <div class="spotlight-sub">台灣按摩龍頭・三合一覆蓋</div>
+        <div class="spotlight-price">NT$12,720 <span>/ 台</span></div>
+        <div class="tag-row">
+          <span class="stag accent">mybest #1</span>
+          <span class="stag">膝+小腿+腳底</span>
+          <span class="stag">溫熱功能</span>
+          <span class="stag">台灣品牌售後</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">推薦理由</div>
+        <ul class="reason-list">
+          <li>台灣市場聲量最高（85），mybest 腿部按摩機評比 #1</li>
+          <li>唯一同時覆蓋膝蓋、小腿、腳底的完整設計</li>
+          <li>溫熱功能適合孕後期關節水腫族群</li>
+          <li>台灣品牌，售後服務與維修便利</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>補充：</strong>高單價（NT$12,720）是主要門檻。若預算有限，輝葉 Hylum（好評率 81%，2025 年 Dcard 新星）是更高 CP 值的替代；OSIM 以品牌知名度勝出，適合贈禮場景。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="rainbow-bar"></div>
+<div class="footer">
+  <div>
+    <strong>孕嬰選品・市場聲量總覽</strong>｜調查期間 2024.06 — 2025.05
+  </div>
+  <div style="text-align:right;">
+    資料來源：PTT BabyMother・Dcard・mybest・媒體評比・momo・Shopee<br>
+    ⚠️ 聲量指數為估算值，非官方數據・每月定期更新
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>壓力襪｜市場聲量報告 2025.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root{--navy:#0f1b35;--navy2:#1a2d52;--accent:#e8834a;--teal:#3db8c4;--gold:#f0c040;--light:#f5f7fa;--white:#ffffff;--text:#1a1a2e;--muted:#6b7280;--rank1:#e8834a;--rank2:#3db8c4;--rank3:#8b7fd4;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#e8edf5;color:var(--text);font-size:15px;line-height:1.6;}
+  .report-wrap{max-width:1280px;margin:32px auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.18);background:var(--white);}
+  .cover{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#24416e 100%);color:var(--white);padding:56px 80px 52px;position:relative;overflow:hidden;aspect-ratio:16/4.2;display:flex;align-items:center;justify-content:space-between;}
+  .cover::before{content:'';position:absolute;right:-60px;top:-80px;width:420px;height:420px;border-radius:50%;background:rgba(232,131,74,0.12);}
+  .cover::after{content:'';position:absolute;right:100px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(61,184,196,0.10);}
+  .cover-left{position:relative;z-index:1;}
+  .cover-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:500;letter-spacing:1px;margin-bottom:16px;color:rgba(255,255,255,0.85);}
+  .cover h1{font-size:48px;font-weight:900;line-height:1.1;margin-bottom:12px;letter-spacing:-0.5px;}
+  .cover h1 span{color:var(--accent);}
+  .cover-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;}
+  .cover-meta{position:relative;z-index:1;text-align:right;}
+  .cover-meta .period{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+  .cover-meta .date-big{font-size:36px;font-weight:700;color:var(--white);letter-spacing:-0.5px;}
+  .cover-meta .sources-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:10px;}
+  .section{padding:48px 80px;border-bottom:1px solid #eef0f4;}
+  .section:last-child{border-bottom:none;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
+  .section-title{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid #eef0f4;}
+  .top3-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+  .brand-card{border-radius:14px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .brand-card-header{padding:20px 24px 16px;position:relative;}
+  .brand-card:nth-child(1) .brand-card-header{background:linear-gradient(135deg,#fff4ee,#ffeee0);border-bottom:3px solid var(--rank1);}
+  .brand-card:nth-child(2) .brand-card-header{background:linear-gradient(135deg,#edfbfc,#d6f5f7);border-bottom:3px solid var(--rank2);}
+  .brand-card:nth-child(3) .brand-card-header{background:linear-gradient(135deg,#f3f0ff,#e8e2fb);border-bottom:3px solid var(--rank3);}
+  .rank-badge{position:absolute;top:16px;right:18px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--white);}
+  .brand-card:nth-child(1) .rank-badge{background:var(--rank1);}
+  .brand-card:nth-child(2) .rank-badge{background:var(--rank2);}
+  .brand-card:nth-child(3) .rank-badge{background:var(--rank3);}
+  .brand-name{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:2px;}
+  .brand-sub{font-size:12px;color:var(--muted);}
+  .brand-card-body{padding:20px 24px;background:var(--white);}
+  .vol-label{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:0.5px;}
+  .vol-bar-track{background:#f0f2f5;border-radius:6px;height:10px;margin-bottom:4px;overflow:hidden;}
+  .vol-bar-fill{height:100%;border-radius:6px;}
+  .brand-card:nth-child(1) .vol-bar-fill{background:linear-gradient(90deg,var(--rank1),#f0a070);}
+  .brand-card:nth-child(2) .vol-bar-fill{background:linear-gradient(90deg,var(--rank2),#70d8e0);}
+  .brand-card:nth-child(3) .vol-bar-fill{background:linear-gradient(90deg,var(--rank3),#b0a0e8);}
+  .vol-score{font-size:13px;font-weight:700;text-align:right;margin-bottom:16px;}
+  .brand-card:nth-child(1) .vol-score{color:var(--rank1);}
+  .brand-card:nth-child(2) .vol-score{color:var(--rank2);}
+  .brand-card:nth-child(3) .vol-score{color:var(--rank3);}
+  .brand-price{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .brand-price span{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;background:#f0f2f5;color:var(--text);}
+  .tag.hot{background:#fff0e8;color:var(--rank1);}
+  .tag.cool{background:#e8f9fb;color:#2a9aa6;}
+  .tag.purple{background:#f0eeff;color:#6b5ad4;}
+  .brand-sentiment{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:14px;border-top:1px dashed #eef0f4;}
+  .sentiment-item{font-size:12px;}
+  .sentiment-item .s-label{color:var(--muted);font-size:10px;font-weight:600;letter-spacing:0.5px;margin-bottom:3px;}
+  .sentiment-item .s-value{font-weight:600;color:var(--text);}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+  .detail-col{border-radius:12px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .detail-col-header{padding:16px 20px;display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;font-size:15px;}
+  .detail-col:nth-child(1) .detail-col-header{background:linear-gradient(90deg,#e8834a,#f0a070);}
+  .detail-col:nth-child(2) .detail-col-header{background:linear-gradient(90deg,#3db8c4,#70d8e0);}
+  .detail-col:nth-child(3) .detail-col-header{background:linear-gradient(90deg,#8b7fd4,#b0a0e8);}
+  .detail-col-body{padding:18px 20px;background:var(--white);}
+  .detail-section-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;margin-top:14px;}
+  .detail-section-title:first-child{margin-top:0;}
+  .pro-list,.con-list{list-style:none;font-size:12.5px;color:var(--text);line-height:1.7;}
+  .pro-list li::before{content:'✓ ';color:#3db870;font-weight:700;}
+  .con-list li::before{content:'✕ ';color:#e85050;font-weight:700;}
+  .platform-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .platform-table th{padding:12px 16px;background:var(--navy);color:var(--white);font-weight:600;text-align:left;font-size:12px;letter-spacing:0.5px;}
+  .platform-table th:first-child{border-radius:8px 0 0 0;}
+  .platform-table th:last-child{border-radius:0 8px 0 0;}
+  .platform-table td{padding:13px 16px;border-bottom:1px solid #eef0f4;vertical-align:middle;}
+  .platform-table tr:last-child td{border-bottom:none;}
+  .platform-table tr:nth-child(even) td{background:#f8f9fc;}
+  .level-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:10px;}
+  .level-high{background:#fff0e8;color:var(--rank1);}
+  .level-mid{background:#e8f9fb;color:#2a9aa6;}
+  .level-low{background:#f5f5f5;color:var(--muted);}
+  .conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .conclusion-card{background:var(--light);border-radius:12px;padding:24px;border-left:4px solid var(--accent);}
+  .conclusion-card.teal{border-left-color:var(--teal);}
+  .conclusion-card h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .conclusion-card p,.conclusion-card li{font-size:13px;color:#374151;line-height:1.8;}
+  .conclusion-card ul{list-style:none;padding:0;}
+  .conclusion-card ul li::before{content:'→ ';color:var(--accent);font-weight:700;}
+  .conclusion-card.teal ul li::before{color:var(--teal);}
+  .report-footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:18px 80px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:0.3px;}
+  .report-footer strong{color:rgba(255,255,255,0.7);}
+  .divider{height:4px;background:linear-gradient(90deg,var(--rank1),var(--teal),var(--rank3));}
+  .insight-box{background:linear-gradient(135deg,#fff8f4,#fff3eb);border:1px solid #fbd5b8;border-left:4px solid var(--accent);border-radius:10px;padding:18px 24px;margin-top:24px;font-size:13px;color:#4a3520;line-height:1.8;}
+  .insight-box strong{color:var(--accent);}
+  .pregnancy-badge{display:inline-flex;align-items:center;gap:4px;background:#fff0f5;border:1px solid #ffb3cc;border-radius:8px;padding:3px 10px;font-size:11px;font-weight:600;color:#c43b72;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="report-wrap">
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">MARKET INTELLIGENCE REPORT</div>
+      <h1>壓力襪 <span>/</span> 彈性機能襪<br>市場聲量報告</h1>
+      <div class="cover-sub">網路社群聲量分析・品牌競爭排名・孕婦族群適用評估</div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間</div>
+      <div class="date-big">2024.06<br>— 2025.05</div>
+      <div class="sources-note">資料來源：PTT・Dcard・媒體排行・momo・Shopee</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">VOLUME RANKING</div>
+    <div class="section-title">聲量前三名總覽</div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#1</div>
+          <div class="brand-name">瑪榭 MarCella</div>
+          <div class="brand-sub">台灣製・30年老牌・CP值最高</div>
+          <div class="pregnancy-badge">🤰 孕婦常推薦</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+          <div class="vol-score">82 / 100</div>
+          <div class="brand-price">NT$149 – $399<span>/ 款</span></div>
+          <div class="tag-row">
+            <span class="tag hot">國民制服</span>
+            <span class="tag">台灣製造</span>
+            <span class="tag">多丹數選擇</span>
+          </div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT 討論串</div><div class="s-value">最多（頻繁）</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 76%</div></div>
+            <div class="sentiment-item"><div class="s-label">Dcard 提及</div><div class="s-value">高頻</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">各大購物平台</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#2</div>
+          <div class="brand-name">途安 Thuasne</div>
+          <div class="brand-sub">法國醫療級・RAL認證</div>
+          <div class="pregnancy-badge">🤰 孕婦首選推薦</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+          <div class="vol-score">75 / 100</div>
+          <div class="brand-price">NT$880 – $1,490<span>/ 大腿款</span></div>
+          <div class="tag-row">
+            <span class="tag cool">醫療級</span>
+            <span class="tag">RAL國際認證</span>
+            <span class="tag">靜脈曲張</span>
+          </div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT 討論串</div><div class="s-value">中高（孕婦板）</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 83%</div></div>
+            <div class="sentiment-item"><div class="s-label">Dcard 提及</div><div class="s-value">中高頻</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">藥局・網路</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#3</div>
+          <div class="brand-name">康護你 KOOLFREE</div>
+          <div class="brand-sub">台灣製・醫療漸進減壓</div>
+          <div class="pregnancy-badge">🤰 孕婦保養款</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:70%"></div></div>
+          <div class="vol-score">70 / 100</div>
+          <div class="brand-price">NT$200 – $450<span>/ 款</span></div>
+          <div class="tag-row">
+            <span class="tag purple">原廠直送</span>
+            <span class="tag">孕婦系列</span>
+            <span class="tag">露趾款</span>
+          </div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT 討論串</div><div class="s-value">中頻</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 79%</div></div>
+            <div class="sentiment-item"><div class="s-label">Dcard 提及</div><div class="s-value">中頻</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">官網・蝦皮</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box">📌 <strong>聲量指數說明：</strong>加權估算，滿分 100。瑪榭以品牌曝光度勝出，但孕婦社群口碑最強的是途安（法國醫療級、RAL認證），選品時需區分「一般大眾」vs「孕婦專屬」兩個族群的需求差異。</div>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">BRAND DEEP DIVE</div>
+    <div class="section-title">各品牌深度分析</div>
+    <div class="detail-grid">
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥇</span> 瑪榭 MarCella</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>台灣製造 30 年，品牌信任度極高</li>
+            <li>「國民制服」—各醫院護理站常見</li>
+            <li>CP 值最高，入門首選</li>
+            <li>棉質混紡，台灣悶熱氣候適用</li>
+            <li>多丹數（20D–420D）選擇豐富</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>無 RAL 等國際醫療認證</li>
+            <li>孕婦專屬系列較少</li>
+            <li>部分款式收腳效果不如醫療級</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「CP 值超高，久站一整天腳也不腫」<br>「台灣製品質穩定，買第二雙了」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥈</span> 途安 Thuasne</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>RAL 國際壓力認證，醫療級品質</li>
+            <li>孕婦靜脈曲張／水腫首推品牌</li>
+            <li>大腿款覆蓋範圍完整</li>
+            <li>漸進式壓力設計，穿著舒適</li>
+            <li>好評率在三品牌中最高（83%）</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>價格偏高（$880–$1,490）</li>
+            <li>大腿款穿脫需要技巧</li>
+            <li>台灣購買通路相對有限</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「懷孕靜脈曲張救星，穿了腿輕鬆很多」<br>「孕期必備，醫師也推薦這個牌子」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥉</span> 康護你 KOOLFREE</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>台灣製造，有孕婦保養專區</li>
+            <li>露趾款適合夏天、腳汗人</li>
+            <li>原廠直送，品質有保障</li>
+            <li>價格合理，孕婦日常穿著適用</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>整體品牌聲量低於前兩名</li>
+            <li>款式選擇相對少</li>
+            <li>在 PTT BabyMother 較少被主動提及</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「孕期腳踝水腫，穿了舒緩很多」<br>「台灣製，品質穩定值得信賴」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">CROSS-PLATFORM ANALYSIS</div>
+    <div class="section-title">跨平台熱度比較</div>
+    <table class="platform-table">
+      <thead><tr><th>平台 / 指標</th><th>🥇 瑪榭 MarCella</th><th>🥈 途安 Thuasne</th><th>🥉 康護你 KOOLFREE</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PTT BabyMother</strong><br><small style="color:#999">孕婦討論串</small></td><td><span class="level-tag level-high">高</span> 常被提名</td><td><span class="level-tag level-high">高</span> 孕婦首推</td><td><span class="level-tag level-mid">中</span> 偶有提及</td></tr>
+        <tr><td><strong>Dcard</strong><br><small style="color:#999">提及頻率</small></td><td><span class="level-tag level-high">高頻</span></td><td><span class="level-tag level-mid">中高頻</span></td><td><span class="level-tag level-mid">中頻</span></td></tr>
+        <tr><td><strong>部落格排行榜</strong><br><small style="color:#999">出現頻率</small></td><td><span class="level-tag level-high">幾乎必出現</span></td><td><span class="level-tag level-high">孕婦榜必出現</span></td><td><span class="level-tag level-mid">常出現</span></td></tr>
+        <tr><td><strong>孕婦適用評估</strong></td><td><span class="level-tag level-mid">一般適用</span></td><td><span class="level-tag level-high">強烈推薦</span></td><td><span class="level-tag level-mid">適合日常</span></td></tr>
+        <tr><td><strong>社群好評率</strong></td><td><span class="level-tag level-mid">約 76%</span></td><td><span class="level-tag level-high">約 83%</span></td><td><span class="level-tag level-mid">約 79%</span></td></tr>
+        <tr><td><strong>主要負評關鍵字</strong></td><td>壓力不如醫療級</td><td>偏貴、穿脫費力</td><td>款式少、聲量低</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">KEY TAKEAWAYS</div>
+    <div class="section-title">結論與選購建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>📊 孕婦族群特殊考量</h3>
+        <p>孕婦壓力值建議：初期～中期 18–21 mmHg（一級）；後期或已有靜脈曲張 23–32 mmHg（二級）；產後持續穿二級幫助血液回流。<br><br>瑪榭聲量最高但非孕婦專用品牌；<strong>途安是孕婦口碑最強的選擇</strong>，有明確的醫療認證。</p>
+      </div>
+      <div class="conclusion-card teal">
+        <h3>🎯 依需求選品建議</h3>
+        <ul>
+          <li>CP 值入門・日常穿著 → <strong>瑪榭 MarCella</strong></li>
+          <li>孕婦靜脈曲張・水腫嚴重 → <strong>途安 Thuasne</strong></li>
+          <li>台灣製・孕婦日常保養 → <strong>康護你 KOOLFREE</strong></li>
+          <li>症狀明顯 → 建議先諮詢醫師再購買</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-footer">
+    <div><strong>壓力襪｜市場聲量報告</strong>・調查期間 2024.06 — 2025.05</div>
+    <div style="text-align:right;">資料來源：PTT BabyMother・Dcard・Pushguy・ddnews・Shopee<br>⚠️ 聲量指數為估算值，非官方數據・本報告每月更新</div>
+  </div>
+</div>
+</body>
+</html>
