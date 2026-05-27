@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>孕婦精油｜市場聲量報告 2025.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root{--navy:#0f1b35;--navy2:#1a2d52;--accent:#7cb87c;--teal:#3db8c4;--light:#f5f7fa;--white:#ffffff;--text:#1a1a2e;--muted:#6b7280;--rank1:#7cb87c;--rank2:#e8834a;--rank3:#8b7fd4;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#e8edf5;color:var(--text);font-size:15px;line-height:1.6;}
+  .report-wrap{max-width:1280px;margin:32px auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.18);background:var(--white);}
+  .cover{background:linear-gradient(135deg,#1a3a1a 0%,#243d24 60%,#2d4e30 100%);color:var(--white);padding:56px 80px 52px;position:relative;overflow:hidden;aspect-ratio:16/4.2;display:flex;align-items:center;justify-content:space-between;}
+  .cover::before{content:'';position:absolute;right:-60px;top:-80px;width:420px;height:420px;border-radius:50%;background:rgba(124,184,124,0.15);}
+  .cover::after{content:'';position:absolute;right:100px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.05);}
+  .cover-left{position:relative;z-index:1;}
+  .cover-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:500;letter-spacing:1px;margin-bottom:16px;color:rgba(255,255,255,0.85);}
+  .cover h1{font-size:48px;font-weight:900;line-height:1.1;margin-bottom:12px;}
+  .cover h1 span{color:#a8d8a8;}
+  .cover-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;}
+  .cover-meta{position:relative;z-index:1;text-align:right;}
+  .cover-meta .period{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+  .cover-meta .date-big{font-size:36px;font-weight:700;color:var(--white);}
+  .cover-meta .sources-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:10px;}
+  .section{padding:48px 80px;border-bottom:1px solid #eef0f4;}
+  .section:last-child{border-bottom:none;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
+  .section-title{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid #eef0f4;}
+  .top3-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+  .brand-card{border-radius:14px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .brand-card-header{padding:20px 24px 16px;position:relative;}
+  .brand-card:nth-child(1) .brand-card-header{background:linear-gradient(135deg,#f0f8f0,#dff0df);border-bottom:3px solid var(--rank1);}
+  .brand-card:nth-child(2) .brand-card-header{background:linear-gradient(135deg,#fff4ee,#ffeee0);border-bottom:3px solid var(--rank2);}
+  .brand-card:nth-child(3) .brand-card-header{background:linear-gradient(135deg,#f3f0ff,#e8e2fb);border-bottom:3px solid var(--rank3);}
+  .rank-badge{position:absolute;top:16px;right:18px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--white);}
+  .brand-card:nth-child(1) .rank-badge{background:var(--rank1);}
+  .brand-card:nth-child(2) .rank-badge{background:var(--rank2);}
+  .brand-card:nth-child(3) .rank-badge{background:var(--rank3);}
+  .brand-name{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:2px;}
+  .brand-sub{font-size:12px;color:var(--muted);}
+  .brand-card-body{padding:20px 24px;background:var(--white);}
+  .vol-label{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+  .vol-bar-track{background:#f0f2f5;border-radius:6px;height:10px;margin-bottom:4px;overflow:hidden;}
+  .vol-bar-fill{height:100%;border-radius:6px;}
+  .brand-card:nth-child(1) .vol-bar-fill{background:linear-gradient(90deg,var(--rank1),#9ad49a);}
+  .brand-card:nth-child(2) .vol-bar-fill{background:linear-gradient(90deg,var(--rank2),#f0a070);}
+  .brand-card:nth-child(3) .vol-bar-fill{background:linear-gradient(90deg,var(--rank3),#b0a0e8);}
+  .vol-score{font-size:13px;font-weight:700;text-align:right;margin-bottom:16px;}
+  .brand-card:nth-child(1) .vol-score{color:var(--rank1);}
+  .brand-card:nth-child(2) .vol-score{color:var(--rank2);}
+  .brand-card:nth-child(3) .vol-score{color:var(--rank3);}
+  .brand-price{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .brand-price span{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;background:#f0f2f5;color:var(--text);}
+  .tag.green{background:#f0f8f0;color:#4a8a4a;}
+  .tag.hot{background:#fff0e8;color:#e8834a;}
+  .tag.purple{background:#f0eeff;color:#6b5ad4;}
+  .brand-sentiment{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:14px;border-top:1px dashed #eef0f4;}
+  .sentiment-item .s-label{color:var(--muted);font-size:10px;font-weight:600;letter-spacing:0.5px;margin-bottom:3px;}
+  .sentiment-item .s-value{font-weight:600;color:var(--text);font-size:12px;}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+  .detail-col{border-radius:12px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .detail-col-header{padding:16px 20px;display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;font-size:15px;}
+  .detail-col:nth-child(1) .detail-col-header{background:linear-gradient(90deg,#7cb87c,#9ad49a);}
+  .detail-col:nth-child(2) .detail-col-header{background:linear-gradient(90deg,#e8834a,#f0a070);}
+  .detail-col:nth-child(3) .detail-col-header{background:linear-gradient(90deg,#8b7fd4,#b0a0e8);}
+  .detail-col-body{padding:18px 20px;background:var(--white);}
+  .detail-section-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;margin-top:14px;}
+  .detail-section-title:first-child{margin-top:0;}
+  .pro-list,.con-list{list-style:none;font-size:12.5px;color:var(--text);line-height:1.7;}
+  .pro-list li::before{content:'✓ ';color:#3db870;font-weight:700;}
+  .con-list li::before{content:'✕ ';color:#e85050;font-weight:700;}
+  .safe-list{list-style:none;font-size:12.5px;color:var(--text);line-height:1.7;}
+  .safe-list li::before{content:'🌿 ';}
+  .platform-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .platform-table th{padding:12px 16px;background:var(--navy);color:var(--white);font-weight:600;text-align:left;font-size:12px;}
+  .platform-table th:first-child{border-radius:8px 0 0 0;}
+  .platform-table th:last-child{border-radius:0 8px 0 0;}
+  .platform-table td{padding:13px 16px;border-bottom:1px solid #eef0f4;vertical-align:middle;}
+  .platform-table tr:last-child td{border-bottom:none;}
+  .platform-table tr:nth-child(even) td{background:#f8f9fc;}
+  .level-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:10px;}
+  .level-high{background:#f0f8f0;color:#4a8a4a;}
+  .level-mid{background:#fff0e8;color:#c06020;}
+  .level-low{background:#f5f5f5;color:var(--muted);}
+  .conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .conclusion-card{background:var(--light);border-radius:12px;padding:24px;border-left:4px solid var(--accent);}
+  .conclusion-card.orange{border-left-color:#e8834a;}
+  .conclusion-card h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .conclusion-card p,.conclusion-card li{font-size:13px;color:#374151;line-height:1.8;}
+  .conclusion-card ul{list-style:none;padding:0;}
+  .conclusion-card ul li::before{content:'→ ';color:var(--accent);font-weight:700;}
+  .conclusion-card.orange ul li::before{color:#e8834a;}
+  .report-footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:18px 80px;display:flex;align-items:center;justify-content:space-between;font-size:11px;}
+  .report-footer strong{color:rgba(255,255,255,0.7);}
+  .divider{height:4px;background:linear-gradient(90deg,#7cb87c,#a8d8a8,#3db8c4);}
+  .warning-box{background:linear-gradient(135deg,#fff8e8,#fff3d6);border:1px solid #f0d890;border-left:4px solid #d4a020;border-radius:10px;padding:18px 24px;margin-top:24px;font-size:13px;color:#5a4010;line-height:1.8;}
+  .warning-box strong{color:#c08020;}
+  .safe-badge{display:inline-flex;align-items:center;gap:4px;background:#f0f8f0;border:1px solid #a8d0a8;border-radius:8px;padding:3px 10px;font-size:11px;font-weight:600;color:#3a7a3a;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="report-wrap">
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">MARKET INTELLIGENCE REPORT</div>
+      <h1>孕婦精油 <span>/</span> 芳療<br>市場聲量報告</h1>
+      <div class="cover-sub">孕婦安全芳香療法・品牌口碑分析・台灣芳療社群聲量調查</div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間</div>
+      <div class="date-big">2024.06<br>— 2025.05</div>
+      <div class="sources-note">資料來源：PTT・Dcard・芳療論壇・mybest・部落格</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">VOLUME RANKING</div>
+    <div class="section-title">聲量前三名總覽</div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#1</div>
+          <div class="brand-name">沐禾芳療 AromaHarvest</div>
+          <div class="brand-sub">台灣唯一 Ecocert 完全有機認證</div>
+          <div class="safe-badge">✅ 孕婦認證安全</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$280 – $1,800<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag green">Ecocert認證</span><span class="tag green">台灣品牌</span><span class="tag">治療師信賴</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">芳療師推薦</div><div class="s-value">專業圈高評價</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 88%</div></div>
+            <div class="sentiment-item"><div class="s-label">PTT/Dcard</div><div class="s-value">有機精油首推</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">官網・選物店</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#2</div>
+          <div class="brand-name">香草魔法學苑</div>
+          <div class="brand-sub">台灣芳療・孕婦安全香氛指南</div>
+          <div class="safe-badge">✅ 孕婦使用指南完整</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+          <div class="vol-score">68 / 100</div>
+          <div class="brand-price">NT$350 – $1,500<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag hot">孕婦指南完整</span><span class="tag">台灣老牌</span><span class="tag">課程體系</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">部落格</div><div class="s-value">孕婦香氛必參考</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 82%</div></div>
+            <div class="sentiment-item"><div class="s-label">孕婦社群</div><div class="s-value">安全指南常引用</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">官網・實體店</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#3</div>
+          <div class="brand-name">普羅芳 Pranarom</div>
+          <div class="brand-sub">法國有機認證・孕婦寶寶系列</div>
+          <div class="safe-badge">✅ 孕婦專用系列</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:62%"></div></div>
+          <div class="vol-score">62 / 100</div>
+          <div class="brand-price">NT$500 – $2,500<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag purple">法國品牌</span><span class="tag">孕婦寶寶線</span><span class="tag">有機認證</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">mybest 排行</div><div class="s-value">精油 TOP 榜</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 79%</div></div>
+            <div class="sentiment-item"><div class="s-label">台灣知名度</div><div class="s-value">芳療師圈較知名</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">芳療店・網路</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="warning-box">⚠️ <strong>孕婦使用精油重要提醒：</strong>孕婦必須避免的精油包括薄荷、迷迭香、鼠尾草、樟腦、冬青、百里香。<strong>孕婦可用</strong>的精油：薰衣草（最低刺激性）、羅馬洋甘菊、甜橙。建議懷孕 12 週後使用，且需稀釋至 1% 以下。購買前務必確認品牌是否有孕婦使用建議說明。</div>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">BRAND DEEP DIVE</div>
+    <div class="section-title">各品牌深度分析</div>
+    <div class="detail-grid">
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥇</span> 沐禾芳療 AromaHarvest</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>台灣唯一 Ecocert 完全有機認證品牌</li>
+            <li>恆溫保存，品質管控嚴格</li>
+            <li>專業芳療師圈最高好評率（88%）</li>
+            <li>有履歷溯源，透明度高</li>
+            <li>台灣品牌，售後服務便利</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>一般大眾社群聲量不如國際大牌</li>
+            <li>主要在芳療專業圈流通</li>
+          </ul>
+          <div class="detail-section-title">孕婦可用精油</div>
+          <ul class="safe-list">
+            <li>薰衣草純露・精油</li>
+            <li>羅馬洋甘菊</li>
+            <li>甜橙精油</li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥈</span> 香草魔法學苑</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>台灣老牌芳療品牌，信任度高</li>
+            <li>提供「懷孕期安全香氛一週時刻表」</li>
+            <li>孕婦指南最完整，社群常引用</li>
+            <li>有課程體系，知識型品牌</li>
+            <li>實體店面可諮詢</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>部分產品線較傳統，設計感弱</li>
+            <li>孕婦社群 PTT 討論相對少</li>
+          </ul>
+          <div class="detail-section-title">孕婦可用精油</div>
+          <ul class="safe-list">
+            <li>依懷孕階段提供安全指引</li>
+            <li>薰衣草・洋甘菊・甜橙</li>
+            <li>橙花精油（孕 12 週後）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥉</span> 普羅芳 Pranarom</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>法國品牌，有機認證</li>
+            <li>唯一有孕婦寶寶專用產品線</li>
+            <li>mybest 精油推薦榜常見</li>
+            <li>歐洲芳療師普遍認可</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>台灣知名度主要限於專業圈</li>
+            <li>台灣購買管道較少</li>
+            <li>價格偏高（$500–$2,500）</li>
+          </ul>
+          <div class="detail-section-title">孕婦可用精油</div>
+          <ul class="safe-list">
+            <li>孕婦寶寶系列有明確標示</li>
+            <li>薰衣草・橘子・洋甘菊</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">CROSS-PLATFORM ANALYSIS</div>
+    <div class="section-title">跨平台熱度比較</div>
+    <table class="platform-table">
+      <thead><tr><th>平台 / 指標</th><th>🥇 沐禾 AromaHarvest</th><th>🥈 香草魔法學苑</th><th>🥉 普羅芳 Pranarom</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PTT 討論</strong></td><td><span class="level-tag level-high">有機精油首推</span></td><td><span class="level-tag level-mid">孕婦安全資訊</span></td><td><span class="level-tag level-low">較少出現</span></td></tr>
+        <tr><td><strong>部落格/媒體</strong></td><td><span class="level-tag level-high">芳療圈推薦</span></td><td><span class="level-tag level-high">孕婦香氛指南</span></td><td><span class="level-tag level-mid">精油排行榜</span></td></tr>
+        <tr><td><strong>孕婦安全認證</strong></td><td>Ecocert 有機認證</td><td>完整使用指引</td><td>孕婦寶寶專線</td></tr>
+        <tr><td><strong>社群好評率</strong></td><td><span class="level-tag level-high">約 88%</span></td><td><span class="level-tag level-high">約 82%</span></td><td><span class="level-tag level-mid">約 79%</span></td></tr>
+        <tr><td><strong>價格帶</strong></td><td>中（$280–$1,800）</td><td>中（$350–$1,500）</td><td>中高（$500–$2,500）</td></tr>
+        <tr><td><strong>主要負評關鍵字</strong></td><td>一般大眾知名度低</td><td>設計較傳統</td><td>購買管道少</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">KEY TAKEAWAYS</div>
+    <div class="section-title">結論與選購建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>📊 品類特性說明</h3>
+        <p>「孕婦精油」是高度知識門檻的品類，消費者最在意的是<strong>安全性</strong>而非品牌知名度。社群聲量排名與一般消費品不同，這裡有機認證 + 孕婦使用指南才是口碑關鍵。<br><br>台灣市場仍以<strong>本土品牌</strong>（沐禾、香草魔法）最被孕媽社群信任。</p>
+      </div>
+      <div class="conclusion-card orange">
+        <h3>🎯 依需求選品建議</h3>
+        <ul>
+          <li>有機認證・專業品質 → <strong>沐禾芳療 AromaHarvest</strong></li>
+          <li>孕婦新手・需要完整指引 → <strong>香草魔法學苑</strong></li>
+          <li>法國進口・孕婦專線 → <strong>普羅芳 Pranarom</strong></li>
+          <li>使用前務必確認孕期週數與稀釋比例</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-footer">
+    <div><strong>孕婦精油｜市場聲量報告</strong>・調查期間 2024.06 — 2025.05</div>
+    <div style="text-align:right;">資料來源：PTT・Dcard・mybest・芳療品牌官網・部落格<br>⚠️ 聲量指數為估算值・孕婦使用精油前請諮詢醫師・本報告每月更新</div>
+  </div>
+</div>
+</body>
+</html>

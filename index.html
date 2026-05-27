@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>孕嬰選品｜市場聲量總覽 2025.05</title>
+<title>孕嬰選品｜市場聲量總覽 2025–2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
 
@@ -20,13 +20,18 @@
   --text:   #1a1a2e;
   --muted:  #6b7280;
 
-  /* 品類主色 */
+  /* 品類主色 — 2025.05 */
   --c-moon:    #e8834a;
   --c-socks:   #3db8c4;
   --c-cream:   #c48fdf;
-  --c-mat:     #3db8c4;
+  --c-mat:     #28a0b0;
   --c-oil:     #7cb87c;
   --c-massage: #8b7fd4;
+  /* 主題主色 — 2026.05 */
+  --c-sleep:   #e87c40;
+  --c-food:    #3ab8b0;
+  --c-bath:    #52b788;
+  --c-poop:    #d4a820;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,12 +113,16 @@ body {
 .rainbow-bar {
   height: 5px;
   background: linear-gradient(90deg,
-    var(--c-moon) 0%, var(--c-moon) 16.6%,
-    var(--c-socks) 16.6%, var(--c-socks) 33.3%,
-    var(--c-cream) 33.3%, var(--c-cream) 50%,
-    var(--c-mat) 50%, var(--c-mat) 66.6%,
-    var(--c-oil) 66.6%, var(--c-oil) 83.3%,
-    var(--c-massage) 83.3%, var(--c-massage) 100%
+    var(--c-moon) 0%,     var(--c-moon) 10%,
+    var(--c-socks) 10%,   var(--c-socks) 20%,
+    var(--c-cream) 20%,   var(--c-cream) 30%,
+    var(--c-mat) 30%,     var(--c-mat) 40%,
+    var(--c-oil) 40%,     var(--c-oil) 50%,
+    var(--c-massage) 50%, var(--c-massage) 60%,
+    var(--c-sleep) 60%,   var(--c-sleep) 70%,
+    var(--c-food) 70%,    var(--c-food) 80%,
+    var(--c-bath) 80%,    var(--c-bath) 90%,
+    var(--c-poop) 90%,    var(--c-poop) 100%
   );
 }
 
@@ -151,6 +160,11 @@ body {
 .nav-pill.mat     { border-color: #28a0b0;           color: #28a0b0;          background: #e0f7fa; }
 .nav-pill.oil     { border-color: var(--c-oil);     color: #4a8a4a;          background: #f0f8f0; }
 .nav-pill.massage { border-color: var(--c-massage); color: #6b5ad4;          background: #f3f0ff; }
+/* 2026.05 主題 */
+.nav-pill.sleep   { border-color: var(--c-sleep);   color: var(--c-sleep);   background: #fff3ec; }
+.nav-pill.food    { border-color: var(--c-food);    color: #1d9b93;          background: #eafaf9; }
+.nav-pill.bath    { border-color: var(--c-bath);    color: #2e8f64;          background: #edf7f1; }
+.nav-pill.poop    { border-color: var(--c-poop);    color: #9a7a10;          background: #fdf8e5; }
 
 /* ══════════════════════════
    SUMMARY TABLE
@@ -240,6 +254,19 @@ body {
 .sc-massage .summary-card-top { background: linear-gradient(135deg,#f3f0ff,#e8e2fb); border-bottom: 3px solid var(--c-massage); }
 .sc-massage .summary-cat { color: #6b5ad4; }
 .sc-massage .summary-link { color: #6b5ad4; }
+/* 2026.05 */
+.sc-sleep   .summary-card-top { background: linear-gradient(135deg,#fff3ec,#ffe8d8); border-bottom: 3px solid var(--c-sleep); }
+.sc-sleep   .summary-cat { color: var(--c-sleep); }
+.sc-sleep   .summary-link { color: var(--c-sleep); }
+.sc-food    .summary-card-top { background: linear-gradient(135deg,#eafaf9,#ccf2ef); border-bottom: 3px solid var(--c-food); }
+.sc-food    .summary-cat { color: #1d9b93; }
+.sc-food    .summary-link { color: #1d9b93; }
+.sc-bath    .summary-card-top { background: linear-gradient(135deg,#edf7f1,#d4f0e2); border-bottom: 3px solid var(--c-bath); }
+.sc-bath    .summary-cat { color: #2e8f64; }
+.sc-bath    .summary-link { color: #2e8f64; }
+.sc-poop    .summary-card-top { background: linear-gradient(135deg,#fdf8e5,#faefbd); border-bottom: 3px solid var(--c-poop); }
+.sc-poop    .summary-cat { color: #9a7a10; }
+.sc-poop    .summary-link { color: #9a7a10; }
 
 /* ══════════════════════════
    CATEGORY SECTIONS
@@ -264,6 +291,10 @@ body {
 .cat-icon.mat     { background: #e0f7fa; }
 .cat-icon.oil     { background: #f0f8f0; }
 .cat-icon.massage { background: #f3f0ff; }
+.cat-icon.sleep   { background: #fff3ec; }
+.cat-icon.food    { background: #eafaf9; }
+.cat-icon.bath    { background: #edf7f1; }
+.cat-icon.poop    { background: #fdf8e5; }
 
 .cat-title { font-size: 24px; font-weight: 800; color: var(--navy); }
 .cat-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
@@ -283,6 +314,10 @@ body {
 .report-btn.mat     { background: #28a0b0;           color: var(--white); }
 .report-btn.oil     { background: var(--c-oil);     color: var(--white); }
 .report-btn.massage { background: var(--c-massage); color: var(--white); }
+.report-btn.sleep   { background: var(--c-sleep);   color: var(--white); }
+.report-btn.food    { background: var(--c-food);    color: var(--white); }
+.report-btn.bath    { background: var(--c-bath);    color: var(--white); }
+.report-btn.poop    { background: var(--c-poop);    color: var(--navy); }
 
 /* rank row */
 .rank-row {
@@ -398,6 +433,57 @@ body {
 .sp-massage .spotlight-label { color: #b0a0e8; }
 .sp-massage .spotlight-price { color: #b0a0e8; }
 .sp-massage .reason-list li::before { color: #b0a0e8; }
+/* 2026.05 spotlight accents */
+.sp-sleep   .spotlight-label { color: #f0a870; }
+.sp-sleep   .spotlight-price { color: #f0a870; }
+.sp-sleep   .reason-list li::before { color: #f0a870; }
+.sp-food    .spotlight-label { color: #5dd8d0; }
+.sp-food    .spotlight-price { color: #5dd8d0; }
+.sp-food    .reason-list li::before { color: #5dd8d0; }
+.sp-bath    .spotlight-label { color: #7dd8a8; }
+.sp-bath    .spotlight-price { color: #7dd8a8; }
+.sp-bath    .reason-list li::before { color: #7dd8a8; }
+.sp-poop    .spotlight-label { color: #f0c840; }
+.sp-poop    .spotlight-price { color: #f0c840; }
+.sp-poop    .reason-list li::before { color: #f0c840; }
+
+/* Mini category grid for multi-cat themes */
+.mini-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.mini-cat-card {
+  background: var(--light);
+  border: 1.5px solid #eef0f4;
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.mini-cat-label {
+  font-size: 10px; font-weight: 700;
+  color: var(--muted); letter-spacing: 0.8px;
+  text-transform: uppercase; margin-bottom: 5px;
+}
+.mini-cat-brand {
+  font-size: 13px; font-weight: 800; color: var(--navy);
+  margin-bottom: 3px;
+}
+.mini-cat-score {
+  font-size: 11px; font-weight: 600;
+}
+.mini-cat-score.s1 { color: var(--accent); }
+.mini-cat-score.s2 { color: var(--teal); }
+.mini-cat-score.s3 { color: #4a8a4a; }
+.mini-cat-score.s4 { color: #8b7fd4; }
+.theme-badge {
+  display: inline-block;
+  padding: 3px 10px; border-radius: 8px;
+  font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.theme-badge.new { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
 
 /* ══════════════════════════
    FOOTER
@@ -450,21 +536,21 @@ body {
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">MARKET INTELLIGENCE HUB · 2025.05</div>
+      <div class="hero-tag">MARKET INTELLIGENCE HUB · 2025–2026</div>
       <h1>孕嬰選品<br><em>市場聲量</em>總覽</h1>
-      <div class="hero-sub">六大品類・過去12個月台灣網路社群聲量調查<br>PTT・Dcard・媒體排行・購物平台評論數 加權分析</div>
+      <div class="hero-sub">十大主題・台灣網路社群聲量調查<br>PTT・Dcard・媒體排行・購物平台評論數 加權分析</div>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">6</div>
-        <div class="stat-label">調查品類</div>
+        <div class="stat-num">10</div>
+        <div class="stat-label">調查主題</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">18</div>
+        <div class="stat-num">30+</div>
         <div class="stat-label">品牌深度分析</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">2025<br><span style="font-size:22px">05</span></div>
+        <div class="stat-num">2026<br><span style="font-size:22px">05</span></div>
         <div class="stat-label">最後更新</div>
       </div>
     </div>
@@ -476,12 +562,18 @@ body {
 <!-- ══ NAV ══ -->
 <div class="nav-wrap">
   <div class="nav-inner">
+    <span style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;white-space:nowrap;">2025.05</span>
     <a class="nav-pill moon"    href="#moon">🌙 月亮枕</a>
     <a class="nav-pill socks"   href="#socks">🧦 壓力襪</a>
     <a class="nav-pill cream"   href="#cream">🧴 舒緩霜</a>
     <a class="nav-pill mat"     href="#mat">❄️ 涼感防水墊</a>
     <a class="nav-pill oil"     href="#oil">🌿 孕婦精油</a>
     <a class="nav-pill massage" href="#massage">💆 腿部按摩</a>
+    <span style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;white-space:nowrap;margin-left:8px;">2026.05</span>
+    <a class="nav-pill sleep"   href="#sleep">🌛 孕期好眠</a>
+    <a class="nav-pill food"    href="#food">🥣 自主進食</a>
+    <a class="nav-pill bath"    href="#bath">🛁 新生兒沐浴</a>
+    <a class="nav-pill poop"    href="#poop">💩 寶寶炸屎危機</a>
   </div>
 </div>
 
@@ -489,8 +581,9 @@ body {
 <div style="background:var(--white)">
 <div class="section-wrap">
   <div class="section-label">QUICK OVERVIEW</div>
-  <div class="section-title">各品類首推商品一覽</div>
+  <div class="section-title">各主題首推商品一覽</div>
 
+  <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:12px;">── 2025.05 品類報告</div>
   <div class="summary-grid">
 
     <!-- 月亮枕 -->
@@ -596,6 +689,79 @@ body {
     </a>
 
   </div>
+
+  <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin:32px 0 12px;">── 2026.05 主題報告</div>
+  <div class="summary-grid">
+
+    <!-- 孕期好眠 -->
+    <a class="summary-card sc-sleep" href="#sleep">
+      <div class="summary-card-top">
+        <div class="summary-cat">孕期好眠・7 品類</div>
+        <div class="vol-chip">主題報告</div>
+      </div>
+      <div class="summary-brand">六甲村 Mammy Village</div>
+      <div class="summary-tagline">待產包・聲量 85/100・主題首推</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>月亮枕：Hugsie（88）・美體霜：Mustela（85）</li>
+        <li>托腹帶：犬印 Inujirushi（80）・茶飲：香草集（72）</li>
+        <li>白噪音：費雪海馬 / LectroFan（各82）</li>
+      </ul>
+      <div class="summary-link">查看完整主題報告 →</div>
+    </a>
+
+    <!-- 自主進食 -->
+    <a class="summary-card sc-food" href="#food">
+      <div class="summary-card-top">
+        <div class="summary-cat">自主進食・5 品類</div>
+        <div class="vol-chip">主題報告</div>
+      </div>
+      <div class="summary-brand">ibobomi 長型磨牙餅</div>
+      <div class="summary-tagline">磨牙餅・聲量 88/100・品類最高</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>分裝盒：2angels（82）・食物處理機：chicco（80）</li>
+        <li>米餅：無毒農（75）・寶寶餐具：MOYUUM（85）</li>
+        <li>多品類用戶指定品牌皆進前三</li>
+      </ul>
+      <div class="summary-link">查看完整主題報告 →</div>
+    </a>
+
+    <!-- 新生兒沐浴 -->
+    <a class="summary-card sc-bath" href="#bath">
+      <div class="summary-card-top">
+        <div class="summary-cat">新生兒沐浴・3 品類</div>
+        <div class="vol-chip">主題報告</div>
+      </div>
+      <div class="summary-brand">Mustela 慕之恬廊</div>
+      <div class="summary-tagline">寶寶洗沐・聲量 88/100・首推</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>澡盆：Shnuggle（88）・Stokke Flexi Bath（82）</li>
+        <li>防掉髮洗髮精：Aromase（82）・Mustela（78）</li>
+        <li>洗沐好評率 92%，Dcard 媽媽板最高</li>
+      </ul>
+      <div class="summary-link">查看完整主題報告 →</div>
+    </a>
+
+    <!-- 寶寶炸屎危機 -->
+    <a class="summary-card sc-poop" href="#poop">
+      <div class="summary-card-top">
+        <div class="summary-cat">寶寶炸屎危機・7 品類</div>
+        <div class="vol-chip">主題報告</div>
+      </div>
+      <div class="summary-brand">Mustela VBC 屁屁膏</div>
+      <div class="summary-tagline">屁屁膏・聲量 88/100・品類冠軍</div>
+      <div class="summary-divider"></div>
+      <ul class="summary-reasons">
+        <li>紗布衣：奇哥（85）・濕紙巾：貝恩 Baan（85）</li>
+        <li>防臭垃圾桶：This is it（75）・尿布台：Didi（78）</li>
+        <li>7 品類完整覆蓋，新手爸媽採購指南</li>
+      </ul>
+      <div class="summary-link">查看完整主題報告 →</div>
+    </a>
+
+  </div>
 </div>
 </div>
 
@@ -615,7 +781,7 @@ body {
           <div class="cat-subtitle">孕期睡眠支撐・哺乳枕・孕哺兩用</div>
         </div>
       </div>
-      <a class="report-btn moon" href="月亮枕_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn moon" href="2025-05/月亮枕_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -699,7 +865,7 @@ body {
           <div class="cat-subtitle">孕婦水腫・靜脈曲張・久站族群</div>
         </div>
       </div>
-      <a class="report-btn socks" href="壓力襪_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn socks" href="2025-05/壓力襪_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -783,7 +949,7 @@ body {
           <div class="cat-subtitle">妊娠紋預防・腿部消水腫・孕期身體保養</div>
         </div>
       </div>
-      <a class="report-btn cream" href="舒緩霜_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn cream" href="2025-05/舒緩霜_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -867,7 +1033,7 @@ body {
           <div class="cat-subtitle">嬰兒夏季降溫・防水隔尿・涼感蒟蒻 / 凝膠</div>
         </div>
       </div>
-      <a class="report-btn mat" href="涼感防水墊_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn mat" href="2025-05/涼感防水墊_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -951,7 +1117,7 @@ body {
           <div class="cat-subtitle">孕期安全芳香療法・情緒舒緩・有機認證</div>
         </div>
       </div>
-      <a class="report-btn oil" href="孕婦精油_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn oil" href="2025-05/孕婦精油_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -1035,7 +1201,7 @@ body {
           <div class="cat-subtitle">小腿・膝部・足底・水腫紓緩</div>
         </div>
       </div>
-      <a class="report-btn massage" href="腿部按摩_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
+      <a class="report-btn massage" href="2025-05/腿部按摩_市場聲量報告_2025-05.html" target="_blank">📄 完整報告 →</a>
     </div>
 
     <div class="rank-row">
@@ -1107,11 +1273,481 @@ body {
 </div>
 </div>
 
+<!-- ══════════════════════════════════
+     2026.05 新主題報告區塊
+══════════════════════════════════ -->
+
+<!-- ── 孕期好眠 ── -->
+<div id="sleep" style="background:#fafbfd;">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon sleep">🌛</div>
+        <div>
+          <div class="cat-title">孕期好眠</div>
+          <div class="cat-subtitle">月亮枕・美體霜・托腹帶・無咖啡因茶・白噪音機・待產包｜7 品類合併報告</div>
+        </div>
+      </div>
+      <a class="report-btn sleep" href="2026-05/孕期好眠_市場聲量報告_2026-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="theme-badge new">NEW · 2026.05</div>
+
+    <div class="mini-cat-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">月亮枕</div>
+        <div class="mini-cat-brand">Hugsie</div>
+        <div class="mini-cat-score s1">聲量 88/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">孕婦美體霜</div>
+        <div class="mini-cat-brand">Mustela</div>
+        <div class="mini-cat-score s1">聲量 85/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">托腹帶</div>
+        <div class="mini-cat-brand">犬印 Inujirushi</div>
+        <div class="mini-cat-score s2">聲量 80/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">無咖啡因茶飲</div>
+        <div class="mini-cat-brand">香草集 JustHerb</div>
+        <div class="mini-cat-score s2">聲量 72/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">寶寶白噪音機</div>
+        <div class="mini-cat-brand">費雪海馬</div>
+        <div class="mini-cat-score s3">聲量 82/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">媽媽白噪音機</div>
+        <div class="mini-cat-brand">LectroFan</div>
+        <div class="mini-cat-score s3">聲量 82/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">待產包</div>
+        <div class="mini-cat-brand">六甲村</div>
+        <div class="mini-cat-score s1">聲量 85/100</div>
+      </div>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">六甲村 Mammy Village</div><div class="rk-sub">待產包・一站備齊・聲量最穩</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:85%"></div></div>
+          <div class="vol-nums"><span>待產包 聲量指數</span><span>NT$3,980–$6,800</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.mammyvillage.com.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">Hugsie 好喜</div><div class="rk-sub">月亮枕・涼感・SGS認證</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:88%"></div></div>
+          <div class="vol-nums"><span>月亮枕 聲量指數</span><span>NT$1,980–$2,580</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://hugsie.com.tw/shop/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">Mustela 慕之恬廊</div><div class="rk-sub">孕婦美體霜・撫紋菁萃</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:85%"></div></div>
+          <div class="vol-nums"><span>美體霜 聲量指數</span><span>NT$495–$1,200</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.mustela.tw/maternity" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-sleep">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 主題最高票</div>
+        <div class="spotlight-brand">Hugsie 好喜</div>
+        <div class="spotlight-sub">月亮枕・涼感孕婦枕・台灣製</div>
+        <div class="spotlight-price">NT$1,980–$2,580 <span>/ 款</span></div>
+        <div class="tag-row">
+          <span class="stag accent">聲量 88/100</span>
+          <span class="stag">SGS 認證</span>
+          <span class="stag">涼感枕套可機洗</span>
+          <span class="stag">孕哺兩用</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">孕期好眠主題重點</div>
+        <ul class="reason-list">
+          <li>7 品類覆蓋從睡眠到備產，一份報告解決孕期採購</li>
+          <li>月亮枕 Hugsie（88）+ 待產包 六甲村（85）雙冠</li>
+          <li>白噪音機費雪海馬 & LectroFan 雙雙達 82，值得並列推薦</li>
+          <li>犬印托腹帶為台灣孕婦社群口碑最穩固的日本品牌</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>查看完整報告：</strong>含各品類深度分析、社群真實口碑、購買連結與方法論說明。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 自主進食 ── -->
+<div id="food" style="background:var(--white);">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon food">🥣</div>
+        <div>
+          <div class="cat-title">自主進食</div>
+          <div class="cat-subtitle">副食品分裝盒・食物處理機・磨牙餅・米餅・寶寶餐具｜5 品類合併報告</div>
+        </div>
+      </div>
+      <a class="report-btn food" href="2026-05/自主進食_市場聲量報告_2026-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="theme-badge new">NEW · 2026.05</div>
+
+    <div class="mini-cat-grid" style="grid-template-columns:repeat(5,1fr);">
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">副食品分裝盒</div>
+        <div class="mini-cat-brand">2angels</div>
+        <div class="mini-cat-score s1">聲量 82/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">食物處理機</div>
+        <div class="mini-cat-brand">chicco</div>
+        <div class="mini-cat-score s2">聲量 80/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">磨牙餅（長型）</div>
+        <div class="mini-cat-brand">ibobomi</div>
+        <div class="mini-cat-score s1">聲量 88/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">米餅</div>
+        <div class="mini-cat-brand">無毒農</div>
+        <div class="mini-cat-score s2">聲量 75/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">寶寶餐具</div>
+        <div class="mini-cat-brand">MOYUUM</div>
+        <div class="mini-cat-score s1">聲量 85/100</div>
+      </div>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">ibobomi 長型磨牙餅</div><div class="rk-sub">磨牙餅・有機・安全安心</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:88%"></div></div>
+          <div class="vol-nums"><span>磨牙餅 聲量指數</span><span>NT$280–$480</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.momoshop.com.tw/search/ibobomi" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">MOYUUM</div><div class="rk-sub">寶寶餐具・矽膠・韓國設計</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:85%"></div></div>
+          <div class="vol-nums"><span>餐具 聲量指數</span><span>NT$380–$1,200</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.momoshop.com.tw/search/MOYUUM" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">2angels 分裝盒</div><div class="rk-sub">副食品分裝・矽膠・多隔設計</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">82</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:82%"></div></div>
+          <div class="vol-nums"><span>分裝盒 聲量指數</span><span>NT$480–$980</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.momoshop.com.tw/search/2angels" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-food">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 品類最高聲量</div>
+        <div class="spotlight-brand">ibobomi 長型磨牙餅</div>
+        <div class="spotlight-sub">磨牙餅・有機成分・嬰幼兒安心食品</div>
+        <div class="spotlight-price">NT$280–$480 <span>/ 包</span></div>
+        <div class="tag-row">
+          <span class="stag accent">聲量 88/100</span>
+          <span class="stag">有機認證</span>
+          <span class="stag">長型易握</span>
+          <span class="stag">6m+ 適用</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">自主進食主題重點</div>
+        <ul class="reason-list">
+          <li>5 品類全面覆蓋副食品工具到零食選購</li>
+          <li>ibobomi 磨牙餅（88）為本主題最高聲量</li>
+          <li>MOYUUM 餐具（85）是媽媽社群最愛矽膠吸盤碗品牌</li>
+          <li>用戶指定品牌（2angels / chicco / ibobomi / 無毒農 / MOYUUM）皆進前三</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>查看完整報告：</strong>含 BLW 自主進食脈絡分析、各品類深度口碑、選購建議與購買連結。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 新生兒沐浴 ── -->
+<div id="bath" style="background:#fafbfd;">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon bath">🛁</div>
+        <div>
+          <div class="cat-title">新生兒沐浴</div>
+          <div class="cat-subtitle">寶寶洗沐・嬰兒澡盆・媽媽防掉髮洗髮精｜3 品類合併報告</div>
+        </div>
+      </div>
+      <a class="report-btn bath" href="2026-05/新生兒沐浴_市場聲量報告_2026-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="theme-badge new">NEW · 2026.05</div>
+
+    <div class="mini-cat-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">寶寶洗沐＋舒緩</div>
+        <div class="mini-cat-brand">Mustela 慕之恬廊</div>
+        <div class="mini-cat-score s1">聲量 88/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">嬰兒澡盆</div>
+        <div class="mini-cat-brand">Shnuggle ✦</div>
+        <div class="mini-cat-score s1">聲量 88/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">防掉髮洗髮精</div>
+        <div class="mini-cat-brand">Aromase 艾瑪絲</div>
+        <div class="mini-cat-score s2">聲量 82/100</div>
+      </div>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">Mustela 慕之恬廊</div><div class="rk-sub">寶寶洗沐・法國孕嬰專業品牌</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:88%"></div></div>
+          <div class="vol-nums"><span>洗沐 聲量指數</span><span>NT$469/500ml</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.mustela.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">Shnuggle 澡盆</div><div class="rk-sub">嬰兒澡盆・腰托設計・英國品牌</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:88%"></div></div>
+          <div class="vol-nums"><span>澡盆 聲量指數</span><span>NT$1,320</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.momoshop.com.tw/search/Shnuggle" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">Aromase 艾瑪絲</div><div class="rk-sub">防掉髮・無矽靈・產後首選</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">82</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:82%"></div></div>
+          <div class="vol-nums"><span>洗髮精 聲量指數</span><span>NT$580/250ml</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.aromase.com.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-bath">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 主題雙冠軍</div>
+        <div class="spotlight-brand">Mustela & Shnuggle</div>
+        <div class="spotlight-sub">洗沐 / 澡盆並列 88 分最高聲量</div>
+        <div class="spotlight-price">NT$469 & NT$1,320 <span>起</span></div>
+        <div class="tag-row">
+          <span class="stag accent">各 88/100</span>
+          <span class="stag">Dcard 媽媽板首推</span>
+          <span class="stag">好評率 90%+</span>
+          <span class="stag">新生兒安全</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">新生兒沐浴主題重點</div>
+        <ul class="reason-list">
+          <li>Mustela 洗沐（88）、Shnuggle 澡盆（88）雙冠，是媽媽群組最常一起推薦的組合</li>
+          <li>Aromase 防掉髮洗髮精（82）是產後媽媽最迫切需求的品類冠軍</li>
+          <li>Stokke Flexi Bath（82）為澡盆第二，摺疊旅行特性吸引不同族群</li>
+          <li>Mustela 在 3 個品類中皆進前三，品牌信任度最全面</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>查看完整報告：</strong>含各品類深度口碑分析、社群代表聲音、選購指南與購買連結。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── 寶寶炸屎危機 ── -->
+<div id="poop" style="background:var(--white);">
+<div class="section-wrap">
+  <div class="cat-section" style="border-top:none;padding-top:0;">
+    <div class="cat-header">
+      <div class="cat-title-group">
+        <div class="cat-icon poop">💩</div>
+        <div>
+          <div class="cat-title">寶寶炸屎危機</div>
+          <div class="cat-subtitle">防臭垃圾桶・尿布台・洗衣籃・紗布衣・濕紙巾・洗沐・屁屁膏｜7 品類合併報告</div>
+        </div>
+      </div>
+      <a class="report-btn poop" href="2026-05/寶寶炸屎危機_市場聲量報告_2026-05.html" target="_blank">📄 完整報告 →</a>
+    </div>
+
+    <div class="theme-badge new">NEW · 2026.05</div>
+
+    <div class="mini-cat-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">防臭垃圾桶</div>
+        <div class="mini-cat-brand">This is it ✦</div>
+        <div class="mini-cat-score s2">聲量 75/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">升降尿布台</div>
+        <div class="mini-cat-brand">Didi ✦</div>
+        <div class="mini-cat-score s2">聲量 78/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">雙層洗衣籃</div>
+        <div class="mini-cat-brand">This is it ✦</div>
+        <div class="mini-cat-score s2">聲量 72/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">紗布衣</div>
+        <div class="mini-cat-brand">奇哥 ✦</div>
+        <div class="mini-cat-score s1">聲量 85/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">濕紙巾</div>
+        <div class="mini-cat-brand">貝恩 Baan</div>
+        <div class="mini-cat-score s1">聲量 85/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">寶寶洗沐</div>
+        <div class="mini-cat-brand">Mustela 免洗</div>
+        <div class="mini-cat-score s3">聲量 82/100</div>
+      </div>
+      <div class="mini-cat-card">
+        <div class="mini-cat-label">屁屁膏</div>
+        <div class="mini-cat-brand">Mustela VBC ✦</div>
+        <div class="mini-cat-score s1">聲量 88/100</div>
+      </div>
+    </div>
+
+    <div class="rank-row">
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r1">#1</div>
+          <div><div class="rk-brand">Mustela VBC 屁屁膏</div><div class="rk-sub">屁屁膏・修護・法國孕嬰品牌</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r1">88</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r1" style="width:88%"></div></div>
+          <div class="vol-nums"><span>屁屁膏 聲量指數</span><span>NT$393/100ml</span></div>
+        </div>
+        <a class="buy-btn r1" href="https://www.mustela.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r2">#2</div>
+          <div><div class="rk-brand">奇哥 紗布衣</div><div class="rk-sub">紗布衣・台灣老牌・柔軟透氣</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r2">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r2" style="width:85%"></div></div>
+          <div class="vol-nums"><span>紗布衣 聲量指數</span><span>NT$399/2件</span></div>
+        </div>
+        <a class="buy-btn r2" href="https://www.chick.com.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+      <div class="rank-card">
+        <div class="rank-card-head">
+          <div class="badge r3">#3</div>
+          <div><div class="rk-brand">貝恩 Baan 濕紙巾</div><div class="rk-sub">濕紙巾・厚款・台灣品牌首選</div></div>
+        </div>
+        <div class="vol-bar-wrap">
+          <div class="vol-score-big vs-r3">85</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill vf-r3" style="width:85%"></div></div>
+          <div class="vol-nums"><span>濕紙巾 聲量指數</span><span>NT$399/80抽×10</span></div>
+        </div>
+        <a class="buy-btn r3" href="https://www.baan.com.tw/" target="_blank" rel="noopener">🛒 查看商品</a>
+      </div>
+    </div>
+
+    <div class="spotlight sp-poop">
+      <div class="spotlight-left">
+        <div class="spotlight-label">⭐ 主題最高聲量</div>
+        <div class="spotlight-brand">Mustela VBC 屁屁膏</div>
+        <div class="spotlight-sub">屁屁膏・鋅氧化物配方・新生兒安全</div>
+        <div class="spotlight-price">NT$393 <span>/ 100ml</span></div>
+        <div class="tag-row">
+          <span class="stag accent">聲量 88/100</span>
+          <span class="stag">好評率 92%</span>
+          <span class="stag">紅屁屁急救首選</span>
+          <span class="stag">法國孕嬰品牌</span>
+        </div>
+      </div>
+      <div class="spotlight-right">
+        <div class="reason-title">寶寶炸屎危機主題重點</div>
+        <ul class="reason-list">
+          <li>7 品類完整解決新手爸媽換尿布/清潔全流程痛點</li>
+          <li>Mustela VBC 屁屁膏（88）、奇哥紗布衣（85）、貝恩濕紙巾（85）三強</li>
+          <li>This is it 同時拿下防臭桶＆洗衣籃兩品類冠軍</li>
+          <li>Didi 升降尿布台（78）是媽媽社群稀缺品類中最高討論度品牌</li>
+        </ul>
+        <div class="caveat-box">
+          <strong>查看完整報告：</strong>含 7 品類深度分析、用戶推薦品牌（✦）排名對照、購買連結與選購邏輯。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 <!-- ══ FOOTER ══ -->
 <div class="rainbow-bar"></div>
 <div class="footer">
   <div>
-    <strong>孕嬰選品・市場聲量總覽</strong>｜調查期間 2024.06 — 2025.05
+    <strong>孕嬰選品・市場聲量總覽</strong>｜調查期間 2024.06 — 2026.05
   </div>
   <div style="text-align:right;">
     資料來源：PTT BabyMother・Dcard・mybest・媒體評比・momo・Shopee<br>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>舒緩霜｜市場聲量報告 2025.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root{--navy:#0f1b35;--navy2:#1a2d52;--accent:#e8834a;--teal:#3db8c4;--light:#f5f7fa;--white:#ffffff;--text:#1a1a2e;--muted:#6b7280;--rank1:#e8834a;--rank2:#3db8c4;--rank3:#8b7fd4;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#e8edf5;color:var(--text);font-size:15px;line-height:1.6;}
+  .report-wrap{max-width:1280px;margin:32px auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.18);background:var(--white);}
+  .cover{background:linear-gradient(135deg,#1a2d52 0%,#2d1f52 60%,#3d2460 100%);color:var(--white);padding:56px 80px 52px;position:relative;overflow:hidden;aspect-ratio:16/4.2;display:flex;align-items:center;justify-content:space-between;}
+  .cover::before{content:'';position:absolute;right:-60px;top:-80px;width:420px;height:420px;border-radius:50%;background:rgba(180,130,220,0.12);}
+  .cover::after{content:'';position:absolute;right:100px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(232,131,74,0.10);}
+  .cover-left{position:relative;z-index:1;}
+  .cover-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:500;letter-spacing:1px;margin-bottom:16px;color:rgba(255,255,255,0.85);}
+  .cover h1{font-size:48px;font-weight:900;line-height:1.1;margin-bottom:12px;}
+  .cover h1 span{color:#c48fdf;}
+  .cover-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;}
+  .cover-meta{position:relative;z-index:1;text-align:right;}
+  .cover-meta .period{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+  .cover-meta .date-big{font-size:36px;font-weight:700;color:var(--white);}
+  .cover-meta .sources-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:10px;}
+  .section{padding:48px 80px;border-bottom:1px solid #eef0f4;}
+  .section:last-child{border-bottom:none;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
+  .section-title{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid #eef0f4;}
+  .top3-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+  .brand-card{border-radius:14px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .brand-card-header{padding:20px 24px 16px;position:relative;}
+  .brand-card:nth-child(1) .brand-card-header{background:linear-gradient(135deg,#fff4ee,#ffeee0);border-bottom:3px solid var(--rank1);}
+  .brand-card:nth-child(2) .brand-card-header{background:linear-gradient(135deg,#edfbfc,#d6f5f7);border-bottom:3px solid var(--rank2);}
+  .brand-card:nth-child(3) .brand-card-header{background:linear-gradient(135deg,#f3f0ff,#e8e2fb);border-bottom:3px solid var(--rank3);}
+  .rank-badge{position:absolute;top:16px;right:18px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--white);}
+  .brand-card:nth-child(1) .rank-badge{background:var(--rank1);}
+  .brand-card:nth-child(2) .rank-badge{background:var(--rank2);}
+  .brand-card:nth-child(3) .rank-badge{background:var(--rank3);}
+  .brand-name{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:2px;}
+  .brand-sub{font-size:12px;color:var(--muted);}
+  .brand-card-body{padding:20px 24px;background:var(--white);}
+  .vol-label{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+  .vol-bar-track{background:#f0f2f5;border-radius:6px;height:10px;margin-bottom:4px;overflow:hidden;}
+  .vol-bar-fill{height:100%;border-radius:6px;}
+  .brand-card:nth-child(1) .vol-bar-fill{background:linear-gradient(90deg,var(--rank1),#f0a070);}
+  .brand-card:nth-child(2) .vol-bar-fill{background:linear-gradient(90deg,var(--rank2),#70d8e0);}
+  .brand-card:nth-child(3) .vol-bar-fill{background:linear-gradient(90deg,var(--rank3),#b0a0e8);}
+  .vol-score{font-size:13px;font-weight:700;text-align:right;margin-bottom:16px;}
+  .brand-card:nth-child(1) .vol-score{color:var(--rank1);}
+  .brand-card:nth-child(2) .vol-score{color:var(--rank2);}
+  .brand-card:nth-child(3) .vol-score{color:var(--rank3);}
+  .brand-price{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .brand-price span{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;background:#f0f2f5;color:var(--text);}
+  .tag.hot{background:#fff0e8;color:var(--rank1);}
+  .tag.cool{background:#e8f9fb;color:#2a9aa6;}
+  .tag.purple{background:#f0eeff;color:#6b5ad4;}
+  .brand-sentiment{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:14px;border-top:1px dashed #eef0f4;}
+  .sentiment-item .s-label{color:var(--muted);font-size:10px;font-weight:600;letter-spacing:0.5px;margin-bottom:3px;}
+  .sentiment-item .s-value{font-weight:600;color:var(--text);font-size:12px;}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+  .detail-col{border-radius:12px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .detail-col-header{padding:16px 20px;display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;font-size:15px;}
+  .detail-col:nth-child(1) .detail-col-header{background:linear-gradient(90deg,#e8834a,#f0a070);}
+  .detail-col:nth-child(2) .detail-col-header{background:linear-gradient(90deg,#3db8c4,#70d8e0);}
+  .detail-col:nth-child(3) .detail-col-header{background:linear-gradient(90deg,#8b7fd4,#b0a0e8);}
+  .detail-col-body{padding:18px 20px;background:var(--white);}
+  .detail-section-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;margin-top:14px;}
+  .detail-section-title:first-child{margin-top:0;}
+  .pro-list,.con-list{list-style:none;font-size:12.5px;color:var(--text);line-height:1.7;}
+  .pro-list li::before{content:'✓ ';color:#3db870;font-weight:700;}
+  .con-list li::before{content:'✕ ';color:#e85050;font-weight:700;}
+  .platform-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .platform-table th{padding:12px 16px;background:var(--navy);color:var(--white);font-weight:600;text-align:left;font-size:12px;}
+  .platform-table th:first-child{border-radius:8px 0 0 0;}
+  .platform-table th:last-child{border-radius:0 8px 0 0;}
+  .platform-table td{padding:13px 16px;border-bottom:1px solid #eef0f4;vertical-align:middle;}
+  .platform-table tr:last-child td{border-bottom:none;}
+  .platform-table tr:nth-child(even) td{background:#f8f9fc;}
+  .level-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:10px;}
+  .level-high{background:#fff0e8;color:var(--rank1);}
+  .level-mid{background:#e8f9fb;color:#2a9aa6;}
+  .level-low{background:#f5f5f5;color:var(--muted);}
+  .conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .conclusion-card{background:var(--light);border-radius:12px;padding:24px;border-left:4px solid var(--accent);}
+  .conclusion-card.teal{border-left-color:var(--teal);}
+  .conclusion-card h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .conclusion-card p,.conclusion-card li{font-size:13px;color:#374151;line-height:1.8;}
+  .conclusion-card ul{list-style:none;padding:0;}
+  .conclusion-card ul li::before{content:'→ ';color:var(--accent);font-weight:700;}
+  .conclusion-card.teal ul li::before{color:var(--teal);}
+  .report-footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:18px 80px;display:flex;align-items:center;justify-content:space-between;font-size:11px;}
+  .report-footer strong{color:rgba(255,255,255,0.7);}
+  .divider{height:4px;background:linear-gradient(90deg,#c48fdf,var(--rank1),var(--teal));}
+  .insight-box{background:linear-gradient(135deg,#fff8f4,#fff3eb);border:1px solid #fbd5b8;border-left:4px solid var(--accent);border-radius:10px;padding:18px 24px;margin-top:24px;font-size:13px;color:#4a3520;line-height:1.8;}
+  .insight-box strong{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="report-wrap">
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">MARKET INTELLIGENCE REPORT</div>
+      <h1>舒緩霜 <span>/</span> 腿部・身體<br>市場聲量報告</h1>
+      <div class="cover-sub">孕婦腿部消水腫・妊娠肌膚保養・台灣媽媽社群口碑分析</div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間</div>
+      <div class="date-big">2024.06<br>— 2025.05</div>
+      <div class="sources-note">資料來源：PTT・Dcard・mybest・@cosme・部落格</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">VOLUME RANKING</div>
+    <div class="section-title">聲量前三名總覽</div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#1</div>
+          <div class="brand-name">Mustela 慕之恬廊</div>
+          <div class="brand-sub">法國・孕婦保養專業品牌</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+          <div class="vol-score">85 / 100</div>
+          <div class="brand-price">NT$495 – $1,200<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag hot">孕媽首選</span><span class="tag">撫紋修護</span><span class="tag">輕盈不黏</span><span class="tag">法國品牌</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT/Dcard</div><div class="s-value">孕婦保養必提</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 84%</div></div>
+            <div class="sentiment-item"><div class="s-label">部落格排行</div><div class="s-value">妊娠油 TOP 1</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">屈臣氏・momo</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#2</div>
+          <div class="brand-name">Clarins 克蘭詩</div>
+          <div class="brand-sub">法國・腿部舒緩活力乳</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$900 – $1,800<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag cool">腿部消水腫</span><span class="tag">即時涼感</span><span class="tag">洋甘菊配方</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT</div><div class="s-value">孕婦保養有討論</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 78%</div></div>
+            <div class="sentiment-item"><div class="s-label">部落格排行</div><div class="s-value">腿部護理常見</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">百貨・官網</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#3</div>
+          <div class="brand-name">Bio-Oil 百洛護膚油</div>
+          <div class="brand-sub">南非・妊娠紋・疤痕護理</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+          <div class="vol-score">68 / 100</div>
+          <div class="brand-price">NT$350 – $780<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag purple">妊娠紋</span><span class="tag">疤痕淡化</span><span class="tag">全球知名</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT/Dcard</div><div class="s-value">妊娠紋必提</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 72%</div></div>
+            <div class="sentiment-item"><div class="s-label">部落格排行</div><div class="s-value">常見推薦</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">屈臣氏・藥局</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box">📌 <strong>品類說明：</strong>「舒緩霜」涵蓋 <strong>腿部消水腫凝膠/霜</strong>（孕婦腿腫）、<strong>妊娠油/霜</strong>（肚皮保養、預防紋路）、<strong>身體舒緩乳</strong> 三個需求面。Mustela 在這三個需求中聲量最綜合；Clarins 美腿系列最針對腿部水腫；Bio-Oil 以妊娠紋護理為主力。</div>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">BRAND DEEP DIVE</div>
+    <div class="section-title">各品牌深度分析</div>
+    <div class="detail-grid">
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥇</span> Mustela 慕之恬廊</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>孕婦社群提及率最高，信任度極強</li>
+            <li>撫紋菁萃質地輕盈、吸收快不黏膩</li>
+            <li>含 Passioline 專利成分，預防妊娠紋</li>
+            <li>全系列孕婦認證，孕媽安心使用</li>
+            <li>屈臣氏、momo 均有販售，易入手</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>價格偏中高，需等促銷購入</li>
+            <li>香味較濃，少數孕婦反應不適</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「懷孕時用超好吸收不黏膩，孕期必備」<br>「搭配調理油使用效果極佳，紋路沒有增加」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥈</span> Clarins 克蘭詩</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>美腿舒倦活力乳：含洋甘菊、羅勒、絲柏</li>
+            <li>即時清涼感，舒緩雙腿疲倦與腫脹</li>
+            <li>孕婦腿腫最具針對性的品牌</li>
+            <li>法國植物配方，成分天然</li>
+            <li>百貨品牌形象佳，贈禮首選</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>價格較高（$900–$1,800）</li>
+            <li>鼠尾草成分部分孕婦需注意</li>
+            <li>百貨通路為主，網購選擇較少</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「腿腫救星！每天晚上塗完立刻輕鬆」<br>「涼感很明顯，孕期腿水腫必備」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥉</span> Bio-Oil 百洛</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>全球知名妊娠紋護理產品</li>
+            <li>含維生素 A、E 與植物萃取</li>
+            <li>價格親民（$350–$780）</li>
+            <li>屈臣氏、藥局均可購得</li>
+            <li>也適合疤痕淡化、膚色不均</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>油感較重，台灣夏天悶熱感高</li>
+            <li>妊娠紋已形成後效果有限</li>
+            <li>近年聲量被 Mustela 超越</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「預防妊娠紋，從懷孕初期就開始塗」<br>「CP 值高，但台灣夏天有點黏膩」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">CROSS-PLATFORM ANALYSIS</div>
+    <div class="section-title">跨平台熱度比較</div>
+    <table class="platform-table">
+      <thead><tr><th>平台 / 指標</th><th>🥇 Mustela 慕之恬廊</th><th>🥈 Clarins 克蘭詩</th><th>🥉 Bio-Oil 百洛</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PTT BabyMother</strong></td><td><span class="level-tag level-high">必提品牌</span></td><td><span class="level-tag level-mid">偶有提及</span></td><td><span class="level-tag level-mid">妊娠紋討論出現</span></td></tr>
+        <tr><td><strong>Dcard 親子版</strong></td><td><span class="level-tag level-high">高頻</span></td><td><span class="level-tag level-mid">中頻</span></td><td><span class="level-tag level-mid">中頻</span></td></tr>
+        <tr><td><strong>部落格排行</strong></td><td><span class="level-tag level-high">妊娠油 TOP 1</span></td><td><span class="level-tag level-mid">腿部護理常出現</span></td><td><span class="level-tag level-mid">妊娠紋類常見</span></td></tr>
+        <tr><td><strong>主要用途聚焦</strong></td><td>妊娠紋・全身保養</td><td>腿部消水腫・涼感</td><td>妊娠紋・疤痕</td></tr>
+        <tr><td><strong>社群好評率</strong></td><td><span class="level-tag level-high">約 84%</span></td><td><span class="level-tag level-mid">約 78%</span></td><td><span class="level-tag level-mid">約 72%</span></td></tr>
+        <tr><td><strong>主要負評關鍵字</strong></td><td>偏貴、香味濃</td><td>價格高、偶有刺激</td><td>油感重、悶熱</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">KEY TAKEAWAYS</div>
+    <div class="section-title">結論與選購建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>📊 品類市場特性</h3>
+        <p>「舒緩霜」是孕婦保養品中討論度最高的品類之一，主要涵蓋<strong>妊娠紋預防</strong>與<strong>腿部消水腫</strong>兩大需求。Mustela 在妊娠紋類統治社群口碑；Clarins 則是腿部消腫最具辨識度的選擇，代表不同使用場景。</p>
+      </div>
+      <div class="conclusion-card teal">
+        <h3>🎯 依需求選品建議</h3>
+        <ul>
+          <li>妊娠紋預防・全身保養 → <strong>Mustela 撫紋修護菁萃</strong></li>
+          <li>腿部水腫・即時涼感 → <strong>Clarins 美腿舒倦活力乳</strong></li>
+          <li>CP 值妊娠紋護理 → <strong>Bio-Oil 百洛護膚油</strong></li>
+          <li>孕婦敏感肌 → 優先選 Mustela（無香料系列）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="insight-box" style="background:linear-gradient(135deg,#f5f0ff,#ede8fc);border-color:#c8b8f0;border-left-color:#8b7fd4;color:#2d1f52;margin-top:24px;">
+      🔮 <strong>市場趨勢觀察：</strong>台灣孕婦美容保養意識提升，Maternea 媽咪莉娜（無香精設計）、Sanosan 珊諾植萃系列等新興品牌在孕婦社群聲量快速成長，值得追蹤。
+    </div>
+  </div>
+
+  <div class="report-footer">
+    <div><strong>舒緩霜｜市場聲量報告</strong>・調查期間 2024.06 — 2025.05</div>
+    <div style="text-align:right;">資料來源：PTT BabyMother・Dcard・mybest・@cosme・部落格評測<br>⚠️ 聲量指數為估算值，非官方數據・本報告每月更新</div>
+  </div>
+</div>
+</body>
+</html>

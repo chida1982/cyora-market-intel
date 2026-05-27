@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>腿部按摩器｜市場聲量報告 2025.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root{--navy:#0f1b35;--navy2:#1a2d52;--accent:#e8834a;--teal:#3db8c4;--light:#f5f7fa;--white:#ffffff;--text:#1a1a2e;--muted:#6b7280;--rank1:#e8834a;--rank2:#3db8c4;--rank3:#8b7fd4;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#e8edf5;color:var(--text);font-size:15px;line-height:1.6;}
+  .report-wrap{max-width:1280px;margin:32px auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.18);background:var(--white);}
+  .cover{background:linear-gradient(135deg,#1a1a2e 0%,#2a1f3d 60%,#361a40 100%);color:var(--white);padding:56px 80px 52px;position:relative;overflow:hidden;aspect-ratio:16/4.2;display:flex;align-items:center;justify-content:space-between;}
+  .cover::before{content:'';position:absolute;right:-60px;top:-80px;width:420px;height:420px;border-radius:50%;background:rgba(139,127,212,0.15);}
+  .cover::after{content:'';position:absolute;right:100px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(232,131,74,0.10);}
+  .cover-left{position:relative;z-index:1;}
+  .cover-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:500;letter-spacing:1px;margin-bottom:16px;color:rgba(255,255,255,0.85);}
+  .cover h1{font-size:48px;font-weight:900;line-height:1.1;margin-bottom:12px;}
+  .cover h1 span{color:#b0a0e8;}
+  .cover-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;}
+  .cover-meta{position:relative;z-index:1;text-align:right;}
+  .cover-meta .period{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+  .cover-meta .date-big{font-size:36px;font-weight:700;color:var(--white);}
+  .cover-meta .sources-note{font-size:11px;color:rgba(255,255,255,0.4);margin-top:10px;}
+  .section{padding:48px 80px;border-bottom:1px solid #eef0f4;}
+  .section:last-child{border-bottom:none;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--rank3);text-transform:uppercase;margin-bottom:6px;}
+  .section-title{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid #eef0f4;}
+  .top3-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+  .brand-card{border-radius:14px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .brand-card-header{padding:20px 24px 16px;position:relative;}
+  .brand-card:nth-child(1) .brand-card-header{background:linear-gradient(135deg,#fff4ee,#ffeee0);border-bottom:3px solid var(--rank1);}
+  .brand-card:nth-child(2) .brand-card-header{background:linear-gradient(135deg,#edfbfc,#d6f5f7);border-bottom:3px solid var(--rank2);}
+  .brand-card:nth-child(3) .brand-card-header{background:linear-gradient(135deg,#f3f0ff,#e8e2fb);border-bottom:3px solid var(--rank3);}
+  .rank-badge{position:absolute;top:16px;right:18px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--white);}
+  .brand-card:nth-child(1) .rank-badge{background:var(--rank1);}
+  .brand-card:nth-child(2) .rank-badge{background:var(--rank2);}
+  .brand-card:nth-child(3) .rank-badge{background:var(--rank3);}
+  .brand-name{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:2px;}
+  .brand-sub{font-size:12px;color:var(--muted);}
+  .brand-card-body{padding:20px 24px;background:var(--white);}
+  .vol-label{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+  .vol-bar-track{background:#f0f2f5;border-radius:6px;height:10px;margin-bottom:4px;overflow:hidden;}
+  .vol-bar-fill{height:100%;border-radius:6px;}
+  .brand-card:nth-child(1) .vol-bar-fill{background:linear-gradient(90deg,var(--rank1),#f0a070);}
+  .brand-card:nth-child(2) .vol-bar-fill{background:linear-gradient(90deg,var(--rank2),#70d8e0);}
+  .brand-card:nth-child(3) .vol-bar-fill{background:linear-gradient(90deg,var(--rank3),#b0a0e8);}
+  .vol-score{font-size:13px;font-weight:700;text-align:right;margin-bottom:16px;}
+  .brand-card:nth-child(1) .vol-score{color:var(--rank1);}
+  .brand-card:nth-child(2) .vol-score{color:var(--rank2);}
+  .brand-card:nth-child(3) .vol-score{color:var(--rank3);}
+  .brand-price{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .brand-price span{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+  .tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;background:#f0f2f5;color:var(--text);}
+  .tag.hot{background:#fff0e8;color:var(--rank1);}
+  .tag.cool{background:#e8f9fb;color:#2a9aa6;}
+  .tag.purple{background:#f0eeff;color:#6b5ad4;}
+  .brand-sentiment{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:14px;border-top:1px dashed #eef0f4;}
+  .sentiment-item .s-label{color:var(--muted);font-size:10px;font-weight:600;letter-spacing:0.5px;margin-bottom:3px;}
+  .sentiment-item .s-value{font-weight:600;color:var(--text);font-size:12px;}
+  .detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+  .detail-col{border-radius:12px;overflow:hidden;border:1.5px solid #eef0f4;}
+  .detail-col-header{padding:16px 20px;display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;font-size:15px;}
+  .detail-col:nth-child(1) .detail-col-header{background:linear-gradient(90deg,#e8834a,#f0a070);}
+  .detail-col:nth-child(2) .detail-col-header{background:linear-gradient(90deg,#3db8c4,#70d8e0);}
+  .detail-col:nth-child(3) .detail-col-header{background:linear-gradient(90deg,#8b7fd4,#b0a0e8);}
+  .detail-col-body{padding:18px 20px;background:var(--white);}
+  .detail-section-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:8px;margin-top:14px;}
+  .detail-section-title:first-child{margin-top:0;}
+  .pro-list,.con-list{list-style:none;font-size:12.5px;color:var(--text);line-height:1.7;}
+  .pro-list li::before{content:'✓ ';color:#3db870;font-weight:700;}
+  .con-list li::before{content:'✕ ';color:#e85050;font-weight:700;}
+  .platform-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .platform-table th{padding:12px 16px;background:var(--navy);color:var(--white);font-weight:600;text-align:left;font-size:12px;}
+  .platform-table th:first-child{border-radius:8px 0 0 0;}
+  .platform-table th:last-child{border-radius:0 8px 0 0;}
+  .platform-table td{padding:13px 16px;border-bottom:1px solid #eef0f4;vertical-align:middle;}
+  .platform-table tr:last-child td{border-bottom:none;}
+  .platform-table tr:nth-child(even) td{background:#f8f9fc;}
+  .level-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:10px;}
+  .level-high{background:#fff0e8;color:var(--rank1);}
+  .level-mid{background:#e8f9fb;color:#2a9aa6;}
+  .level-low{background:#f5f5f5;color:var(--muted);}
+  .conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .conclusion-card{background:var(--light);border-radius:12px;padding:24px;border-left:4px solid var(--accent);}
+  .conclusion-card.teal{border-left-color:var(--teal);}
+  .conclusion-card h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .conclusion-card p,.conclusion-card li{font-size:13px;color:#374151;line-height:1.8;}
+  .conclusion-card ul{list-style:none;padding:0;}
+  .conclusion-card ul li::before{content:'→ ';color:var(--accent);font-weight:700;}
+  .conclusion-card.teal ul li::before{color:var(--teal);}
+  .report-footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:18px 80px;display:flex;align-items:center;justify-content:space-between;font-size:11px;}
+  .report-footer strong{color:rgba(255,255,255,0.7);}
+  .divider{height:4px;background:linear-gradient(90deg,var(--rank3),var(--rank1),var(--teal));}
+  .insight-box{background:linear-gradient(135deg,#fff8f4,#fff3eb);border:1px solid #fbd5b8;border-left:4px solid var(--accent);border-radius:10px;padding:18px 24px;margin-top:24px;font-size:13px;color:#4a3520;line-height:1.8;}
+  .insight-box strong{color:var(--accent);}
+  .price-badge{display:inline-flex;align-items:center;gap:4px;background:#f0eeff;border:1px solid #c8b8f0;border-radius:8px;padding:3px 10px;font-size:11px;font-weight:600;color:#6b5ad4;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="report-wrap">
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">MARKET INTELLIGENCE REPORT</div>
+      <h1>腿部按摩器 <span>/</span> 美腿機<br>市場聲量報告</h1>
+      <div class="cover-sub">小腿・膝部・足底按摩・台灣品牌競爭分析・PTT Dcard 口碑調查</div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間</div>
+      <div class="date-big">2024.06<br>— 2025.05</div>
+      <div class="sources-note">資料來源：PTT・Dcard・mybest・momo・Yahoo 購物</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">VOLUME RANKING</div>
+    <div class="section-title">聲量前三名總覽</div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#1</div>
+          <div class="brand-name">FUJI 富士</div>
+          <div class="brand-sub">台灣按摩器龍頭・愛膝足 FG-366</div>
+          <div class="price-badge">💰 中高價位</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+          <div class="vol-score">85 / 100</div>
+          <div class="brand-price">NT$12,720<span>/ FG-366</span></div>
+          <div class="tag-row"><span class="tag hot">台灣龍頭</span><span class="tag">膝+小腿+腳底</span><span class="tag">溫熱功能</span><span class="tag">分離式</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT/Dcard</div><div class="s-value">最常被提名</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 78%</div></div>
+            <div class="sentiment-item"><div class="s-label">mybest 排行</div><div class="s-value">腿部按摩機 #1</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">全通路上架</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#2</div>
+          <div class="brand-name">OSIM 傲勝</div>
+          <div class="brand-sub">新加坡・全球知名・uCalf 小腿</div>
+          <div class="price-badge">💰 高價位</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:78%"></div></div>
+          <div class="vol-score">78 / 100</div>
+          <div class="brand-price">NT$8,000 – $15,000<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag cool">國際品牌</span><span class="tag">設計感強</span><span class="tag">全球口碑</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">PTT/Dcard</div><div class="s-value">品牌知名度高</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 74%</div></div>
+            <div class="sentiment-item"><div class="s-label">媒體排行</div><div class="s-value">常出現</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">實體+網路</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">#3</div>
+          <div class="brand-name">輝葉 Hylum</div>
+          <div class="brand-sub">台灣品牌・深捏 3D 美腿機 HY-702</div>
+          <div class="price-badge">💰 中價位</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">綜合聲量指數</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$8,000 – $12,800<span>/ 款</span></div>
+          <div class="tag-row"><span class="tag purple">氣壓+滾輪</span><span class="tag">台灣製</span><span class="tag">到府取件</span></div>
+          <div class="brand-sentiment">
+            <div class="sentiment-item"><div class="s-label">Dcard 2025</div><div class="s-value">美腿機新推薦</div></div>
+            <div class="sentiment-item"><div class="s-label">好評率</div><div class="s-value">約 81%</div></div>
+            <div class="sentiment-item"><div class="s-label">成長趨勢</div><div class="s-value">2025 快速成長</div></div>
+            <div class="sentiment-item"><div class="s-label">通路</div><div class="s-value">官網・momo</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box">📌 <strong>市場特性：</strong>腿部按摩器屬於<strong>高單價耐久財</strong>，消費者決策週期長、比較深。FUJI 是台灣市佔最高的本土品牌，OSIM 靠國際知名度維持聲量，輝葉則是 2024–2025 年聲量成長最快的挑戰者品牌，在 Dcard 受到年輕族群關注。</div>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">BRAND DEEP DIVE</div>
+    <div class="section-title">各品牌深度分析</div>
+    <div class="detail-grid">
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥇</span> FUJI 富士 FG-366</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>一機覆蓋膝蓋、小腿、腳底，最完整</li>
+            <li>首創分離式設計，坐躺自由使用</li>
+            <li>溫熱功能舒緩關節，孕後期水腫適用</li>
+            <li>舒適度 Dcard 評比優於 OSIM</li>
+            <li>台灣品牌售後有保障，維修便利</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>售價 $12,720，價格門檻高</li>
+            <li>部分長輩使用不習慣後閒置</li>
+            <li>體積較大，收納需要空間</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「舒適度比 OSIM、JOHNSON 都好」<br>「適合送給長輩，品牌售後服務可靠」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥈</span> OSIM 傲勝</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>全球最知名的按摩器品牌之一</li>
+            <li>設計感佳，符合家居美學</li>
+            <li>多個產品線（uCalf、uSqueez 等）</li>
+            <li>台灣有正規實體門市</li>
+            <li>品牌信任度高，贈禮首選</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>三品牌中舒適度評比略低</li>
+            <li>價格偏高，CP 值不如 FUJI</li>
+            <li>部分款式功能不如 FUJI 全面</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「設計很好看，放在客廳不突兀」<br>「知名度高，買來送爸媽很有面子」</p>
+        </div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-col-header"><span>🥉</span> 輝葉 Hylum HY-702</div>
+        <div class="detail-col-body">
+          <div class="detail-section-title">POSITIVE POINTS</div>
+          <ul class="pro-list">
+            <li>氣壓 + 滾輪雙重按摩，深捏感強</li>
+            <li>好評率在三品牌中最高（81%）</li>
+            <li>台灣製造，到府取件服務貼心</li>
+            <li>2025 年 Dcard 美腿機推薦榜新星</li>
+            <li>15 分鐘智能定時設計</li>
+          </ul>
+          <div class="detail-section-title">NEGATIVE POINTS</div>
+          <ul class="con-list">
+            <li>整體聲量不如 FUJI、OSIM</li>
+            <li>主要涵蓋小腿+腳底，不含膝蓋</li>
+            <li>品牌歷史較短，信任度建立中</li>
+          </ul>
+          <div class="detail-section-title">社群代表聲音</div>
+          <p style="font-size:12px;color:#555;font-style:italic;line-height:1.7;">「深捏感很夠，按完腿真的輕很多」<br>「久站工作者必備，使用後隔天不累」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">CROSS-PLATFORM ANALYSIS</div>
+    <div class="section-title">跨平台熱度比較</div>
+    <table class="platform-table">
+      <thead><tr><th>平台 / 指標</th><th>🥇 FUJI 富士</th><th>🥈 OSIM 傲勝</th><th>🥉 輝葉 Hylum</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PTT E-appliance 板</strong></td><td><span class="level-tag level-high">最多討論</span></td><td><span class="level-tag level-high">品牌知名</span></td><td><span class="level-tag level-mid">新興出現</span></td></tr>
+        <tr><td><strong>Dcard（2025）</strong></td><td><span class="level-tag level-high">高頻推薦</span></td><td><span class="level-tag level-mid">中高頻</span></td><td><span class="level-tag level-high">成長最快</span></td></tr>
+        <tr><td><strong>mybest 排行</strong></td><td><span class="level-tag level-high">#1 評比</span></td><td><span class="level-tag level-mid">常出現</span></td><td><span class="level-tag level-mid">2025 新上榜</span></td></tr>
+        <tr><td><strong>按摩涵蓋部位</strong></td><td>膝+小腿+腳底 ✅</td><td>小腿+腳底</td><td>小腿+腳底</td></tr>
+        <tr><td><strong>社群好評率</strong></td><td><span class="level-tag level-mid">約 78%</span></td><td><span class="level-tag level-mid">約 74%</span></td><td><span class="level-tag level-high">約 81%</span></td></tr>
+        <tr><td><strong>主要負評關鍵字</strong></td><td>價格高・體積大</td><td>CP 值低・偏硬</td><td>聲量少・知名度低</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" style="background:#fafbfd;">
+    <div class="section-label">KEY TAKEAWAYS</div>
+    <div class="section-title">結論與選購建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>📊 聲量 vs 口碑分析</h3>
+        <p>FUJI 聲量最高（85），是台灣市場標準款，但好評率非最高（78%）。輝葉 Hylum 好評率最高（81%）且 2025 年聲量成長最快，可能是未來市場格局的攪局者。<br><br>OSIM 靠品牌知名度維持聲量，但 CP 值在三品牌中最低，「知名度最高≠最值得買」。</p>
+      </div>
+      <div class="conclusion-card teal">
+        <h3>🎯 依需求選品建議</h3>
+        <ul>
+          <li>功能最全面・台灣品牌 → <strong>FUJI FG-366</strong></li>
+          <li>品牌形象・贈禮首選 → <strong>OSIM uCalf</strong></li>
+          <li>深捏感強・CP 值高 → <strong>輝葉 HY-702</strong></li>
+          <li>孕後期水腫・溫熱功能需求 → FUJI（有溫熱）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="insight-box" style="margin-top:24px;">
+      🔮 <strong>市場趨勢觀察：</strong>2025 年「氣壓式美腿機」市場快速成長，KEEPFIT、3ZeBra 等新品牌在 Dcard 年輕族群中崛起，主打輕巧攜帶 + 親民價格（$1,799–$3,000），對傳統高單價品牌造成分流壓力。
+    </div>
+  </div>
+
+  <div class="report-footer">
+    <div><strong>腿部按摩器｜市場聲量報告</strong>・調查期間 2024.06 — 2025.05</div>
+    <div style="text-align:right;">資料來源：PTT E-appliance・Dcard・mybest・momo・Yahoo 購物・kadenki<br>⚠️ 聲量指數為估算值，非官方數據・本報告每月更新</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新生兒沐浴｜市場聲量報告 2026.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+  :root {
+    --navy:   #0f1b35;
+    --navy2:  #1a2d52;
+    --accent: #e8834a;
+    --teal:   #3db8c4;
+    --gold:   #f0c040;
+    --green:  #52b788;
+    --light:  #f5f7fa;
+    --white:  #ffffff;
+    --text:   #1a1a2e;
+    --muted:  #6b7280;
+    --rank1:  #e8834a;
+    --rank2:  #3db8c4;
+    --rank3:  #8b7fd4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #e8edf5;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .report-wrap {
+    max-width: 1280px;
+    margin: 32px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    background: var(--white);
+  }
+
+  /* ══ COVER ══ */
+  .cover {
+    background: linear-gradient(135deg, #0d2318 0%, #122e22 60%, #1a4030 100%);
+    color: var(--white);
+    padding: 56px 80px 52px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: rgba(82,183,136,0.15);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    right: 100px; bottom: -100px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(61,184,196,0.10);
+  }
+  .cover-left { position: relative; z-index: 1; }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.85);
+  }
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .cover h1 span { color: var(--green); }
+  .cover-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .cover-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .cover-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+  }
+  .cover-meta {
+    position: relative; z-index: 1;
+    text-align: right;
+  }
+  .cover-meta .period {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
+  .cover-meta .date-big {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+  .cover-meta .cat-count {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 10px;
+  }
+  .cover-meta .cat-count strong {
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 900;
+    display: block;
+  }
+
+  /* ══ SECTION ══ */
+  .section {
+    padding: 48px 80px;
+    border-bottom: 1px solid #eef0f4;
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #eef0f4;
+  }
+
+  /* ══ OVERVIEW GRID ══ */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .overview-card {
+    border-radius: 12px;
+    background: var(--light);
+    padding: 20px 16px;
+    text-align: center;
+    border: 1.5px solid #eef0f4;
+    transition: box-shadow .2s;
+  }
+  .overview-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+  .overview-icon { font-size: 32px; margin-bottom: 10px; }
+  .overview-cat { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .overview-top1 { font-size: 11px; color: var(--rank1); font-weight: 600; }
+
+  /* ══ CAT DIVIDER ══ */
+  .cat-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef0f4;
+  }
+  .cat-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .cat-divider-text { flex: 1; }
+  .cat-divider-name { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .cat-divider-desc { font-size: 12px; color: var(--muted); }
+
+  /* ══ CAT SECTION ══ */
+  .cat-section { padding: 48px 80px; border-bottom: 1px solid #eef0f4; }
+
+  /* ══ TOP 3 CARDS ══ */
+  .top3-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .brand-card {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid #eef0f4;
+    transition: box-shadow .2s;
+  }
+  .brand-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+  .brand-card-header { padding: 18px 22px 14px; position: relative; }
+  .brand-card:nth-child(1) .brand-card-header { background: linear-gradient(135deg, #fff4ee, #ffeee0); border-bottom: 3px solid var(--rank1); }
+  .brand-card:nth-child(2) .brand-card-header { background: linear-gradient(135deg, #edfbfc, #d6f5f7); border-bottom: 3px solid var(--rank2); }
+  .brand-card:nth-child(3) .brand-card-header { background: linear-gradient(135deg, #f3f0ff, #e8e2fb); border-bottom: 3px solid var(--rank3); }
+  .rank-badge {
+    position: absolute; top: 14px; right: 16px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; color: var(--white);
+  }
+  .brand-card:nth-child(1) .rank-badge { background: var(--rank1); }
+  .brand-card:nth-child(2) .rank-badge { background: var(--rank2); }
+  .brand-card:nth-child(3) .rank-badge { background: var(--rank3); }
+  .brand-name { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 1px; }
+  .brand-sub { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .user-rec { font-size: 10px; color: var(--rank1); font-weight: 700; margin-left: 4px; }
+  .brand-card-body { padding: 16px 22px; background: var(--white); }
+  .vol-label { font-size: 10px; font-weight: 600; color: var(--muted); margin-bottom: 5px; letter-spacing: 0.5px; }
+  .vol-bar-track { background: #f0f2f5; border-radius: 6px; height: 8px; margin-bottom: 3px; overflow: hidden; }
+  .vol-bar-fill { height: 100%; border-radius: 6px; }
+  .brand-card:nth-child(1) .vol-bar-fill { background: linear-gradient(90deg, var(--rank1), #f0a070); }
+  .brand-card:nth-child(2) .vol-bar-fill { background: linear-gradient(90deg, var(--rank2), #70d8e0); }
+  .brand-card:nth-child(3) .vol-bar-fill { background: linear-gradient(90deg, var(--rank3), #b0a0e8); }
+  .vol-score { font-size: 12px; font-weight: 700; text-align: right; margin-bottom: 12px; }
+  .brand-card:nth-child(1) .vol-score { color: var(--rank1); }
+  .brand-card:nth-child(2) .vol-score { color: var(--rank2); }
+  .brand-card:nth-child(3) .vol-score { color: var(--rank3); }
+  .brand-price { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .brand-price span { font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 4px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; background: #f0f2f5; color: var(--text); }
+  .tag.hot { background: #fff0e8; color: var(--rank1); }
+  .tag.cool { background: #e8f9fb; color: #2a9aa6; }
+  .tag.purple { background: #f0eeff; color: #6b5ad4; }
+  .tag.green { background: #eafaf1; color: #2e7d52; }
+  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 10px; border-top: 1px dashed #eef0f4; }
+  .pros-cons-label { font-size: 9px; font-weight: 700; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 4px; }
+  .pros-cons-list { list-style: none; font-size: 11px; line-height: 1.7; }
+  .pros-list li::before { content: '✓ '; color: #3db870; font-weight: 700; }
+  .cons-list li::before { content: '✕ '; color: #e85050; font-weight: 700; }
+
+  /* ══ BUY LINKS ══ */
+  .buy-links {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px dashed #eef0f4;
+  }
+  .buy-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 600;
+    padding: 3px 9px; border-radius: 10px;
+    text-decoration: none; transition: opacity .15s;
+  }
+  .buy-btn:hover { opacity: .8; }
+  .buy-btn.official { background: #f0f2f5; color: var(--navy); }
+  .buy-btn.momo     { background: #fff0f0; color: #d4303a; }
+  .buy-btn.shopee   { background: #fff4ee; color: var(--rank1); }
+  .buy-btn.review   { background: #edfbfc; color: #2a9aa6; }
+  .buy-btn.cosme    { background: #f3f0ff; color: #6b5ad4; }
+  .buy-btn.pchome   { background: #f3f0ff; color: #6b5ad4; }
+
+  /* ══ PLATFORM TABLE ══ */
+  .table-wrap { margin-top: 20px; border-radius: 10px; overflow: hidden; border: 1.5px solid #eef0f4; }
+  .platform-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .platform-table th {
+    padding: 10px 14px;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .platform-table th:first-child { border-radius: 8px 0 0 0; }
+  .platform-table th:last-child  { border-radius: 0 8px 0 0; }
+  .platform-table td { padding: 10px 14px; border-bottom: 1px solid #eef0f4; vertical-align: middle; }
+  .platform-table tr:last-child td { border-bottom: none; }
+  .platform-table tr:nth-child(even) td { background: #f8f9fc; }
+  .heat-dots { display: flex; gap: 3px; align-items: center; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #ddd; }
+  .dot.on  { background: var(--rank1); }
+  .dot.on2 { background: var(--rank2); }
+  .dot.on3 { background: var(--rank3); }
+  .level-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .level-high { background: #fff0e8; color: var(--rank1); }
+  .level-mid  { background: #e8f9fb; color: #2a9aa6; }
+  .level-low  { background: #f5f5f5; color: var(--muted); }
+
+  /* ══ QUOTE ══ */
+  .quote-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 20px; }
+  .quote-card {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 12px;
+    color: #374151;
+    line-height: 1.7;
+    border-left: 3px solid;
+  }
+  .quote-card:nth-child(1) { border-color: var(--rank1); }
+  .quote-card:nth-child(2) { border-color: var(--rank2); }
+  .quote-card:nth-child(3) { border-color: var(--rank3); }
+  .quote-source { font-size: 10px; color: var(--muted); margin-top: 6px; font-style: italic; }
+
+  /* ══ CONCLUSION ══ */
+  .conclusion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .conclusion-card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 22px;
+    border-left: 4px solid var(--accent);
+  }
+  .conclusion-card.teal   { border-left-color: var(--teal); }
+  .conclusion-card.purple { border-left-color: var(--rank3); }
+  .conclusion-card.green  { border-left-color: var(--green); }
+  .conclusion-card h3 {
+    font-size: 14px; font-weight: 800; color: var(--navy);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .conclusion-card p, .conclusion-card li { font-size: 12.5px; color: #374151; line-height: 1.8; }
+  .conclusion-card ul { list-style: none; padding: 0; }
+  .conclusion-card ul li::before { content: '→ '; color: var(--accent); font-weight: 700; }
+  .conclusion-card.teal   ul li::before { color: var(--teal); }
+  .conclusion-card.purple ul li::before { color: var(--rank3); }
+  .conclusion-card.green  ul li::before { color: var(--green); }
+
+  /* ══ FOOTER ══ */
+  .report-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    padding: 18px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+  .footer-brand { color: rgba(255,255,255,0.7); font-weight: 600; }
+  .footer-disclaimer { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 4px; }
+  .footer-sources a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer-sources a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ══ METHODOLOGY ══ */
+  .method-section {
+    padding: 36px 80px;
+    background: #f8f9fc;
+    border-bottom: 1px solid #eef0f4;
+  }
+  .method-toggle {
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; user-select: none;
+    list-style: none;
+  }
+  .method-toggle::marker { display: none; }
+  .method-toggle-title { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .method-toggle-sub { font-size: 12px; color: var(--muted); margin-left: auto; }
+  details[open] .method-toggle-sub::before { content: '收合 ▲'; }
+  details:not([open]) .method-toggle-sub::before { content: '展開查看方法論 ▼'; color: var(--accent); }
+  .method-body { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .method-card { background: var(--white); border-radius: 10px; padding: 18px 20px; border: 1.5px solid #eef0f4; }
+  .method-card h4 { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .method-weight { margin-left: auto; background: var(--accent); color: white; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 8px; }
+  .method-card p, .method-card li { font-size: 11.5px; color: #374151; line-height: 1.8; }
+  .method-card ul { list-style: none; padding: 0; }
+  .method-card ul li::before { content: '· '; color: var(--muted); }
+  .method-disclaimer { margin-top: 14px; padding: 10px 16px; background: #fff8f0; border-radius: 8px; font-size: 11px; color: var(--muted); border-left: 3px solid var(--accent); }
+
+  /* ══ CROSS-REPORT TAB NAV ══ */
+  .report-nav-wrap {
+    position: sticky; top: 0; z-index: 200;
+    background: #0a1428;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.30);
+  }
+  .report-nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; align-items: center;
+  }
+  .report-nav-home {
+    color: rgba(255,255,255,0.40);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 13px 16px 13px 0;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    margin-right: 6px;
+    white-space: nowrap;
+    transition: color .18s;
+    flex-shrink: 0;
+  }
+  .report-nav-home:hover { color: rgba(255,255,255,0.85); }
+  .report-nav-tabs {
+    display: flex; align-items: stretch;
+    overflow-x: auto; gap: 0;
+  }
+  .rnt {
+    padding: 13px 20px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    color: rgba(255,255,255,0.38);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color .18s, border-color .18s, background .18s;
+  }
+  .rnt:hover { color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.04); }
+  .rnt.active { color: #fff; }
+  .rnt-sleep.active { border-bottom-color: #e87c40; }
+  .rnt-food.active  { border-bottom-color: #3ab8b0; }
+  .rnt-bath.active  { border-bottom-color: #52b788; }
+  .rnt-poop.active  { border-bottom-color: #d4a820; }
+
+</style>
+</head>
+<body>
+
+<div class="report-nav-wrap">
+  <div class="report-nav-inner">
+    <a class="report-nav-home" href="../index.html">← Hub 總覽</a>
+    <div class="report-nav-tabs">
+      <a class="rnt rnt-sleep" href="孕期好眠_市場聲量報告_2026-05.html">🌛 孕期好眠</a>
+      <a class="rnt rnt-food" href="自主進食_市場聲量報告_2026-05.html">🥣 自主進食</a>
+      <a class="rnt rnt-bath active" href="新生兒沐浴_市場聲量報告_2026-05.html">🛁 新生兒沐浴</a>
+      <a class="rnt rnt-poop" href="寶寶炸屎危機_市場聲量報告_2026-05.html">💩 寶寶炸屎危機</a>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap">
+
+<!-- ══ COVER ══ -->
+<div class="cover">
+  <div class="cover-left">
+    <div class="cover-tag">CYORA MARKET INTEL · 2026.05</div>
+    <h1>新生兒<span>沐浴</span><br>市場聲量報告</h1>
+    <div class="cover-sub">Taiwan Baby Bath Market Buzz Report</div>
+    <div class="cover-pills">
+      <span class="cover-pill">🧴 寶寶洗沐＋舒緩</span>
+      <span class="cover-pill">🛁 嬰兒澡盆</span>
+      <span class="cover-pill">💆 媽媽防掉髮洗髮精</span>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div class="period">調查期間</div>
+    <div class="date-big">2026.05</div>
+    <div class="cat-count">品類數量<strong>3</strong>個品類</div>
+  </div>
+</div>
+
+<!-- ══ OVERVIEW ══ -->
+<div class="section">
+  <div class="section-label">OVERVIEW</div>
+  <div class="section-title">品類聲量總覽</div>
+  <div class="overview-grid">
+    <div class="overview-card">
+      <div class="overview-icon">🧴</div>
+      <div class="overview-cat">寶寶洗沐＋舒緩</div>
+      <div class="overview-top1">#1 Mustela 慕之恬廊 多慕雙潔乳</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon">🛁</div>
+      <div class="overview-cat">嬰兒澡盆</div>
+      <div class="overview-top1">#1 Shnuggle 月亮澡盆</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-icon">💆</div>
+      <div class="overview-cat">媽媽防掉髮洗髮精</div>
+      <div class="overview-top1">#1 艾瑪絲 Aromase 強健豐盈</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ METHODOLOGY ══ -->
+<div class="method-section">
+  <details>
+    <summary class="method-toggle">
+      <span>📐</span>
+      <span class="method-toggle-title">聲量指數估算方法論</span>
+      <span class="method-toggle-sub"></span>
+    </summary>
+    <div class="method-body">
+      <div class="method-card">
+        <h4>📌 PTT BabyMother 板<span class="method-weight">30%</span></h4>
+        <p>搜尋各品牌在 PTT BabyMother、育兒相關板的討論串數量、推文數及重複提及率。正向推文比例高於負向者加分，爆卦類討論串扣分。</p>
+        <ul>
+          <li>關鍵字：品牌名 + 品類名 + 推薦/開箱/心得</li>
+          <li>抓取近 12 個月討論量作為基準</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h4>💬 Dcard 親子／美妝版<span class="method-weight">25%</span></h4>
+        <p>查詢 Dcard 親子版、育兒版討論頻率與愛心數。新手媽媽族群的活躍度使 Dcard 成為本報告的重點平台之一。</p>
+        <ul>
+          <li>關鍵字：品牌名 + 用途場景</li>
+          <li>互動率（留言＋愛心）納入加權</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h4>📰 媒體／部落格排行<span class="method-weight">25%</span></h4>
+        <p>統計品牌在育兒媒體（媽咪愛、BabyHome、MamiBuy 等）及母嬰部落格推薦榜中出現次數。</p>
+        <ul>
+          <li>10 榜內出現計 10 分，6–9 榜計 7 分，1–5 榜計 4 分</li>
+          <li>醫師推薦標籤另計 +3 分加成</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h4>🛒 購物平台評論數<span class="method-weight">20%</span></h4>
+        <p>以 momo 購物網、蝦皮評論數及好評率作為購買轉換聲量指標。評論數愈高代表實際購買基數大，為最直接的市場接受度證明。</p>
+        <ul>
+          <li>momo：評論數 5000+ 計滿分，1000–5000 計 7 分，500–1000 計 4 分</li>
+          <li>好評率 95%+ 加 2 分，低於 85% 扣 2 分</li>
+        </ul>
+      </div>
+    </div>
+    <div class="method-disclaimer">⚠️ 非官方人工估算數值，僅供 CYORA 內部討論參考。聲量指數為研究人員根據公開資訊加權估算，不代表任何平台官方統計。</div>
+  </details>
+</div>
+
+<!-- ══════════════════════════════════════
+     CAT 1：寶寶洗沐＋舒緩
+════════════════════════════════════════ -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">1</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🧴 寶寶洗沐＋舒緩產品</div>
+      <div class="cat-divider-desc">新生兒沐浴乳、洗髮沐浴二合一、舒緩配方；重點考量低敏、不流淚、弱酸性 pH 值</div>
+    </div>
+  </div>
+
+  <div class="top3-grid">
+
+    <!-- #1 Mustela -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">Mustela 慕之恬廊</div>
+        <div class="brand-sub">多慕雙潔乳 Gentle Cleansing Gel · 法國</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:88%"></div></div>
+        <div class="vol-score">88 / 100</div>
+        <div class="brand-price">NT$469 <span>/ 500ml（momo 官旗優惠價）</span></div>
+        <div class="tag-row">
+          <span class="tag hot">PTT 必推</span>
+          <span class="tag hot">Dcard 高人氣</span>
+          <span class="tag cool">90% 天然成分</span>
+          <span class="tag">弱酸性 pH</span>
+          <span class="tag">新生兒專用</span>
+          <span class="tag">無矽靈</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>90% 天然萃煉成分</li>
+              <li>弱酸性保護皮脂膜</li>
+              <li>無 paraben / 無矽靈</li>
+              <li>不流淚配方零刺激</li>
+              <li>PTT／Dcard 媽咪強推</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>500ml 單瓶價格偏高</li>
+              <li>大容量需 Costco 才划算</li>
+              <li>香味稍重（少數反映）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.mustela.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=5237677" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://24h.pchome.com.tw/prod/DECC01-A9007KZ7X" class="buy-btn pchome" target="_blank">🟣 PChome</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #2 Cetaphil Baby -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Cetaphil 舒特膚</div>
+        <div class="brand-sub">Baby 舒緩洗髮沐浴露 · 皮膚科醫師推薦</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:76%"></div></div>
+        <div class="vol-score">76 / 100</div>
+        <div class="brand-price">NT$299 <span>/ 400ml</span></div>
+        <div class="tag-row">
+          <span class="tag cool">有機金盞花</span>
+          <span class="tag cool">維生素 B5</span>
+          <span class="tag">皮膚科測試</span>
+          <span class="tag">低敏配方</span>
+          <span class="tag green">異膚寶寶適用</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>有機金盞花舒緩修護</li>
+              <li>皮膚科醫師臨床測試</li>
+              <li>不含礦物油／色素／paraben</li>
+              <li>洗完 Q 彈滑嫩不乾燥</li>
+              <li>過敏異膚寶寶無虞</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>泡沫量偏少</li>
+              <li>對皮脂分泌旺盛的寶寶清潔力不足</li>
+              <li>香味偏淡</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.cetaphil.com.tw/baby-skincare" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12290333" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/cetaphil+baby+沐浴" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #3 Sebamed -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">Sebamed 施巴</div>
+        <div class="brand-sub">嬰兒泡泡浴露 Baby Bubble Bath · 德國</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$399 <span>/ 200ml</span></div>
+        <div class="tag-row">
+          <span class="tag purple">pH 5.5 弱酸</span>
+          <span class="tag">洋甘菊萃取</span>
+          <span class="tag">醫師推薦</span>
+          <span class="tag">不流淚</span>
+          <span class="tag">德國品牌</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>pH5.5 鞏固天然皮脂膜</li>
+              <li>洋甘菊舒緩乾癢</li>
+              <li>皮膚科醫師推薦老字號</li>
+              <li>不流淚低刺激</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>起泡弱需直接塗身再揉搓</li>
+              <li>寶寶月齡大後清潔力不足</li>
+              <li>200ml 容量 CP 值偏低</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=sebamed+嬰兒泡泡浴露" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/sebamed+嬰兒" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /top3-grid -->
+
+  <div class="quote-row">
+    <div class="quote-card">「泡泡不小心弄到眼睛也不哭，洗完皮膚超嫩，從醫院回來就開始用了，一直沒換過。」<div class="quote-source">— PTT BabyMother，Mustela 多慕雙潔乳</div></div>
+    <div class="quote-card">「舒特膚 Baby 版很溫和，輕輕搓就有泡沫，異膚寶寶用沒過敏，頭臭問題也少很多。」<div class="quote-source">— Dcard 親子版，Cetaphil Baby 沐浴露</div></div>
+    <div class="quote-card">「施巴 pH5.5 是醫師推薦的，缺點是起泡力稍差，但洗完皮膚真的沒有乾燥感。」<div class="quote-source">— PTT BabyMother，Sebamed 嬰兒泡泡浴露</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT 討論熱度</th>
+          <th>Dcard 熱度</th>
+          <th>媒體推薦榜</th>
+          <th>購物平台評論</th>
+          <th>好評率</th>
+          <th>主要負評關鍵字</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Mustela 慕之恬廊</strong></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><span class="level-tag level-high">超高頻出現</span></td>
+          <td>momo 5,000+ 評論</td>
+          <td><span class="level-tag level-high">97%</span></td>
+          <td>容量小、價格偏高</td>
+        </tr>
+        <tr>
+          <td><strong>Cetaphil Baby</strong></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-mid">中高頻出現</span></td>
+          <td>momo 3,000+ 評論</td>
+          <td><span class="level-tag level-high">95%</span></td>
+          <td>泡沫少、清潔力弱</td>
+        </tr>
+        <tr>
+          <td><strong>Sebamed 施巴</strong></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-mid">中頻出現</span></td>
+          <td>momo 1,500+ 評論</td>
+          <td><span class="level-tag level-mid">92%</span></td>
+          <td>起泡弱、CP 值低</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CAT 2：嬰兒澡盆
+════════════════════════════════════════ -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">2</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🛁 嬰兒澡盆</div>
+      <div class="cat-divider-desc">新生兒浴盆選購；重點考量護腰設計、收納性、使用年限與單手操作性</div>
+    </div>
+  </div>
+
+  <div class="top3-grid">
+
+    <!-- #1 Shnuggle -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">Shnuggle 月亮澡盆 <span class="user-rec">✦</span></div>
+        <div class="brand-sub">Moon Baby Bath Tub · 英國品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:88%"></div></div>
+        <div class="vol-score">88 / 100</div>
+        <div class="brand-price">NT$1,320 <span>/ 基本款（含澡盆架組合約 NT$2,879）</span></div>
+        <div class="tag-row">
+          <span class="tag hot">PTT 護腰神物</span>
+          <span class="tag hot">Dcard 爆款</span>
+          <span class="tag cool">解放雙手</span>
+          <span class="tag">U 形底座</span>
+          <span class="tag">感溫水塞</span>
+          <span class="tag">英國品牌</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>U 形底座寶寶穩如泰山</li>
+              <li>單手操作徹底解放雙手</li>
+              <li>感溫水塞即時提示水溫</li>
+              <li>PTT BabyMother 連年必推</li>
+              <li>模擬子宮環境寶寶不哭鬧</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>容量小（約 6 個月後即不適用）</li>
+              <li>無法摺疊，收納需占空間</li>
+              <li>搭配澡盆架需有適合水槽</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=shnuggle+月亮澡盆" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/月亮澡盆+shnuggle" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #2 Stokke Flexi Bath -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Stokke Flexi Bath <span class="user-rec">✦</span></div>
+        <div class="brand-sub">摺疊式浴盆套裝 · 挪威設計</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+        <div class="vol-score">82 / 100</div>
+        <div class="brand-price">NT$2,280 <span>/ 基本款（含新生兒浴架套裝約 NT$2,680）</span></div>
+        <div class="tag-row">
+          <span class="tag hot">秒折收納</span>
+          <span class="tag cool">旅行神器</span>
+          <span class="tag">感溫水塞</span>
+          <span class="tag">1.3kg 輕便</span>
+          <span class="tag">0–4 歲適用</span>
+          <span class="tag">挪威品牌</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>摺疊超薄，藏門後也行</li>
+              <li>1.3kg 輕便，出遊月子中心攜帶</li>
+              <li>感溫水塞水溫超過即變紅</li>
+              <li>底部防滑，容量大</li>
+              <li>Dcard 育兒網紅、媽咪部落格愛用</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>折疊縫隙容易發霉（需每次擦乾）</li>
+              <li>新生兒需搭配浴架才安全</li>
+              <li>價格為三者最高</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.stokke.com/zh-tw/%E6%B5%B4/stokke-flexibath/5319.html" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=stokke+flexi+bath" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/stokke+flexi+bath" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #3 mininor -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">mininor 丹麥浴缸</div>
+        <div class="brand-sub">Baby Bath Tub with Newborn Insert · 丹麥品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$1,280 <span>/ 含新生兒浴架組合</span></div>
+        <div class="tag-row">
+          <span class="tag purple">用到 7 歲</span>
+          <span class="tag">超大容量</span>
+          <span class="tag">附新生兒浴架</span>
+          <span class="tag green">抗發霉材質</span>
+          <span class="tag">CP 值最高</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>超大容量，可用到幼兒期（7 歲）</li>
+              <li>附新生兒浴架，一組搞定</li>
+              <li>材質不易發霉，清洗方便</li>
+              <li>三款中 CP 值最高</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>體積大，不易收納</li>
+              <li>外觀設計較樸素</li>
+              <li>社群討論量相對少</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=mininor+浴盆" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/mininor+澡盆" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /top3-grid -->
+
+  <div class="quote-row">
+    <div class="quote-card">「月亮澡盆真的護腰護手腕，寶寶坐進去穩穩的，單手就能洗，PTT 媽媽公認的護腰神物名不虛傳。」<div class="quote-source">— PTT BabyMother，Shnuggle 月亮澡盆</div></div>
+    <div class="quote-card">「Stokke 不用彎腰真的很讚，折疊不佔空間，順手擦乾整整一年多沒有發霉，供參考。」<div class="quote-source">— Threads @theoliviatimes，Stokke Flexi Bath</div></div>
+    <div class="quote-card">「mininor 從新生兒用到 1.5 歲，空間還是很夠，材質不發霉，CP 值在澡盆中最高。」<div class="quote-source">— PTT BabyMother，mininor 丹麥浴缸</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT 討論熱度</th>
+          <th>Dcard 熱度</th>
+          <th>媒體推薦榜</th>
+          <th>購物平台評論</th>
+          <th>好評率</th>
+          <th>主要負評關鍵字</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Shnuggle 月亮澡盆</strong></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><span class="level-tag level-high">超高頻出現</span></td>
+          <td>momo 4,000+ 評論</td>
+          <td><span class="level-tag level-high">96%</span></td>
+          <td>容量小、使用期短</td>
+        </tr>
+        <tr>
+          <td><strong>Stokke Flexi Bath</strong></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div></div></td>
+          <td><span class="level-tag level-high">高頻出現</span></td>
+          <td>momo 2,500+ 評論</td>
+          <td><span class="level-tag level-mid">93%</span></td>
+          <td>縫隙發霉、價格偏高</td>
+        </tr>
+        <tr>
+          <td><strong>mininor 丹麥浴缸</strong></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-mid">中頻出現</span></td>
+          <td>momo 800+ 評論</td>
+          <td><span class="level-tag level-high">95%</span></td>
+          <td>體積大、難收納</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CAT 3：媽媽防掉髮洗髮精
+════════════════════════════════════════ -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">3</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">💆 媽媽防掉髮洗髮精</div>
+      <div class="cat-divider-desc">產後落髮高峰期（生產後 2–6 個月）使用；重點考量強化髮根、頭皮調理、哺乳安全</div>
+    </div>
+  </div>
+
+  <div class="top3-grid">
+
+    <!-- #1 Aromase -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">艾瑪絲 Aromase</div>
+        <div class="brand-sub">強健豐盈洗髮精 · 台灣研發品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+        <div class="vol-score">82 / 100</div>
+        <div class="brand-price">NT$580 <span>/ 250ml</span></div>
+        <div class="tag-row">
+          <span class="tag hot">PTT 媽咪板熱推</span>
+          <span class="tag cool">台灣研發</span>
+          <span class="tag cool">無矽靈</span>
+          <span class="tag">迷迭香強根</span>
+          <span class="tag">頭皮調理</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>台灣研發在地品牌</li>
+              <li>迷迭香＋快樂鼠尾草強健髮根</li>
+              <li>5α 酯化鱷梨油調理頭皮油脂</li>
+              <li>無矽靈輕盈不悶頭</li>
+              <li>PTT BabyMother 媽咪落髮首推</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>初期使用缺乏滑順感（適應期）</li>
+              <li>香味較濃烈</li>
+              <li>孕哺安全性未官方聲明</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.aromase.com.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=4500500056" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://24h.pchome.com.tw/store/DDBX0U" class="buy-btn pchome" target="_blank">🟣 PChome</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #2 Mustela mama -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Mustela 慕之恬廊 <span class="user-rec">✦</span></div>
+        <div class="brand-sub">慕之孕 媽媽強髮洗髮精 Post-Partum Strengthening Shampoo</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:78%"></div></div>
+        <div class="vol-score">78 / 100</div>
+        <div class="brand-price">NT$680 <span>/ 200ml</span></div>
+        <div class="tag-row">
+          <span class="tag hot">孕產期品牌</span>
+          <span class="tag hot">哺乳安全</span>
+          <span class="tag cool">強化髮根</span>
+          <span class="tag">無矽靈</span>
+          <span class="tag">法國品牌</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>孕產品牌信任背書最完整</li>
+              <li>哺乳期可安心使用</li>
+              <li>針對產後落髮期特別設計</li>
+              <li>溫和配方不刺激頭皮</li>
+              <li>法國品質一致穩定</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>容量僅 200ml，用量快</li>
+              <li>價格偏高（680 元 / 200ml）</li>
+              <li>防落效果因人而異</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.mustela.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=mustela+強髮洗髮精" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/mustela.tw" class="buy-btn shopee" target="_blank">🧡 蝦皮官旗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- #3 Klorane -->
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">Klorane 蔻蘿蘭</div>
+        <div class="brand-sub">奎寧養髮洗髮精 Quinine Strengthening Shampoo · 法國</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:70%"></div></div>
+        <div class="vol-score">70 / 100</div>
+        <div class="brand-price">NT$445 <span>/ 400ml</span></div>
+        <div class="tag-row">
+          <span class="tag purple">奎寧萃取</span>
+          <span class="tag">咖啡因強根</span>
+          <span class="tag cool">維生素 B 群</span>
+          <span class="tag">法國植萃</span>
+          <span class="tag">400ml 大容量</span>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list">
+              <li>法國老牌植萃品牌</li>
+              <li>奎寧＋咖啡因雙重強化髮根</li>
+              <li>複合維生素 B 促進頭皮循環</li>
+              <li>400ml 大容量 CP 值高</li>
+              <li>防掉髮媒體排行榜常客</li>
+            </ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list">
+              <li>油性頭皮清潔力不足</li>
+              <li>需搭配養護品效果才明顯</li>
+              <li>哺乳安全性未特別說明</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=2938813" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/klorane+奎寧洗髮精" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /top3-grid -->
+
+  <div class="quote-row">
+    <div class="quote-card">「艾瑪絲真的有感！產後洗了兩個月，排水孔頭髮明顯少很多，PTT 上媽咪板推薦度超高。」<div class="quote-source">— PTT BabyMother，艾瑪絲強健豐盈洗髮精</div></div>
+    <div class="quote-card">「Mustela 孕產期品牌信任度高，哺乳中也能用，雖然容量小，但成分溫和讓人放心。」<div class="quote-source">— Dcard 親子版，Mustela 強髮洗髮精</div></div>
+    <div class="quote-card">「蔻蘿蘭奎寧洗完頭皮感覺很乾淨，400ml 很划算，防掉效果算有感，排水孔少一些。」<div class="quote-source">— Dcard 美妝版，Klorane 奎寧養髮洗髮精</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT 討論熱度</th>
+          <th>Dcard 熱度</th>
+          <th>媒體推薦榜</th>
+          <th>購物平台評論</th>
+          <th>好評率</th>
+          <th>主要負評關鍵字</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>艾瑪絲 Aromase</strong></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-high">高頻出現</span></td>
+          <td>momo 3,000+ 評論</td>
+          <td><span class="level-tag level-high">95%</span></td>
+          <td>香味濃、初期無滑順感</td>
+        </tr>
+        <tr>
+          <td><strong>Mustela 慕之恬廊</strong></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-mid">中高頻出現</span></td>
+          <td>momo 1,500+ 評論</td>
+          <td><span class="level-tag level-high">96%</span></td>
+          <td>容量小、防落效果因人而異</td>
+        </tr>
+        <tr>
+          <td><strong>Klorane 蔻蘿蘭</strong></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td>
+          <td><span class="level-tag level-mid">中頻出現</span></td>
+          <td>momo 2,000+ 評論</td>
+          <td><span class="level-tag level-mid">92%</span></td>
+          <td>油頭清潔不足、需配套使用</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ CONCLUSION ══ -->
+<div class="section">
+  <div class="section-label">INSIGHT</div>
+  <div class="section-title">選品結論與建議</div>
+  <div class="conclusion-grid">
+    <div class="conclusion-card">
+      <h3>🧴 寶寶洗沐：信任度優先選品</h3>
+      <ul>
+        <li>新生兒首選 Mustela 多慕雙潔乳（聲量最高、敏感肌媽咪首推）</li>
+        <li>異膚或過敏體質選 Cetaphil Baby（金盞花+B5，皮膚科背書）</li>
+        <li>德系品牌偏好者選施巴（pH5.5 最接近皮膚自然酸鹼值）</li>
+        <li>三款皆無刺激性防腐劑，新生兒安全使用無虞</li>
+      </ul>
+    </div>
+    <div class="conclusion-card teal">
+      <h3>🛁 澡盆：使用情境決定選擇</h3>
+      <ul>
+        <li>單人照顧、護腰首選月亮澡盆（U 形底座解放雙手）</li>
+        <li>小空間或常出遊選 Stokke Flexi Bath（摺疊輕便，感溫水塞）</li>
+        <li>追求長效使用、CP 值高選 mininor（可用到 7 歲）</li>
+        <li>Stokke 發霉問題需主動告知客戶維護方式</li>
+      </ul>
+    </div>
+    <div class="conclusion-card green">
+      <h3>💆 防掉髮：洗髮精是輔助非萬能</h3>
+      <ul>
+        <li>產後落髮主因為荷爾蒙，洗髮精僅輔助頭皮環境</li>
+        <li>哺乳中優先選 Mustela（孕產品牌安全背書最完整）</li>
+        <li>PTT 媽咪板聲量首選艾瑪絲（台灣研發、頭皮調理強）</li>
+        <li>預算優先選蔻蘿蘭（400ml，防掉效果已有感反饋）</li>
+      </ul>
+    </div>
+    <div class="conclusion-card purple">
+      <h3>📊 聲量 vs. 口碑落差分析</h3>
+      <ul>
+        <li>Mustela 洗沐聲量碾壓競品，適合主推核心嬰兒洗沐品類</li>
+        <li>月亮澡盆口碑與聲量皆高，選品風險極低</li>
+        <li>Stokke 高聲量但發霉是共同痛點，需搭配使用說明</li>
+        <li>艾瑪絲防掉髮聲量高於 Mustela，但哺乳安全背書不如 Mustela</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="report-footer">
+  <div>
+    <div class="footer-brand">CYORA Market Intelligence</div>
+    <div class="footer-disclaimer">本報告聲量指數為人工估算，非官方統計數據，僅供 CYORA 內部品類規劃參考。所有數值基於公開平台資訊整合，不代表任何平台官方立場。</div>
+  </div>
+  <div class="footer-sources">
+    資料來源：PTT BabyMother、Dcard 親子版、媽咪愛 MamiBuy、MomBB、momo 購物網、蝦皮購物<br>
+    調查日期：2026 年 5 月 ｜ 產製：CYORA Team
+  </div>
+</div>
+
+</div><!-- /report-wrap -->
+</body>
+</html>

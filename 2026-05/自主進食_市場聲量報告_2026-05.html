@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自主進食｜市場聲量報告 2026.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root {
+    --navy:#0f1b35; --navy2:#1a2d52; --accent:#e8834a; --teal:#3db8c4;
+    --gold:#f0c040; --light:#f5f7fa; --white:#ffffff; --text:#1a1a2e;
+    --muted:#6b7280; --rank1:#e8834a; --rank2:#3db8c4; --rank3:#8b7fd4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#e8edf5;color:var(--text);font-size:15px;line-height:1.6;}
+  .report-wrap{max-width:1280px;margin:32px auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.18);background:var(--white);}
+
+  /* COVER */
+  .cover{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#24416e 100%);color:var(--white);padding:56px 80px 52px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;}
+  .cover::before{content:'';position:absolute;right:-60px;top:-80px;width:420px;height:420px;border-radius:50%;background:rgba(61,184,196,0.12);}
+  .cover::after{content:'';position:absolute;right:100px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:rgba(232,131,74,0.10);}
+  .cover-left{position:relative;z-index:1;}
+  .cover-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:500;letter-spacing:1px;margin-bottom:16px;color:rgba(255,255,255,0.85);}
+  .cover h1{font-size:48px;font-weight:900;line-height:1.1;margin-bottom:12px;letter-spacing:-0.5px;}
+  .cover h1 span{color:var(--teal);}
+  .cover-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;margin-top:10px;}
+  .cover-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .cover-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:20px;padding:4px 14px;font-size:12px;color:rgba(255,255,255,0.8);}
+  .cover-meta{position:relative;z-index:1;text-align:right;}
+  .cover-meta .period{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+  .cover-meta .date-big{font-size:36px;font-weight:700;color:var(--white);letter-spacing:-0.5px;}
+  .cover-meta .cat-count strong{color:var(--teal);font-size:22px;font-weight:900;display:block;}
+  .cover-meta .cat-count{font-size:13px;color:rgba(255,255,255,0.45);margin-top:10px;}
+
+  /* SECTION */
+  .section{padding:48px 80px;border-bottom:1px solid #eef0f4;}
+  .section:last-child{border-bottom:none;}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--teal);text-transform:uppercase;margin-bottom:6px;}
+  .section-title{font-size:26px;font-weight:800;color:var(--navy);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid #eef0f4;}
+
+  /* OVERVIEW */
+  .overview-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .overview-card{border-radius:12px;background:var(--light);padding:18px 14px;text-align:center;border:1.5px solid #eef0f4;transition:box-shadow .2s;}
+  .overview-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.09);}
+  .overview-icon{font-size:30px;margin-bottom:8px;}
+  .overview-cat{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+  .overview-top1{font-size:10px;color:var(--teal);font-weight:600;}
+
+  /* METHODOLOGY */
+  .method-section{padding:36px 80px;background:#f8f9fc;border-bottom:1px solid #eef0f4;}
+  .method-toggle{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;list-style:none;}
+  .method-toggle::marker{display:none;}
+  .method-toggle-title{font-size:13px;font-weight:700;color:var(--navy);}
+  details[open] .method-toggle-sub::before{content:'收合 ▲';}
+  details:not([open]) .method-toggle-sub::before{content:'展開查看方法論 ▼';color:var(--accent);}
+  .method-toggle-sub{margin-left:auto;font-size:11px;color:var(--muted);}
+  .method-body{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .method-card{background:var(--white);border-radius:10px;padding:18px 20px;border:1.5px solid #eef0f4;}
+  .method-card h4{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+  .method-weight{margin-left:auto;background:var(--accent);color:white;font-size:11px;font-weight:700;padding:1px 8px;border-radius:8px;}
+  .method-card p,.method-card li{font-size:11.5px;color:#374151;line-height:1.8;}
+  .method-card ul{list-style:none;padding:0;}
+  .method-card ul li::before{content:'· ';color:var(--muted);}
+  .score-table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px;}
+  .score-table th{background:var(--navy);color:white;padding:6px 10px;text-align:left;font-size:11px;}
+  .score-table td{padding:6px 10px;border-bottom:1px solid #f0f2f5;}
+  .score-table tr:last-child td{border-bottom:none;}
+  .method-disclaimer{margin-top:14px;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;font-size:11px;color:#92400e;line-height:1.7;}
+
+  /* CAT DIVIDER */
+  .cat-divider{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:2px solid #eef0f4;}
+  .cat-num{width:32px;height:32px;border-radius:50%;background:var(--navy);color:white;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .cat-divider-name{font-size:20px;font-weight:800;color:var(--navy);}
+  .cat-divider-desc{font-size:12px;color:var(--muted);}
+
+  /* TOP 3 CARDS */
+  .top3-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:28px;}
+  .brand-card{border-radius:14px;overflow:hidden;border:1.5px solid #eef0f4;transition:box-shadow .2s;}
+  .brand-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.10);}
+  .brand-card-header{padding:18px 22px 14px;position:relative;}
+  .brand-card:nth-child(1) .brand-card-header{background:linear-gradient(135deg,#fff4ee,#ffeee0);border-bottom:3px solid var(--rank1);}
+  .brand-card:nth-child(2) .brand-card-header{background:linear-gradient(135deg,#edfbfc,#d6f5f7);border-bottom:3px solid var(--rank2);}
+  .brand-card:nth-child(3) .brand-card-header{background:linear-gradient(135deg,#f3f0ff,#e8e2fb);border-bottom:3px solid var(--rank3);}
+  .rank-badge{position:absolute;top:14px;right:16px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--white);}
+  .brand-card:nth-child(1) .rank-badge{background:var(--rank1);}
+  .brand-card:nth-child(2) .rank-badge{background:var(--rank2);}
+  .brand-card:nth-child(3) .rank-badge{background:var(--rank3);}
+  .brand-name{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:1px;}
+  .brand-sub{font-size:11px;color:var(--muted);font-weight:400;}
+  .user-rec{display:inline;font-size:11px;color:var(--rank1);font-weight:700;margin-left:4px;}
+  .brand-card-body{padding:16px 22px;background:var(--white);}
+  .vol-label{font-size:10px;font-weight:600;color:var(--muted);margin-bottom:5px;letter-spacing:0.5px;}
+  .vol-bar-track{background:#f0f2f5;border-radius:6px;height:8px;margin-bottom:3px;overflow:hidden;}
+  .vol-bar-fill{height:100%;border-radius:6px;}
+  .brand-card:nth-child(1) .vol-bar-fill{background:linear-gradient(90deg,var(--rank1),#f0a070);}
+  .brand-card:nth-child(2) .vol-bar-fill{background:linear-gradient(90deg,var(--rank2),#70d8e0);}
+  .brand-card:nth-child(3) .vol-bar-fill{background:linear-gradient(90deg,var(--rank3),#b0a0e8);}
+  .vol-score{font-size:12px;font-weight:700;text-align:right;margin-bottom:12px;}
+  .brand-card:nth-child(1) .vol-score{color:var(--rank1);}
+  .brand-card:nth-child(2) .vol-score{color:var(--rank2);}
+  .brand-card:nth-child(3) .vol-score{color:var(--rank3);}
+  .brand-price{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+  .brand-price span{font-size:11px;font-weight:400;color:var(--muted);margin-left:4px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
+  .tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:10px;background:#f0f2f5;color:var(--text);}
+  .tag.hot{background:#fff0e8;color:var(--rank1);}
+  .tag.cool{background:#e8f9fb;color:#2a9aa6;}
+  .tag.purple{background:#f0eeff;color:#6b5ad4;}
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:10px;border-top:1px dashed #eef0f4;}
+  .pros-cons-label{font-size:9px;font-weight:700;letter-spacing:0.8px;color:var(--muted);margin-bottom:4px;}
+  .pros-cons-list{list-style:none;font-size:11px;line-height:1.7;}
+  .pros-list li::before{content:'✓ ';color:#3db870;font-weight:700;}
+  .cons-list li::before{content:'✕ ';color:#e85050;font-weight:700;}
+  .buy-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;padding-top:10px;border-top:1px dashed #eef0f4;}
+  .buy-btn{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;padding:3px 9px;border-radius:10px;text-decoration:none;transition:opacity .15s;}
+  .buy-btn:hover{opacity:.8;}
+  .buy-btn.official{background:#f0f2f5;color:var(--navy);}
+  .buy-btn.momo{background:#fff0f0;color:#d4303a;}
+  .buy-btn.shopee{background:#fff4ee;color:var(--rank1);}
+  .buy-btn.review{background:#edfbfc;color:#2a9aa6;}
+  .buy-btn.pchome{background:#f0eeff;color:#6b5ad4;}
+
+  /* PLATFORM TABLE */
+  .platform-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .platform-table th{padding:10px 14px;background:var(--navy);color:var(--white);font-weight:600;text-align:left;font-size:11px;letter-spacing:0.5px;}
+  .platform-table th:first-child{border-radius:8px 0 0 0;}
+  .platform-table th:last-child{border-radius:0 8px 0 0;}
+  .platform-table td{padding:10px 14px;border-bottom:1px solid #eef0f4;vertical-align:middle;}
+  .platform-table tr:last-child td{border-bottom:none;}
+  .platform-table tr:nth-child(even) td{background:#f8f9fc;}
+  .heat-dots{display:flex;gap:3px;align-items:center;}
+  .dot{width:9px;height:9px;border-radius:50%;background:#ddd;}
+  .dot.on{background:var(--rank1);}
+  .dot.on2{background:var(--rank2);}
+  .dot.on3{background:var(--rank3);}
+  .level-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;}
+  .level-high{background:#fff0e8;color:var(--rank1);}
+  .level-mid{background:#e8f9fb;color:#2a9aa6;}
+  .level-low{background:#f5f5f5;color:var(--muted);}
+
+  /* CONCLUSION */
+  .conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .conclusion-card{background:var(--light);border-radius:12px;padding:22px;border-left:4px solid var(--teal);}
+  .conclusion-card.orange{border-left-color:var(--accent);}
+  .conclusion-card.purple{border-left-color:var(--rank3);}
+  .conclusion-card h3{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+  .conclusion-card p,.conclusion-card li{font-size:12.5px;color:#374151;line-height:1.8;}
+  .conclusion-card ul{list-style:none;padding:0;}
+  .conclusion-card ul li::before{content:'→ ';color:var(--teal);font-weight:700;}
+  .conclusion-card.orange ul li::before{color:var(--accent);}
+  .conclusion-card.purple ul li::before{color:var(--rank3);}
+
+  /* FOOTER */
+  .report-footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:18px 80px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:0.3px;}
+  .footer-brand{color:rgba(255,255,255,0.7);font-weight:600;}
+  .footer-disclaimer{font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;}
+  .footer-sources a{color:rgba(255,255,255,0.45);text-decoration:none;}
+  .footer-sources a:hover{color:rgba(255,255,255,0.7);}
+
+  @media print{body{background:white;}.report-wrap{box-shadow:none;margin:0;}}
+
+  /* ══ CROSS-REPORT TAB NAV ══ */
+  .report-nav-wrap {
+    position: sticky; top: 0; z-index: 200;
+    background: #0a1428;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.30);
+  }
+  .report-nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; align-items: center;
+  }
+  .report-nav-home {
+    color: rgba(255,255,255,0.40);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 13px 16px 13px 0;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    margin-right: 6px;
+    white-space: nowrap;
+    transition: color .18s;
+    flex-shrink: 0;
+  }
+  .report-nav-home:hover { color: rgba(255,255,255,0.85); }
+  .report-nav-tabs {
+    display: flex; align-items: stretch;
+    overflow-x: auto; gap: 0;
+  }
+  .rnt {
+    padding: 13px 20px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    color: rgba(255,255,255,0.38);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color .18s, border-color .18s, background .18s;
+  }
+  .rnt:hover { color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.04); }
+  .rnt.active { color: #fff; }
+  .rnt-sleep.active { border-bottom-color: #e87c40; }
+  .rnt-food.active  { border-bottom-color: #3ab8b0; }
+  .rnt-bath.active  { border-bottom-color: #52b788; }
+  .rnt-poop.active  { border-bottom-color: #d4a820; }
+
+</style>
+</head>
+<body>
+
+<div class="report-nav-wrap">
+  <div class="report-nav-inner">
+    <a class="report-nav-home" href="../index.html">← Hub 總覽</a>
+    <div class="report-nav-tabs">
+      <a class="rnt rnt-sleep" href="孕期好眠_市場聲量報告_2026-05.html">🌛 孕期好眠</a>
+      <a class="rnt rnt-food active" href="自主進食_市場聲量報告_2026-05.html">🥣 自主進食</a>
+      <a class="rnt rnt-bath" href="新生兒沐浴_市場聲量報告_2026-05.html">🛁 新生兒沐浴</a>
+      <a class="rnt rnt-poop" href="寶寶炸屎危機_市場聲量報告_2026-05.html">💩 寶寶炸屎危機</a>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">CYORA MARKET INTEL · 主題報告</div>
+      <h1>自主<span>進食</span><br>市場聲量調查</h1>
+      <div class="cover-sub">5 大品類 × Top 3 品牌 × 台灣社群聲量分析</div>
+      <div class="cover-pills">
+        <span class="cover-pill">副食品分裝保存盒</span>
+        <span class="cover-pill">食物處理機</span>
+        <span class="cover-pill">磨牙餅（長型）</span>
+        <span class="cover-pill">米餅</span>
+        <span class="cover-pill">寶寶餐具</span>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間 2025.01 — 2026.05</div>
+      <div class="date-big">2026.05</div>
+      <div class="cat-count"><strong>5</strong>品類涵蓋</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;">資料來源：PTT・Dcard・媒體排行・購物平台</div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <div class="section-label">OVERVIEW</div>
+    <div class="section-title">5 品類聲量概覽</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-icon">🧊</div>
+        <div class="overview-cat">副食品分裝盒</div>
+        <div class="overview-top1"># 2angels</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🍲</div>
+        <div class="overview-cat">食物處理機</div>
+        <div class="overview-top1"># chicco</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🦷</div>
+        <div class="overview-cat">磨牙餅（長型）</div>
+        <div class="overview-top1"># ibobomi</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🍘</div>
+        <div class="overview-cat">米餅</div>
+        <div class="overview-top1"># 無毒農</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🥣</div>
+        <div class="overview-cat">寶寶餐具</div>
+        <div class="overview-top1"># MOYUUM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="method-section">
+    <details>
+      <summary class="method-toggle">
+        <span style="font-size:16px;">📐</span>
+        <span class="method-toggle-title">聲量指數估算方法論</span>
+        <span style="font-size:11px;color:#6b7280;">（點擊展開，建議內部討論前閱讀）</span>
+        <span class="method-toggle-sub"></span>
+      </summary>
+      <div class="method-body">
+        <div class="method-card">
+          <h4>📌 資料蒐集流程 <span class="method-weight" style="background:var(--navy);">Step 1–3</span></h4>
+          <ul>
+            <li><strong>Step 1：</strong>「[品類] 台灣 品牌 推薦 2024 2025」確認候選品牌名單</li>
+            <li><strong>Step 2：</strong>「[品牌] [品類] PTT 評價」+ 「[品牌] [品類] dcard 推薦」個別搜尋</li>
+            <li><strong>Step 3：</strong>抓取代表性評測或討論串，提取正負評關鍵字</li>
+            <li><strong>搜尋時間窗口：</strong>2024.01 — 2026.05</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h4>⚖️ 聲量指數計算權重</h4>
+          <table class="score-table">
+            <thead><tr><th>資料來源</th><th>權重</th><th>評估方式</th></tr></thead>
+            <tbody>
+              <tr><td>PTT BabyMother 討論串數</td><td><strong>30%</strong></td><td>搜尋結果筆數＋回文熱度</td></tr>
+              <tr><td>Dcard 親子版提及頻率</td><td><strong>25%</strong></td><td>搜尋結果筆數＋互動數</td></tr>
+              <tr><td>媒體/部落格排行出現次數</td><td><strong>25%</strong></td><td>「推薦排行」榜出現頻率</td></tr>
+              <tr><td>momo / 蝦皮評論數量</td><td><strong>20%</strong></td><td>購物平台評論數</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="method-card">
+          <h4>📊 分數計算說明</h4>
+          <ul>
+            <li>各品牌在每個資料源以 0–5 分估算，依權重加權得 0–100 指數</li>
+            <li>為<strong>同品類品牌間相對比較</strong>，跨品類指數不可直接比較</li>
+            <li>聲量最高 ≠ 市佔最高，需搭配銷售數據交叉驗證</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h4>⚠️ 已知限制</h4>
+          <ul>
+            <li>搜尋結果受 Google 演算法影響，SEO 強的品牌可能高估</li>
+            <li>PTT/Dcard 使用者以 25–35 歲女性為主，不代表全體客群</li>
+            <li>新品牌進市場時間短，聲量可能被低估</li>
+            <li>建議搭配實際用戶訪談做交叉驗證</li>
+          </ul>
+        </div>
+      </div>
+      <div class="method-disclaimer">⚠️ 本報告所有聲量指數均為<strong>非官方人工估算數值</strong>，僅供參考與內部討論使用，不得作為投資決策、財務預測或對外宣傳之依據。</div>
+    </details>
+  </div>
+
+  <!-- CAT 1：副食品分裝保存盒 -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">1</div>
+      <div>
+        <div class="cat-divider-name">🧊 副食品分裝保存盒</div>
+        <div class="cat-divider-desc">食品級矽膠冷凍分裝・PTT BabyMother 熱議品類・✦ 2angels</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">2angels <span class="user-rec">✦</span></div>
+          <div class="brand-sub">矽膠副食品製冰盒＋儲存杯｜台灣製造</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+          <div class="vol-score">82 / 100</div>
+          <div class="brand-price">NT$390 <span>起 / 組</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT 高提及</span>
+            <span class="tag cool">德國 LFGB 認證</span>
+            <span class="tag">台灣 MIT</span>
+            <span class="tag">可消毒</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>德國最高標準食品認證</li>
+                <li>盒＋杯兩形態靈活使用</li>
+                <li>台灣製造信賴感高</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>蓋子冷凍後密合度差</li>
+                <li>鎖扣久用易斷</li>
+                <li>初開封有燒焦味</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shop.2angelsbaby.com/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=5306855" target="_blank" class="buy-btn momo">momo 三件組</a>
+            <a href="https://www.ptt.cc/bbs/BabyMother/M.1684126498.A.BB2.html" target="_blank" class="buy-btn review">PTT 討論 ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">TGM</div>
+          <div class="brand-sub">韓國白金矽膠冷凍儲存盒</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$350 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag cool">4 種尺寸</span>
+            <span class="tag">好脫模</span>
+            <span class="tag">韓國品牌</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>4 種尺寸選擇彈性大</li>
+                <li>密合度佳、好脫模</li>
+                <li>耐冷耐熱性好</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>洗碗機久洗可能染色</li>
+                <li>台灣能見度低於 2angels</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=TGM+%E5%89%AF%E9%A3%9F%E5%93%81+%E5%88%86%E8%A3%9D%E7%9B%92" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=TGM+%E5%89%AF%E9%A3%9F%E5%93%81%E5%88%86%E8%A3%9D%E7%9B%92" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">MOYUUM</div>
+          <div class="brand-sub">韓國白金矽膠分裝盒</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$490 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag purple">療癒設計</span>
+            <span class="tag">3 種尺寸</span>
+            <span class="tag">韓國品牌</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>好脫模省時省力</li>
+                <li>顏色款式療癒</li>
+                <li>品牌整體評價高</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格為三者最高</li>
+                <li>尺寸選擇少於 TGM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2704100273" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://shopee.tw/search?keyword=MOYUUM+%E5%88%86%E8%A3%9D%E7%9B%92" target="_blank" class="buy-btn shopee">蝦皮</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT BabyMother</th><th>Dcard 親子板</th><th>媒體/部落格</th><th>蝦皮/momo</th><th>好評率</th><th>主要負評</th></tr></thead>
+      <tbody>
+        <tr><td><strong><a href="https://shop.2angelsbaby.com/" target="_blank" style="color:var(--navy);text-decoration:none;">2angels ↗</a></strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-high">3,000+ 評</span></td><td>83%</td><td>蓋子密合度</td></tr>
+        <tr><td><strong>TGM</strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">1,500+ 評</span></td><td>85%</td><td>洗碗機染色</td></tr>
+        <tr><td><strong>MOYUUM</strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">1,200+ 評</span></td><td>87%</td><td>價格偏高</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CAT 2：食物處理機 -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">2</div>
+      <div>
+        <div class="cat-divider-name">🍲 食物處理機（副食品調理機）</div>
+        <div class="cat-divider-desc">蒸煮＋攪拌一機完成・副食品製作省時神器・✦ chicco</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">chicco <span class="user-rec">✦</span></div>
+          <div class="brand-sub">多功能食物調理機｜義大利品牌</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:80%"></div></div>
+          <div class="vol-score">80 / 100</div>
+          <div class="brand-price">NT$3,980 <span>起</span></div>
+          <div class="tag-row">
+            <span class="tag hot">部落格高頻推薦</span>
+            <span class="tag cool">四合一功能</span>
+            <span class="tag">義大利品牌</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>切割蒸煮攪拌加熱一機</li>
+                <li>無需顧爐解放雙手</li>
+                <li>附食譜零廚藝也能上手</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>清洗零件較多</li>
+                <li>容量相對法國品牌小</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.chicco.com.tw/products/easy-mealsteam-cooker-1" target="_blank" class="buy-btn official">🛍 chicco 官網</a>
+            <a href="https://shopee.tw/search?keyword=chicco+%E9%A3%9F%E7%89%A9%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=chicco+%E9%A3%9F%E7%89%A9%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">BÉABA</div>
+          <div class="brand-sub">法國嬰兒食物調理機</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+          <div class="vol-score">68 / 100</div>
+          <div class="brand-price">NT$5,980 <span>起</span></div>
+          <div class="tag-row">
+            <span class="tag cool">法國品牌</span>
+            <span class="tag">1100ml 大容量</span>
+            <span class="tag">單手操作</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>1100ml 大容量一次多天份</li>
+                <li>直覺操作單手按鈕</li>
+                <li>法國品牌品質好</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格最高</li>
+                <li>體積大佔空間</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=BEABA+%E5%89%AF%E9%A3%9F%E5%93%81%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=BEABA+%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">Philips Avent</div>
+          <div class="brand-sub">四合一嬰兒食物蒸煮攪拌器</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$3,280 <span>起</span></div>
+          <div class="tag-row">
+            <span class="tag purple">全球知名品牌</span>
+            <span class="tag">1000ml 蒸煮</span>
+            <span class="tag">翻轉攪拌</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>品牌信賴度最高</li>
+                <li>蒸煮保留食材營養</li>
+                <li>價格最平實</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>攪拌容量僅 720ml</li>
+                <li>功能較其他兩款基本</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=Philips+Avent+%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Philips+Avent+%E8%AA%BF%E7%90%86%E6%A9%9F" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT BabyMother</th><th>Dcard 親子板</th><th>媒體/部落格</th><th>蝦皮/momo</th><th>好評率</th><th>主要負評</th></tr></thead>
+      <tbody>
+        <tr><td><strong><a href="https://www.chicco.com.tw/products/easy-mealsteam-cooker-1" target="_blank" style="color:var(--navy);text-decoration:none;">chicco ↗</a></strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-high">2,500+ 評</span></td><td>88%</td><td>清洗零件多</td></tr>
+        <tr><td><strong>BÉABA</strong></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">1,200+ 評</span></td><td>87%</td><td>價格高體積大</td></tr>
+        <tr><td><strong>Philips Avent</strong></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-high">2,000+ 評</span></td><td>85%</td><td>攪拌容量小</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CAT 3：磨牙餅（長型） -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">3</div>
+      <div>
+        <div class="cat-divider-name">🦷 磨牙餅（長型）</div>
+        <div class="cat-divider-desc">6m＋練習抓握・低添加長棒型磨牙零食・✦ ibobomi</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">ibobomi <span class="user-rec">✦</span></div>
+          <div class="brand-sub">韓國嬰兒長棒型磨牙餅</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:88%"></div></div>
+          <div class="vol-score">88 / 100</div>
+          <div class="brand-price">NT$75 <span>起 / 30g</span></div>
+          <div class="tag-row">
+            <span class="tag hot">Dcard 銷量 10 萬＋包</span>
+            <span class="tag cool">韓國國產原料</span>
+            <span class="tag">無添加</span>
+            <span class="tag">入口即化</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>長棒型易抓握練習</li>
+                <li>入口即化不嗆噎</li>
+                <li>無糖無鹽無添加</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>曾有重金屬疑慮（已聲明）</li>
+                <li>進口批次價格波動</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2007100124" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://shopee.tw/mall/search?keyword=ibobomi" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://24h.pchome.com.tw/store/DBAEHV" target="_blank" class="buy-btn pchome">PChome</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">郭老師烘焙坊</div>
+          <div class="brand-sub">台灣烘焙磨牙餅</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$120 <span>起 / 包</span></div>
+          <div class="tag-row">
+            <span class="tag cool">台灣製造</span>
+            <span class="tag">烘焙工法</span>
+            <span class="tag">無防腐劑</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>台灣製造食安有保障</li>
+                <li>烘焙工法口感酥脆</li>
+                <li>媽媽社群口碑穩定</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>口味選擇較少</li>
+                <li>線上能見度低</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=%E9%83%AD%E8%80%81%E5%B8%AB+%E7%A3%A8%E7%89%99%E9%A4%85" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E9%83%AD%E8%80%81%E5%B8%AB+%E7%A3%A8%E7%89%99%E9%A4%85" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">寶寶的秘密（牧菓）</div>
+          <div class="brand-sub">台灣有機糙米磨牙棒</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:58%"></div></div>
+          <div class="vol-score">58 / 100</div>
+          <div class="brand-price">NT$130 <span>起 / 包</span></div>
+          <div class="tag-row">
+            <span class="tag purple">台灣有機認證</span>
+            <span class="tag">糙米原料</span>
+            <span class="tag">月齡分級</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>有機認證最安心</li>
+                <li>依月齡設計口感</li>
+                <li>成分單純透明</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格較高</li>
+                <li>討論聲量相對低</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=%E5%AF%B6%E5%AF%B6%E7%9A%84%E7%A7%98%E5%AF%86+%E7%A3%A8%E7%89%99" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E5%AF%B6%E5%AF%B6%E7%9A%84%E7%A7%98%E5%AF%86" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT BabyMother</th><th>Dcard 親子板</th><th>媒體/部落格</th><th>蝦皮/momo</th><th>好評率</th><th>主要負評</th></tr></thead>
+      <tbody>
+        <tr><td><strong><a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2007100124" target="_blank" style="color:var(--navy);text-decoration:none;">ibobomi ↗</a></strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-high">5,000+ 評</span></td><td>91%</td><td>重金屬疑慮聲明</td></tr>
+        <tr><td><strong>郭老師烘焙坊</strong></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">1,000+ 評</span></td><td>87%</td><td>口味少</td></tr>
+        <tr><td><strong>寶寶的秘密</strong></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-low">800+ 評</span></td><td>88%</td><td>價格偏高</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CAT 4：米餅 -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">4</div>
+      <div>
+        <div class="cat-divider-name">🍘 米餅</div>
+        <div class="cat-divider-desc">6m＋副食品零食首選・低鈉低添加・✦ 無毒農</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">無毒農 <span class="user-rec">✦</span></div>
+          <div class="brand-sub">台灣友善農業米餅</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+          <div class="vol-score">75 / 100</div>
+          <div class="brand-price">NT$100 <span>起 / 包</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT 推薦</span>
+            <span class="tag cool">台灣品牌</span>
+            <span class="tag">友善農業</span>
+            <span class="tag">長條形好抓</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>台灣友善農業品牌</li>
+                <li>天然口味（草莓、原味）</li>
+                <li>長條形易抓握</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>通路相對集中網路</li>
+                <li>口味種類較少</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=%E7%84%A1%E6%AF%92%E8%BE%B2+%E7%B1%B3%E9%A4%85" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E7%84%A1%E6%AF%92%E8%BE%B2+%E7%B1%B3%E9%A4%85" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://www.ptt.cc/bbs/BabyMother/M.1653378503.A.9C3.html" target="_blank" class="buy-btn review">PTT 評測 ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">ibobomi</div>
+          <div class="brand-sub">韓國嬰兒米餅（圓形）</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:80%"></div></div>
+          <div class="vol-score">80 / 100</div>
+          <div class="brand-price">NT$75 <span>起 / 30g</span></div>
+          <div class="tag-row">
+            <span class="tag cool">韓國國產原料</span>
+            <span class="tag">米＋水果粉</span>
+            <span class="tag">零添加</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>成分極簡（米＋水果粉）</li>
+                <li>低鈉低糖最受推薦</li>
+                <li>Dcard 媽媽高度討論</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>進口批次穩定性</li>
+                <li>外觀普通不吸睛</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2007100124" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://shopee.tw/mall/search?keyword=ibobomi" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://24h.pchome.com.tw/store/DBAEHV" target="_blank" class="buy-btn pchome">PChome</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">宜蘭五結農會夢田</div>
+          <div class="brand-sub">台灣農會出品米菓</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:60%"></div></div>
+          <div class="vol-score">60 / 100</div>
+          <div class="brand-price">NT$65 <span>起 / 包</span></div>
+          <div class="tag-row">
+            <span class="tag purple">農會掛保證</span>
+            <span class="tag">CP值最高</span>
+            <span class="tag">台灣</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>農會出品食安信賴高</li>
+                <li>三者中 CP 值最高</li>
+                <li>宜蘭在地好米</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>口味較少較傳統</li>
+                <li>品牌行銷能見度低</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=%E4%BA%94%E7%B5%90%E8%BE%B2%E6%9C%83+%E7%B1%B3%E9%A4%85" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E4%BA%94%E7%B5%90%E8%BE%B2%E6%9C%83+%E7%B1%B3%E9%A4%85" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT BabyMother</th><th>Dcard 親子板</th><th>媒體/部落格</th><th>蝦皮/momo</th><th>好評率</th><th>主要負評</th></tr></thead>
+      <tbody>
+        <tr><td><strong>無毒農</strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-mid">1,500+ 評</span></td><td>88%</td><td>口味較少</td></tr>
+        <tr><td><strong><a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2007100124" target="_blank" style="color:var(--navy);text-decoration:none;">ibobomi ↗</a></strong></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span></div></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-high">4,000+ 評</span></td><td>89%</td><td>進口批次</td></tr>
+        <tr><td><strong>宜蘭五結農會</strong></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">800+ 評</span></td><td>90%</td><td>能見度低</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CAT 5：寶寶餐具 -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">5</div>
+      <div>
+        <div class="cat-divider-name">🥣 寶寶餐具（吸盤碗＋餐盤）</div>
+        <div class="cat-divider-desc">BLW 自主進食輔助・矽膠防翻吸盤設計・✦ bluemama・MOYUUM・minikoioi</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">MOYUUM <span class="user-rec">✦</span></div>
+          <div class="brand-sub">韓國矽膠吸盤碗＋餐具組</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+          <div class="vol-score">85 / 100</div>
+          <div class="brand-price">NT$580 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag hot">Dcard 顏值控首選</span>
+            <span class="tag cool">吸盤力超強</span>
+            <span class="tag">可入洗碗機</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>吸盤吸力為三者最強</li>
+                <li>可入洗碗機不變形</li>
+                <li>款式顏色療癒多元</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>矽膠需注意卡味問題</li>
+                <li>價格偏高</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2704100273" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://shopee.tw/search?keyword=MOYUUM+%E5%90%B8%E7%9B%A4%E7%A2%97" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.dcard.tw/f/parentchild/p/253917892" target="_blank" class="buy-btn review">Dcard 評比 ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">minikoioi <span class="user-rec">✦</span></div>
+          <div class="brand-sub">土耳其矽膠拼圖分格餐盤</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+          <div class="vol-score">75 / 100</div>
+          <div class="brand-price">NT$680 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag cool">材質最厚實</span>
+            <span class="tag">拼圖可拆洗</span>
+            <span class="tag">BLW 適合</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>矽膠材質最厚實耐用</li>
+                <li>拼圖設計可拆分清洗</li>
+                <li>BLW 初期首選</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>台灣售後支援有限</li>
+                <li>品牌能見度低於 MOYUUM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=minikoioi+%E9%A4%90%E7%9B%A4" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=minikoioi" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">bluemama <span class="user-rec">✦</span></div>
+          <div class="brand-sub">台灣防翻矽膠吸盤碗</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$380 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag purple">台灣品牌</span>
+            <span class="tag">防翻倒設計</span>
+            <span class="tag">CP 值高</span>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>防翻倒掉飯最少</li>
+                <li>台灣品牌售後方便</li>
+                <li>三者中價格最平實</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>款式選擇較少</li>
+                <li>整體討論聲量最低</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=bluemama+%E5%90%B8%E7%9B%A4%E7%A2%97" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=bluemama" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT BabyMother</th><th>Dcard 親子板</th><th>媒體/部落格</th><th>蝦皮/momo</th><th>好評率</th><th>主要負評</th></tr></thead>
+      <tbody>
+        <tr><td><strong><a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2704100273" target="_blank" style="color:var(--navy);text-decoration:none;">MOYUUM ↗</a></strong></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td><td><span class="level-tag level-high">高</span></td><td><span class="level-tag level-high">5,000+ 評</span></td><td>90%</td><td>矽膠卡味</td></tr>
+        <tr><td><strong>minikoioi</strong></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">2,000+ 評</span></td><td>88%</td><td>售後有限</td></tr>
+        <tr><td><strong>bluemama</strong></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td><td><span class="level-tag level-mid">中</span></td><td><span class="level-tag level-mid">1,200+ 評</span></td><td>87%</td><td>款式少</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section">
+    <div class="section-label">RECOMMENDATION</div>
+    <div class="section-title">自主進食選購總建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>🧊 分裝保存首選</h3>
+        <ul>
+          <li>台灣製造優先選 <strong>2angels</strong>（LFGB 認證 MIT）</li>
+          <li>密合度要求高可考慮 <strong>TGM</strong>（4 種尺寸更彈性）</li>
+          <li>注意 2angels 冷凍後蓋子密合問題，建議加套保鮮袋</li>
+        </ul>
+      </div>
+      <div class="conclusion-card orange">
+        <h3>🍲 調理機選購策略</h3>
+        <ul>
+          <li><strong>chicco</strong> 四合一最均衡，附食譜適合新手爸媽</li>
+          <li>容量需求大（多胎或常備食）選 <strong>BÉABA</strong> 1100ml</li>
+          <li>預算有限選 <strong>Philips Avent</strong>，品牌信賴度最高</li>
+        </ul>
+      </div>
+      <div class="conclusion-card">
+        <h3>🦷 零食選購建議</h3>
+        <ul>
+          <li>磨牙餅首選 <strong>ibobomi</strong>，但建議確認最新批次重金屬報告</li>
+          <li>米餅台灣品牌選 <strong>無毒農</strong>，聲量低但口碑穩</li>
+          <li>最省荷包方案：<strong>宜蘭五結農會</strong> CP 值最高</li>
+        </ul>
+      </div>
+      <div class="conclusion-card purple">
+        <h3>🥣 餐具搭配組合</h3>
+        <ul>
+          <li>預算充足選 <strong>MOYUUM</strong>（吸力最強、最耐用）</li>
+          <li>BLW 初期選 <strong>minikoioi</strong> 拼圖分格餐盤，靈活拆洗</li>
+          <li><strong>bluemama</strong> 防翻設計適合動手能力弱的寶寶</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="report-footer">
+    <div>
+      <div class="footer-brand">CYORA Market Intel</div>
+      <div class="footer-disclaimer">※ 聲量指數為非官方估算數據，僅供參考。實際排名可能因時間推移而變動。</div>
+    </div>
+    <div style="text-align:right;">
+      <div>調查日期：2026.05 ｜ 品類主題：自主進食</div>
+      <div style="margin-top:4px;" class="footer-sources">
+        資料來源：
+        <a href="https://www.ptt.cc/bbs/BabyMother/" target="_blank">PTT BabyMother</a> ·
+        <a href="https://www.dcard.tw/f/parentchild" target="_blank">Dcard 親子版</a> ·
+        蝦皮 · momo · 各品牌官網
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

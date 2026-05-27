@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寶寶炸屎危機｜市場聲量報告 2026.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  :root {
+    --navy:#0f1b35; --navy2:#1a2d52; --accent:#e8834a; --teal:#3db8c4;
+    --gold:#f0c040; --light:#f5f7fa; --white:#ffffff; --text:#1a1a2e;
+    --muted:#6b7280; --rank1:#e8834a; --rank2:#3db8c4; --rank3:#8b7fd4;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Noto Sans TC',sans-serif; background:#e8edf5; color:var(--text); font-size:15px; line-height:1.6; }
+  .report-wrap { max-width:1280px; margin:32px auto; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.18); background:var(--white); }
+
+  /* COVER */
+  .cover { background:linear-gradient(135deg,#1a1100 0%,#2a1e00 60%,#382a00 100%); color:var(--white); padding:56px 80px 52px; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; }
+  .cover::before { content:''; position:absolute; right:-60px; top:-80px; width:420px; height:420px; border-radius:50%; background:rgba(240,192,64,.15); }
+  .cover::after  { content:''; position:absolute; right:100px; bottom:-100px; width:260px; height:260px; border-radius:50%; background:rgba(61,184,196,.10); }
+  .cover-left { position:relative; z-index:1; }
+  .cover-tag { display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:20px; padding:4px 16px; font-size:12px; font-weight:500; letter-spacing:1px; margin-bottom:16px; color:rgba(255,255,255,.85); }
+  .cover h1 { font-size:48px; font-weight:900; line-height:1.1; margin-bottom:12px; letter-spacing:-.5px; }
+  .cover h1 span { color:var(--gold); }
+  .cover-sub { font-size:15px; color:rgba(255,255,255,.6); font-weight:300; margin-top:10px; }
+  .cover-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+  .cover-pill { background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); border-radius:20px; padding:4px 14px; font-size:12px; color:rgba(255,255,255,.8); }
+  .cover-meta { position:relative; z-index:1; text-align:right; }
+  .cover-meta .period { font-size:13px; color:rgba(255,255,255,.5); margin-bottom:8px; }
+  .cover-meta .date-big { font-size:36px; font-weight:700; color:var(--white); letter-spacing:-.5px; }
+  .cover-meta .cat-count { font-size:13px; color:rgba(255,255,255,.45); margin-top:10px; }
+  .cover-meta .cat-count strong { color:var(--gold); font-size:22px; font-weight:900; display:block; }
+
+  /* SECTIONS */
+  .section { padding:48px 80px; border-bottom:1px solid #eef0f4; }
+  .section:last-child { border-bottom:none; }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:2.5px; color:var(--gold); text-transform:uppercase; margin-bottom:6px; }
+  .section-title { font-size:26px; font-weight:800; color:var(--navy); margin-bottom:32px; padding-bottom:16px; border-bottom:2px solid #eef0f4; }
+  .cat-section { padding:48px 80px; border-bottom:1px solid #eef0f4; }
+
+  /* OVERVIEW */
+  .overview-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; }
+  .overview-card { border-radius:12px; background:var(--light); padding:14px 10px; text-align:center; border:1.5px solid #eef0f4; transition:box-shadow .2s; }
+  .overview-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.09); }
+  .overview-icon { font-size:26px; margin-bottom:8px; }
+  .overview-cat { font-size:10px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .overview-top1 { font-size:9.5px; color:var(--rank1); font-weight:600; }
+
+  /* CAT DIVIDER */
+  .cat-divider { display:flex; align-items:center; gap:12px; margin-bottom:28px; padding-bottom:20px; border-bottom:2px solid #eef0f4; }
+  .cat-num { width:32px; height:32px; border-radius:50%; background:var(--navy); color:white; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .cat-divider-text { flex:1; }
+  .cat-divider-name { font-size:20px; font-weight:800; color:var(--navy); }
+  .cat-divider-desc { font-size:12px; color:var(--muted); }
+
+  /* BRAND CARDS */
+  .top3-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-bottom:28px; }
+  .brand-card { border-radius:14px; overflow:hidden; border:1.5px solid #eef0f4; transition:box-shadow .2s; }
+  .brand-card:hover { box-shadow:0 8px 24px rgba(0,0,0,.10); }
+  .brand-card-header { padding:18px 22px 14px; position:relative; }
+  .brand-card:nth-child(1) .brand-card-header { background:linear-gradient(135deg,#fff4ee,#ffeee0); border-bottom:3px solid var(--rank1); }
+  .brand-card:nth-child(2) .brand-card-header { background:linear-gradient(135deg,#edfbfc,#d6f5f7); border-bottom:3px solid var(--rank2); }
+  .brand-card:nth-child(3) .brand-card-header { background:linear-gradient(135deg,#f3f0ff,#e8e2fb); border-bottom:3px solid var(--rank3); }
+  .rank-badge { position:absolute; top:14px; right:16px; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; color:var(--white); }
+  .brand-card:nth-child(1) .rank-badge { background:var(--rank1); }
+  .brand-card:nth-child(2) .rank-badge { background:var(--rank2); }
+  .brand-card:nth-child(3) .rank-badge { background:var(--rank3); }
+  .brand-name { font-size:17px; font-weight:800; color:var(--navy); margin-bottom:1px; }
+  .brand-sub { font-size:11px; color:var(--muted); font-weight:400; }
+  .user-rec { font-size:10px; color:var(--rank1); font-weight:700; margin-left:4px; }
+  .brand-card-body { padding:16px 22px; background:var(--white); }
+  .vol-label { font-size:10px; font-weight:600; color:var(--muted); margin-bottom:5px; letter-spacing:.5px; }
+  .vol-bar-track { background:#f0f2f5; border-radius:6px; height:8px; margin-bottom:3px; overflow:hidden; }
+  .vol-bar-fill { height:100%; border-radius:6px; }
+  .brand-card:nth-child(1) .vol-bar-fill { background:linear-gradient(90deg,var(--rank1),#f0a070); }
+  .brand-card:nth-child(2) .vol-bar-fill { background:linear-gradient(90deg,var(--rank2),#70d8e0); }
+  .brand-card:nth-child(3) .vol-bar-fill { background:linear-gradient(90deg,var(--rank3),#b0a0e8); }
+  .vol-score { font-size:12px; font-weight:700; text-align:right; margin-bottom:12px; }
+  .brand-card:nth-child(1) .vol-score { color:var(--rank1); }
+  .brand-card:nth-child(2) .vol-score { color:var(--rank2); }
+  .brand-card:nth-child(3) .vol-score { color:var(--rank3); }
+  .brand-price { font-size:19px; font-weight:800; color:var(--navy); margin-bottom:10px; }
+  .brand-price span { font-size:11px; font-weight:400; color:var(--muted); margin-left:4px; }
+  .tag-row { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:12px; }
+  .tag { font-size:10px; font-weight:500; padding:2px 8px; border-radius:10px; background:#f0f2f5; color:var(--text); }
+  .tag.hot { background:#fff0e8; color:var(--rank1); }
+  .tag.cool { background:#e8f9fb; color:#2a9aa6; }
+  .tag.purple { background:#f0eeff; color:#6b5ad4; }
+  .tag.gold { background:#fffbe8; color:#a07800; }
+  .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding-top:10px; border-top:1px dashed #eef0f4; }
+  .pros-cons-label { font-size:9px; font-weight:700; letter-spacing:.8px; color:var(--muted); margin-bottom:4px; }
+  .pros-cons-list { list-style:none; font-size:11px; line-height:1.7; }
+  .pros-list li::before { content:'✓ '; color:#3db870; font-weight:700; }
+  .cons-list li::before { content:'✕ '; color:#e85050; font-weight:700; }
+
+  /* BUY LINKS */
+  .buy-links { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; padding-top:10px; border-top:1px dashed #eef0f4; }
+  .buy-btn { display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:600; padding:3px 9px; border-radius:10px; text-decoration:none; transition:opacity .15s; }
+  .buy-btn:hover { opacity:.8; }
+  .buy-btn.official { background:#f0f2f5; color:var(--navy); }
+  .buy-btn.momo     { background:#fff0f0; color:#d4303a; }
+  .buy-btn.shopee   { background:#fff4ee; color:var(--rank1); }
+  .buy-btn.review   { background:#edfbfc; color:#2a9aa6; }
+  .buy-btn.pchome   { background:#f3f0ff; color:#6b5ad4; }
+
+  /* TABLE */
+  .table-wrap { margin-top:20px; border-radius:10px; overflow:hidden; border:1.5px solid #eef0f4; }
+  .platform-table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  .platform-table th { padding:10px 14px; background:var(--navy); color:var(--white); font-weight:600; text-align:left; font-size:11px; letter-spacing:.5px; }
+  .platform-table th:first-child { border-radius:8px 0 0 0; }
+  .platform-table th:last-child  { border-radius:0 8px 0 0; }
+  .platform-table td { padding:10px 14px; border-bottom:1px solid #eef0f4; vertical-align:middle; }
+  .platform-table tr:last-child td { border-bottom:none; }
+  .platform-table tr:nth-child(even) td { background:#f8f9fc; }
+  .heat-dots { display:flex; gap:3px; align-items:center; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#ddd; }
+  .dot.on  { background:var(--rank1); }
+  .dot.on2 { background:var(--rank2); }
+  .dot.on3 { background:var(--rank3); }
+  .level-tag { display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:10px; }
+  .level-high { background:#fff0e8; color:var(--rank1); }
+  .level-mid  { background:#e8f9fb; color:#2a9aa6; }
+  .level-low  { background:#f5f5f5; color:var(--muted); }
+
+  /* QUOTE */
+  .quote-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:20px; }
+  .quote-card { background:var(--light); border-radius:10px; padding:14px 16px; font-size:12px; color:#374151; line-height:1.7; border-left:3px solid; }
+  .quote-card:nth-child(1) { border-color:var(--rank1); }
+  .quote-card:nth-child(2) { border-color:var(--rank2); }
+  .quote-card:nth-child(3) { border-color:var(--rank3); }
+  .quote-source { font-size:10px; color:var(--muted); margin-top:6px; font-style:italic; }
+
+  /* CONCLUSION */
+  .conclusion-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .conclusion-card { background:var(--light); border-radius:12px; padding:22px; border-left:4px solid var(--accent); }
+  .conclusion-card.teal   { border-left-color:var(--teal); }
+  .conclusion-card.purple { border-left-color:var(--rank3); }
+  .conclusion-card.gold   { border-left-color:var(--gold); }
+  .conclusion-card h3 { font-size:14px; font-weight:800; color:var(--navy); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .conclusion-card p, .conclusion-card li { font-size:12.5px; color:#374151; line-height:1.8; }
+  .conclusion-card ul { list-style:none; padding:0; }
+  .conclusion-card ul li::before { content:'→ '; color:var(--accent); font-weight:700; }
+  .conclusion-card.teal   ul li::before { color:var(--teal); }
+  .conclusion-card.purple ul li::before { color:var(--rank3); }
+  .conclusion-card.gold   ul li::before { color:var(--gold); }
+
+  /* FOOTER */
+  .report-footer { background:var(--navy); color:rgba(255,255,255,.45); padding:18px 80px; display:flex; align-items:center; justify-content:space-between; font-size:11px; letter-spacing:.3px; }
+  .footer-brand { color:rgba(255,255,255,.7); font-weight:600; }
+  .footer-disclaimer { font-size:10px; color:rgba(255,255,255,.3); margin-top:4px; }
+
+  /* METHODOLOGY */
+  .method-section { padding:36px 80px; background:#f8f9fc; border-bottom:1px solid #eef0f4; }
+  .method-toggle { display:flex; align-items:center; gap:10px; cursor:pointer; user-select:none; list-style:none; }
+  .method-toggle::marker { display:none; }
+  .method-toggle-title { font-size:13px; font-weight:700; color:var(--navy); }
+  .method-toggle-sub { font-size:12px; color:var(--muted); margin-left:auto; }
+  details[open] .method-toggle-sub::before { content:'收合 ▲'; }
+  details:not([open]) .method-toggle-sub::before { content:'展開查看方法論 ▼'; color:var(--accent); }
+  .method-body { margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .method-card { background:var(--white); border-radius:10px; padding:18px 20px; border:1.5px solid #eef0f4; }
+  .method-card h4 { font-size:12px; font-weight:700; color:var(--navy); margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+  .method-weight { margin-left:auto; background:var(--accent); color:white; font-size:11px; font-weight:700; padding:1px 8px; border-radius:8px; }
+  .method-card p, .method-card li { font-size:11.5px; color:#374151; line-height:1.8; }
+  .method-card ul { list-style:none; padding:0; }
+  .method-card ul li::before { content:'· '; color:var(--muted); }
+  .method-disclaimer { margin-top:14px; padding:10px 16px; background:#fff8f0; border-radius:8px; font-size:11px; color:var(--muted); border-left:3px solid var(--accent); }
+
+  /* ══ CROSS-REPORT TAB NAV ══ */
+  .report-nav-wrap {
+    position: sticky; top: 0; z-index: 200;
+    background: #0a1428;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.30);
+  }
+  .report-nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; align-items: center;
+  }
+  .report-nav-home {
+    color: rgba(255,255,255,0.40);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 13px 16px 13px 0;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    margin-right: 6px;
+    white-space: nowrap;
+    transition: color .18s;
+    flex-shrink: 0;
+  }
+  .report-nav-home:hover { color: rgba(255,255,255,0.85); }
+  .report-nav-tabs {
+    display: flex; align-items: stretch;
+    overflow-x: auto; gap: 0;
+  }
+  .rnt {
+    padding: 13px 20px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    color: rgba(255,255,255,0.38);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color .18s, border-color .18s, background .18s;
+  }
+  .rnt:hover { color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.04); }
+  .rnt.active { color: #fff; }
+  .rnt-sleep.active { border-bottom-color: #e87c40; }
+  .rnt-food.active  { border-bottom-color: #3ab8b0; }
+  .rnt-bath.active  { border-bottom-color: #52b788; }
+  .rnt-poop.active  { border-bottom-color: #d4a820; }
+
+</style>
+</head>
+<body>
+
+<div class="report-nav-wrap">
+  <div class="report-nav-inner">
+    <a class="report-nav-home" href="../index.html">← Hub 總覽</a>
+    <div class="report-nav-tabs">
+      <a class="rnt rnt-sleep" href="孕期好眠_市場聲量報告_2026-05.html">🌛 孕期好眠</a>
+      <a class="rnt rnt-food" href="自主進食_市場聲量報告_2026-05.html">🥣 自主進食</a>
+      <a class="rnt rnt-bath" href="新生兒沐浴_市場聲量報告_2026-05.html">🛁 新生兒沐浴</a>
+      <a class="rnt rnt-poop active" href="寶寶炸屎危機_市場聲量報告_2026-05.html">💩 寶寶炸屎危機</a>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-left">
+    <div class="cover-tag">CYORA MARKET INTEL · 2026.05</div>
+    <h1>寶寶<span>炸屎危機</span><br>市場聲量報告</h1>
+    <div class="cover-sub">Taiwan Baby Diaper Crisis Essentials — Buzz Report</div>
+    <div class="cover-pills">
+      <span class="cover-pill">🗑 防臭垃圾桶</span>
+      <span class="cover-pill">🪑 升降尿布台</span>
+      <span class="cover-pill">🧺 雙層洗衣籃</span>
+      <span class="cover-pill">👕 紗布衣</span>
+      <span class="cover-pill">🧻 濕紙巾</span>
+      <span class="cover-pill">🧴 寶寶洗沐</span>
+      <span class="cover-pill">💛 屁屁膏</span>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div class="period">調查期間</div>
+    <div class="date-big">2026.05</div>
+    <div class="cat-count">品類數量<strong>7</strong>個品類</div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section">
+  <div class="section-label">OVERVIEW</div>
+  <div class="section-title">品類聲量總覽</div>
+  <div class="overview-grid">
+    <div class="overview-card"><div class="overview-icon">🗑</div><div class="overview-cat">防臭垃圾桶</div><div class="overview-top1">#1 This is it</div></div>
+    <div class="overview-card"><div class="overview-icon">🪑</div><div class="overview-cat">升降尿布台</div><div class="overview-top1">#1 Didi 升降尿布台</div></div>
+    <div class="overview-card"><div class="overview-icon">🧺</div><div class="overview-cat">雙層洗衣籃</div><div class="overview-top1">#1 This is it</div></div>
+    <div class="overview-card"><div class="overview-icon">👕</div><div class="overview-cat">紗布衣</div><div class="overview-top1">#1 奇哥</div></div>
+    <div class="overview-card"><div class="overview-icon">🧻</div><div class="overview-cat">濕紙巾</div><div class="overview-top1">#1 貝恩 Baan</div></div>
+    <div class="overview-card"><div class="overview-icon">🧴</div><div class="overview-cat">寶寶洗沐</div><div class="overview-top1">#1 Mustela 免洗潔膚水</div></div>
+    <div class="overview-card"><div class="overview-icon">💛</div><div class="overview-cat">屁屁膏</div><div class="overview-top1">#1 Mustela 衛蓓欣 VBC</div></div>
+  </div>
+</div>
+
+<!-- METHODOLOGY -->
+<div class="method-section">
+  <details>
+    <summary class="method-toggle">
+      <span>📐</span>
+      <span class="method-toggle-title">聲量指數估算方法論</span>
+      <span class="method-toggle-sub"></span>
+    </summary>
+    <div class="method-body">
+      <div class="method-card">
+        <h4>📌 PTT BabyMother 板<span class="method-weight">30%</span></h4>
+        <p>搜尋各品牌在 PTT BabyMother 的討論串數量、推文數及重複提及率。正向推文比例高於負向者加分，爆卦類討論串扣分。</p>
+        <ul><li>關鍵字：品牌名 + 品類名 + 推薦/開箱/心得</li><li>抓取近 12 個月討論量作為基準</li></ul>
+      </div>
+      <div class="method-card">
+        <h4>💬 Dcard 親子版<span class="method-weight">25%</span></h4>
+        <p>查詢 Dcard 親子版討論頻率與愛心數。新手媽媽族群的活躍度使 Dcard 成為本報告的重點平台之一。</p>
+        <ul><li>互動率（留言＋愛心）納入加權</li></ul>
+      </div>
+      <div class="method-card">
+        <h4>📰 媒體／部落格排行<span class="method-weight">25%</span></h4>
+        <p>統計品牌在育兒媒體（媽咪愛、MamiBuy、BabyHome 等）及母嬰部落格推薦榜中出現次數。醫師推薦標籤另計 +3 分加成。</p>
+      </div>
+      <div class="method-card">
+        <h4>🛒 購物平台評論數<span class="method-weight">20%</span></h4>
+        <p>以 momo 購物網、蝦皮評論數及好評率作為市場接受度指標。momo 5000+ 評論計滿分，好評率 95%+ 加 2 分。</p>
+      </div>
+    </div>
+    <div class="method-disclaimer">⚠️ 非官方人工估算數值，僅供 CYORA 內部討論參考。聲量指數為研究人員根據公開資訊加權估算，不代表任何平台官方統計。</div>
+  </details>
+</div>
+
+<!-- CAT 1: 防臭垃圾桶 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">1</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🗑 防臭垃圾桶</div>
+      <div class="cat-divider-desc">尿布炸屎必備；重點考量密封防臭效果、是否需專用袋、設計收納性</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">This is it <span class="user-rec">✦</span></div>
+        <div class="brand-sub">防臭感應垃圾桶 · 質感生活風格品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+        <div class="vol-score">75 / 100</div>
+        <div class="brand-price">NT$1,680 <span>/ 約 12L</span></div>
+        <div class="tag-row"><span class="tag hot">質感設計</span><span class="tag cool">防臭密封</span><span class="tag">可用市售袋</span><span class="tag gold">育兒房必備</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>簡約北歐風格融入育兒空間</li><li>雙層蓋防臭密封設計</li><li>可搭配市售垃圾袋無耗材費</li><li>尺寸適中育兒房好收納</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>PTT/Dcard 討論量相對少</li><li>防臭效果不如不鏽鋼密封款</li><li>容量偏小（需頻繁倒垃圾）</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/this+is+it+垃圾桶" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=this+is+it+垃圾桶" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Ubbi 不鏽鋼尿布桶</div>
+        <div class="brand-sub">Steel Diaper Pail · 美國品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+        <div class="vol-score">72 / 100</div>
+        <div class="brand-price">NT$2,200 <span>/ 不鏽鋼款</span></div>
+        <div class="tag-row"><span class="tag hot">不鏽鋼桶身</span><span class="tag cool">矽膠密封圈</span><span class="tag">滑動式蓋板</span><span class="tag">可用市售袋</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>不鏽鋼桶身耐久不吸味</li><li>矽膠密封圈鎖臭效果優</li><li>滑動式單手開蓋方便</li><li>可用市售垃圾袋省耗材費</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>價格偏高</li><li>重量重（不鏽鋼桶身）</li><li>蓋板設計不如全密封款防臭</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/ubbi+尿布桶" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=ubbi+尿布桶" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">ELPHECO 感應防臭桶</div>
+        <div class="brand-sub">智能感應垃圾桶 · 臭氧殺菌版</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+        <div class="vol-score">65 / 100</div>
+        <div class="brand-price">NT$2,800 <span>/ 感應殺菌款</span></div>
+        <div class="tag-row"><span class="tag purple">感應開蓋</span><span class="tag purple">臭氧殺菌</span><span class="tag">PTT 廚藝版推薦</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>感應開蓋雙手不沾垃圾</li><li>臭氧殺菌主動除臭</li><li>PTT 媽寶版＋廚藝版共同推薦</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>價格最高</li><li>需充電，電池耗盡時失效</li><li>感應器偶有誤觸問題</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=elpheco+感應垃圾桶" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/elpheco垃圾桶" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「尿布桶的密封很重要，用了感應式的之後整個房間味道改善超多，不用買專用袋是最大優點。」<div class="quote-source">— PTT BabyMother，防臭垃圾桶討論串</div></div>
+    <div class="quote-card">「Ubbi 不鏽鋼的防臭真的好，矽膠密封圈讓臭味幾乎鎖死在桶子裡，單手開蓋超方便。」<div class="quote-source">— Dcard 親子版，Ubbi 使用心得</div></div>
+    <div class="quote-card">「ELPHECO 臭氧版在 PTT 媽寶版很多人推，廚房和育兒房兩用，省一個桶的錢。」<div class="quote-source">— PTT BabyMother，智能垃圾桶討論</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>This is it</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>蝦皮 1,000+ 評論</td><td><span class="level-tag level-high">94%</span></td><td>防臭力不如不鏽鋼款</td></tr>
+        <tr><td><strong>Ubbi 不鏽鋼</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>momo 800+ 評論</td><td><span class="level-tag level-high">93%</span></td><td>重、價格高</td></tr>
+        <tr><td><strong>ELPHECO 感應</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中高頻出現</span></td><td>momo 2,000+ 評論</td><td><span class="level-tag level-mid">91%</span></td><td>電池耗盡、誤觸</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 2: 升降尿布台 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">2</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🪑 升降尿布台</div>
+      <div class="cat-divider-desc">護腰必備；重點考量高度可調性、安全護欄、材質與清潔便利性</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">Didi 升降尿布台 <span class="user-rec">✦</span></div>
+        <div class="brand-sub">實木升降多段可調 · 台灣熱銷品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:78%"></div></div>
+        <div class="vol-score">78 / 100</div>
+        <div class="brand-price">NT$2,000 <span>/ 升降實木款</span></div>
+        <div class="tag-row"><span class="tag hot">PTT CP 值王</span><span class="tag hot">Dcard 推薦</span><span class="tag cool">多段升降</span><span class="tag">實木材質</span><span class="tag">護腰神器</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>多段升降適應不同身高父母</li><li>實木質感木紋細緻溫潤</li><li>三款中 CP 值最高</li><li>PTT 媽咪板「整家都說 CP 值最高」</li><li>Dcard 2026 尿布台推薦 #1</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>有媽咪反映木屑疑慮</li><li>部分客訴客服態度問題</li><li>SGS 報告需主動索取</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/didi+升降尿布台" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=didi+尿布台" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">IKEA SNIGLAR</div>
+        <div class="brand-sub">嬰兒尿布台 · 瑞典品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$2,495 <span>/ 含護欄墊</span></div>
+        <div class="tag-row"><span class="tag cool">北歐簡約</span><span class="tag">山毛櫸實木</span><span class="tag">快速安裝</span><span class="tag">全台 IKEA 可購</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>北歐品牌信任度高</li><li>簡約風格融入各類居家</li><li>全台 IKEA 實體可試看</li><li>安裝簡單快速</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>高度固定，無法升降</li><li>較高身材父母需彎腰</li><li>功能較陽春</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.ikea.com/tw/zh/p/sniglar-changing-table-beech-60215912/" class="buy-btn official" target="_blank">🌐 IKEA 官網</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">童心 ChangingTable</div>
+        <div class="brand-sub">多功能升降尿布台 · 台灣品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:62%"></div></div>
+        <div class="vol-score">62 / 100</div>
+        <div class="brand-price">NT$3,500 <span>/ 多功能款</span></div>
+        <div class="tag-row"><span class="tag purple">台灣品牌</span><span class="tag">多層收納</span><span class="tag">寬敞台面</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>台灣本土品牌售後服務有保障</li><li>台面空間大</li><li>多層收納架實用</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>價格三款最高</li><li>設計較傳統</li><li>Dcard 討論量少</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/童心+尿布台" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=童心+尿布台" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「買了 Didi 全家都說 CP 值最高，升降功能讓爸媽各自調整高度，腰不再痠了。」<div class="quote-source">— PTT BabyMother，Didi 升降尿布台心得</div></div>
+    <div class="quote-card">「IKEA SNIGLAR 去門市直接看、快速安裝，簡約設計融入北歐風格育兒房。」<div class="quote-source">— Dcard 親子版，IKEA 尿布台</div></div>
+    <div class="quote-card">「童心台面很大放尿布尿布膏都綽綽有餘，台灣品牌問題好解決，就是貴一點。」<div class="quote-source">— PTT BabyMother，童心尿布台</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Didi 升降尿布台</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><span class="level-tag level-high">高頻出現</span></td><td>蝦皮 3,000+ 評論</td><td><span class="level-tag level-high">94%</span></td><td>木屑疑慮、客服態度</td></tr>
+        <tr><td><strong>IKEA SNIGLAR</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>IKEA 官網評論多</td><td><span class="level-tag level-high">92%</span></td><td>無法升降、功能陽春</td></tr>
+        <tr><td><strong>童心</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-low">低頻出現</span></td><td>蝦皮 500+ 評論</td><td><span class="level-tag level-mid">91%</span></td><td>價格偏高、設計傳統</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 3: 雙層洗衣籃 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">3</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🧺 雙層洗衣籃</div>
+      <div class="cat-divider-desc">炸屎衣物分類收納；重點考量分層設計、材質透氣性、體積與整體質感</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">This is it <span class="user-rec">✦</span></div>
+        <div class="brand-sub">雙層分類洗衣籃 · 質感家居品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+        <div class="vol-score">72 / 100</div>
+        <div class="brand-price">NT$1,180 <span>/ 雙層款</span></div>
+        <div class="tag-row"><span class="tag hot">雙層分類</span><span class="tag cool">質感布料</span><span class="tag">輕量可摺</span><span class="tag gold">育兒房設計感</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>上下雙層分類炸屎衣物</li><li>質感外觀融入育兒空間</li><li>輕量布料可折疊收納</li><li>取物輕便單手操作</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>布面容易吸附異味</li><li>PTT 討論量少</li><li>無硬殼撐形較易軟塌</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/this+is+it+洗衣籃" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=this+is+it+洗衣籃" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Mr.Box 掀蓋洗衣籃</div>
+        <div class="brand-sub">分區掀蓋設計 · 台灣品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$580 <span>/ 分區掀蓋款</span></div>
+        <div class="tag-row"><span class="tag cool">台灣品牌</span><span class="tag">掀蓋設計</span><span class="tag">透氣網布</span><span class="tag">多色可選</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>台灣品牌售後有保障</li><li>透氣網布防潮發霉</li><li>掀蓋設計收納井然有序</li><li>價格親民 CP 值高</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>設計感較普通</li><li>容量相對小</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=mr.box+洗衣籃" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/mr.box+洗衣籃" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">IKEA PLUGGIS / TORKIS</div>
+        <div class="brand-sub">洗衣收納籃 · 瑞典品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:60%"></div></div>
+        <div class="vol-score">60 / 100</div>
+        <div class="brand-price">NT$299–599 <span>/ 系列款</span></div>
+        <div class="tag-row"><span class="tag purple">北歐設計</span><span class="tag">可折疊</span><span class="tag">超平價</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>超平價入門首選</li><li>可折疊存放</li><li>北歐品牌信任度高</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>無分層設計</li><li>設計功能最簡單</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.ikea.com/tw/zh/cat/laundry-baskets-sc001/" class="buy-btn official" target="_blank">🌐 IKEA 官網</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「雙層洗衣籃讓我把炸屎衣跟一般髒衣分開，不用蓋蓋就能通風，很實用。」<div class="quote-source">— Dcard 親子版，洗衣籃使用心得</div></div>
+    <div class="quote-card">「Mr.Box 台灣品牌透氣網布防霉，價格很親民，當育兒室洗衣籃用最划算。」<div class="quote-source">— PTT BabyMother，收納好物分享</div></div>
+    <div class="quote-card">「IKEA 的可折疊洗衣籃最便宜，雖然沒分層，但放在尿布台旁當備用籃很夠用。」<div class="quote-source">— Dcard 親子版，育兒收納整理</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>This is it 雙層</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>蝦皮 800+ 評論</td><td><span class="level-tag level-high">93%</span></td><td>吸味、布料軟塌</td></tr>
+        <tr><td><strong>Mr.Box</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>momo 1,500+ 評論</td><td><span class="level-tag level-high">94%</span></td><td>設計感普通、容量小</td></tr>
+        <tr><td><strong>IKEA</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>IKEA 官網多</td><td><span class="level-tag level-mid">90%</span></td><td>無分層、功能陽春</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 4: 紗布衣 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">4</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">👕 紗布衣</div>
+      <div class="cat-divider-desc">炸屎高頻更換衣物；重點考量純棉透氣、台灣製品質、耐洗不變形</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">奇哥 Chick <span class="user-rec">✦</span></div>
+        <div class="brand-sub">純棉雙層紗布肚衣 · 台灣製造</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+        <div class="vol-score">85 / 100</div>
+        <div class="brand-price">NT$399 <span>/ 2件組</span></div>
+        <div class="tag-row"><span class="tag hot">台灣製造</span><span class="tag hot">PTT 強推</span><span class="tag cool">雙層紗布</span><span class="tag">100% 純棉</span><span class="tag">親膚透氣</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>台灣製造品質穩定可靠</li><li>100% 純棉雙層紗布超透氣</li><li>耐洗不變形不縮水</li><li>PTT／Dcard 多年強推款</li><li>奇哥實體門市全台可買</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>款式設計較傳統</li><li>顏色選擇較少</li><li>單件價格略高於無品牌款</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.chick.com.tw/" class="buy-btn official" target="_blank">🌐 奇哥官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=奇哥+紗布衣" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/奇哥+紗布衣" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">ding baby</div>
+        <div class="brand-sub">嬰兒純棉紗布衣 · 台灣製造</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+        <div class="vol-score">72 / 100</div>
+        <div class="brand-price">NT$299 <span>/ 件（顏色款式較多）</span></div>
+        <div class="tag-row"><span class="tag cool">多款設計</span><span class="tag">純棉</span><span class="tag">台灣製</span><span class="tag">多色選擇</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>款式設計多元活潑</li><li>台灣製造品質穩定</li><li>多色可選方便區分新生兒</li><li>價格比奇哥親民</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>部分款式洗後縮水</li><li>知名度低於奇哥</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=ding+baby+紗布衣" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/ding+baby+紗布衣" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">KU.KU. 酷咕鴨</div>
+        <div class="brand-sub">嬰兒紗布肚衣 · 平價實用款</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+        <div class="vol-score">65 / 100</div>
+        <div class="brand-price">NT$249 <span>/ 件</span></div>
+        <div class="tag-row"><span class="tag purple">平價首選</span><span class="tag">純棉材質</span><span class="tag">多色款</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>價格最親民</li><li>純棉材質基礎配方達標</li><li>適合大量備貨備炸屎</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>品質不如奇哥穩定</li><li>洗多次後易起球</li><li>PTT 討論量少</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=ku.ku+紗布衣" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/酷咕鴨+紗布衣" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「奇哥紗布衣洗了幾十次都不縮水不起球，台灣製造品質真的有保障，這款是我多次回購的。」<div class="quote-source">— PTT BabyMother，奇哥紗布衣心得</div></div>
+    <div class="quote-card">「ding baby 顏色款式多，我給寶寶每天換不同顏色，比較好記哪件換洗了幾次。」<div class="quote-source">— Dcard 親子版，ding baby 使用心得</div></div>
+    <div class="quote-card">「酷咕鴨是炸屎備用的，買一堆備著不心疼，等寶寶大一點再換奇哥這種品質款。」<div class="quote-source">— PTT BabyMother，紗布衣囤貨策略</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>奇哥 Chick</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><span class="level-tag level-high">超高頻出現</span></td><td>momo 8,000+ 評論</td><td><span class="level-tag level-high">97%</span></td><td>款式傳統、顏色少</td></tr>
+        <tr><td><strong>ding baby</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>momo 2,000+ 評論</td><td><span class="level-tag level-high">94%</span></td><td>部分縮水、知名度低</td></tr>
+        <tr><td><strong>KU.KU. 酷咕鴨</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-low">低頻出現</span></td><td>momo 1,000+ 評論</td><td><span class="level-tag level-mid">88%</span></td><td>起球、品質不穩定</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 5: 濕紙巾 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">5</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🧻 濕紙巾</div>
+      <div class="cat-divider-desc">炸屎清潔核心用品；重點考量厚度、純水成分、不易多抽、低敏配方</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">貝恩 Baan</div>
+        <div class="brand-sub">EDI 超純水嬰兒濕紙巾 · 台灣品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+        <div class="vol-score">85 / 100</div>
+        <div class="brand-price">NT$399 <span>/ 80抽×10包</span></div>
+        <div class="tag-row"><span class="tag hot">PTT 強推</span><span class="tag hot">Dcard 第一名</span><span class="tag cool">EDI 超純水</span><span class="tag">超厚</span><span class="tag">不易多抽</span><span class="tag">台灣品牌</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>EDI 超純水零刺激</li><li>超厚不易破裂</li><li>不易多抽省用量</li><li>PTT BabyMother 連年推薦</li><li>台灣品牌在地好溝通</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>價格略高於好奇</li><li>部分人覺得濕度不夠</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.baan.com.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=貝恩+濕紙巾" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://24h.pchome.com.tw/store/DAAT3X" class="buy-btn pchome" target="_blank">🟣 PChome</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">好奇 Huggies Pure</div>
+        <div class="brand-sub">小森林純水超厚嬰兒濕巾 · 美國品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:80%"></div></div>
+        <div class="vol-score">80 / 100</div>
+        <div class="brand-price">NT$329 <span>/ 60抽×12包</span></div>
+        <div class="tag-row"><span class="tag hot">飲用級純水</span><span class="tag cool">台灣 SGS 認證</span><span class="tag">植物基纖維</span><span class="tag">敏感肌適用</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>100% 飲用級純水</li><li>通過台灣 SGS 多重認證</li><li>植物基纖維親膚</li><li>美國多項皮膚科臨床測試</li><li>大量購買 CP 值高</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>單抽比貝恩薄一些</li><li>部分批次濕度不均</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=好奇+pure+濕紙巾" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/huggies+pure+濕紙巾" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">ENBLANC 韓國濕巾</div>
+        <div class="brand-sub">純水超厚型嬰兒濕紙巾 · 韓國品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+        <div class="vol-score">72 / 100</div>
+        <div class="brand-price">NT$299 <span>/ 80抽×10包</span></div>
+        <div class="tag-row"><span class="tag purple">韓國製造</span><span class="tag">超厚型</span><span class="tag">無酒精香料</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>韓國製造嚴格品管</li><li>超厚度耐拭不破</li><li>無酒精無香料低敏</li><li>Dcard 韓系媽咪推薦</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>進口運費推高實際成本</li><li>台灣 PTT 討論量少</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/enblanc+濕紙巾" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=enblanc+濕紙巾" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「貝恩真的最厚而且不會多抽，炸屎的時候拉一張就夠擦一次，不像某些牌子一次拉三張。」<div class="quote-source">— PTT BabyMother，嬰兒濕紙巾使用心得</div></div>
+    <div class="quote-card">「好奇 Pure 飲用級純水讓我放心用在寶寶臉上，SGS 認證加分，買箱裝很划算。」<div class="quote-source">— Dcard 親子版，好奇 Pure 濕紙巾</div></div>
+    <div class="quote-card">「ENBLANC 韓國製很厚實，用起來感覺很高級，對有紅屁屁問題的寶寶特別溫和。」<div class="quote-source">— Dcard 親子版，ENBLANC 濕紙巾</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>貝恩 Baan</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><span class="level-tag level-high">超高頻出現</span></td><td>momo 10,000+ 評論</td><td><span class="level-tag level-high">97%</span></td><td>濕度、價格略高</td></tr>
+        <tr><td><strong>好奇 Huggies Pure</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><span class="level-tag level-high">高頻出現</span></td><td>momo 8,000+ 評論</td><td><span class="level-tag level-high">96%</span></td><td>單抽薄、批次不均</td></tr>
+        <tr><td><strong>ENBLANC</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>蝦皮 3,000+ 評論</td><td><span class="level-tag level-high">95%</span></td><td>進口運費高、PTT 少</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 6: 寶寶洗沐 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">6</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">🧴 寶寶洗沐（炸屎急洗）</div>
+      <div class="cat-divider-desc">炸屎後全身清潔；重點考量免沖洗便利性、溫和低敏、快速清潔屁屁區</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">Mustela 免洗潔膚水</div>
+        <div class="brand-sub">No Rinse Cleansing Water · 炸屎神器</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+        <div class="vol-score">82 / 100</div>
+        <div class="brand-price">NT$499 <span>/ 500ml</span></div>
+        <div class="tag-row"><span class="tag hot">炸屎急用</span><span class="tag hot">免沖洗</span><span class="tag cool">90%+ 天然成分</span><span class="tag">法國品牌</span><span class="tag">外出必備</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>不需沖水炸屎現場急救</li><li>外出時找不到洗手台的救星</li><li>90%+ 天然成分低刺激</li><li>PTT 炸屎討論串必提</li><li>配合棉片使用更有效</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>價格偏高</li><li>大範圍炸屎還是需正式沐浴</li><li>500ml 瓶裝不方便外出攜帶</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.mustela.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=mustela+免洗潔膚水" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/mustela.tw" class="buy-btn shopee" target="_blank">🧡 蝦皮官旗</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">貝恩 Baan</div>
+        <div class="brand-sub">嬰兒沐浴乳 · 台灣品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+        <div class="vol-score">75 / 100</div>
+        <div class="brand-price">NT$169 <span>/ 500ml</span></div>
+        <div class="tag-row"><span class="tag cool">台灣品牌</span><span class="tag cool">無香料</span><span class="tag">低敏</span><span class="tag">CP 值高</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>台灣品牌在地品質保證</li><li>無香料無酒精低敏配方</li><li>500ml 大容量頻繁使用夠用</li><li>價格親民可大量囤貨</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>起泡力略遜於外國品牌</li><li>容量雖大但泵頭不包含</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.baan.com.tw/" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=貝恩+嬰兒沐浴乳" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://24h.pchome.com.tw/store/DAAT3X" class="buy-btn pchome" target="_blank">🟣 PChome</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">嬌生 Johnson's</div>
+        <div class="brand-sub">嬰兒沐浴精 · 全球品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$99 <span>/ 400ml</span></div>
+        <div class="tag-row"><span class="tag purple">超平價</span><span class="tag">全台可買</span><span class="tag">不流淚配方</span><span class="tag">熟悉品牌</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>超平價隨時補貨不心疼</li><li>全台超商藥局均可購買</li><li>不流淚配方基礎達標</li><li>長輩熟悉品牌溝通零壓力</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>成分現代標準較遜色</li><li>香精添加（部分人不喜）</li><li>PTT 近年推薦度下降</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=嬌生+嬰兒沐浴精" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://shopee.tw/list/johnson+嬰兒沐浴精" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「Mustela 免洗潔膚水真的是炸屎救星，外出找不到地方洗澡，直接噴棉片擦乾淨就好。」<div class="quote-source">— PTT BabyMother，炸屎應急好物分享</div></div>
+    <div class="quote-card">「貝恩沐浴乳台灣製、無香精、價格親民，炸屎多洗幾次也不心疼，是高頻使用的首選。」<div class="quote-source">— Dcard 親子版，炸屎後清潔討論</div></div>
+    <div class="quote-card">「嬌生最平價，藥局隨便買，長輩到家裡幫忙照顧時認得這個牌子，溝通零壓力。」<div class="quote-source">— PTT BabyMother，嬰兒沐浴產品分享</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mustela 免洗潔膚水</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></td><td><span class="level-tag level-high">高頻出現</span></td><td>momo 3,000+ 評論</td><td><span class="level-tag level-high">96%</span></td><td>價格高、大量用時划算</td></tr>
+        <tr><td><strong>貝恩 Baan</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中高頻出現</span></td><td>momo 4,000+ 評論</td><td><span class="level-tag level-high">95%</span></td><td>起泡力普通</td></tr>
+        <tr><td><strong>嬌生 Johnson's</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>momo 5,000+ 評論</td><td><span class="level-tag level-mid">90%</span></td><td>香精、成分舊標準</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CAT 7: 屁屁膏 -->
+<div class="cat-section">
+  <div class="cat-divider">
+    <div class="cat-num">7</div>
+    <div class="cat-divider-text">
+      <div class="cat-divider-name">💛 屁屁膏</div>
+      <div class="cat-divider-desc">炸屎後紅屁屁預防與修護；重點考量氧化鋅含量、成分天然、清洗便利</div>
+    </div>
+  </div>
+  <div class="top3-grid">
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">1</div>
+        <div class="brand-name">Mustela 衛蓓欣 VBC <span class="user-rec">✦</span></div>
+        <div class="brand-sub">全效護膚膏 123 屁屁膏 · 法國 Mustela</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:88%"></div></div>
+        <div class="vol-score">88 / 100</div>
+        <div class="brand-price">NT$393 <span>/ 100ml（MomBB 價）</span></div>
+        <div class="tag-row"><span class="tag hot">PTT 最推</span><span class="tag hot">Dcard 必買</span><span class="tag cool">98% 天然植萃</span><span class="tag">氧化鋅</span><span class="tag">三重功效</span><span class="tag">易清洗</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>98% 天然植萃成分</li><li>氧化鋅預防＋舒緩＋修護三效</li><li>不含類固醇臨床高耐受性</li><li>PTT 媽咪 #1 回購款</li><li>用濕紙巾就能輕鬆清洗</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>質地略油（需習慣手感）</li><li>50ml 小罐用量快</li><li>相較施巴價格略高</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://www.mustela.tw/yingerjiertongbaoyang/pipizhaohu" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=3599786" class="buy-btn momo" target="_blank">🛒 momo</a>
+          <a href="https://www.mombb.tw/products/4253867" class="buy-btn review" target="_blank">🔵 MomBB</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">2</div>
+        <div class="brand-name">Sebamed 施巴</div>
+        <div class="brand-sub">嬰兒護臀修護膏 · 德國品牌</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+        <div class="vol-score">75 / 100</div>
+        <div class="brand-price">NT$700 <span>/ 100ml×2 入（官網特惠）</span></div>
+        <div class="tag-row"><span class="tag cool">pH 5.5 弱酸</span><span class="tag">植物配方</span><span class="tag">醫師推薦</span><span class="tag">德國品牌</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>pH5.5 維持皮膚自然酸鹼</li><li>植物多活性成分配方</li><li>皮膚科醫師推薦</li><li>100ml×2 入 CP 值高</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>質地較厚重</li><li>清洗比 VBC 麻煩</li><li>Dcard 討論量不及 Mustela</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://store.sebamed.com.tw/promotions/85" class="buy-btn official" target="_blank">🌐 官網</a>
+          <a href="https://24h.pchome.com.tw/prod/DDBF0A-A80094065" class="buy-btn pchome" target="_blank">🟣 PChome</a>
+          <a href="https://shopee.tw/list/sebamed+護臀膏" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+        </div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-card-header">
+        <div class="rank-badge">3</div>
+        <div class="brand-name">Bepanthen 保特疹</div>
+        <div class="brand-sub">嬰兒護臀霜 Pro-Vitamin B5 · 拜耳</div>
+      </div>
+      <div class="brand-card-body">
+        <div class="vol-label">聲量指數 BUZZ INDEX</div>
+        <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+        <div class="vol-score">68 / 100</div>
+        <div class="brand-price">NT$299 <span>/ 100g</span></div>
+        <div class="tag-row"><span class="tag purple">維生素 B5</span><span class="tag">無香料</span><span class="tag">無防腐劑</span><span class="tag">敏感肌</span></div>
+        <div class="pros-cons">
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">優評 PROS</div>
+            <ul class="pros-cons-list pros-list"><li>Pro 維生素 B5 促皮膚修復</li><li>無香料無防腐劑低敏</li><li>質地透明不油膩</li><li>100g 大容量 CP 值高</li></ul>
+          </div>
+          <div class="pros-cons-col">
+            <div class="pros-cons-label">負評 CONS</div>
+            <ul class="pros-cons-list cons-list"><li>無氧化鋅預防效果有限</li><li>台灣 PTT 討論量少</li><li>嚴重尿布疹效果不如 VBC</li></ul>
+          </div>
+        </div>
+        <div class="buy-links">
+          <a href="https://shopee.tw/list/bepanthen+護臀霜" class="buy-btn shopee" target="_blank">🧡 蝦皮</a>
+          <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=bepanthen+護臀霜" class="buy-btn momo" target="_blank">🛒 momo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quote-row">
+    <div class="quote-card">「VBC 屁屁膏是我最多次回購的育兒好物，一抹就形成保護膜，用濕紙巾就能清洗掉。」<div class="quote-source">— PTT BabyMother，五款屁屁膏使用心得</div></div>
+    <div class="quote-card">「施巴 pH5.5 護臀膏買兩入划算，跟洗沐品牌一致維持酸鹼平衡，醫師也推薦。」<div class="quote-source">— PTT BabyMother，三條屁屁膏比較</div></div>
+    <div class="quote-card">「Bepanthen 質地透明好清洗，B5 修護力感覺比較舒緩，對紅屁屁狀況輕微的寶寶夠用。」<div class="quote-source">— Dcard 親子版，護臀霜評比</div></div>
+  </div>
+  <div class="table-wrap">
+    <table class="platform-table">
+      <thead><tr><th>品牌</th><th>PTT 討論熱度</th><th>Dcard 熱度</th><th>媒體推薦榜</th><th>購物平台評論</th><th>好評率</th><th>主要負評關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mustela 衛蓓欣 VBC</strong></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><div class="heat-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></td><td><span class="level-tag level-high">超高頻出現</span></td><td>momo 5,000+ 評論</td><td><span class="level-tag level-high">97%</span></td><td>略油、容量小</td></tr>
+        <tr><td><strong>Sebamed 施巴</strong></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on2"></div><div class="dot on2"></div><div class="dot on2"></div><div class="dot"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中高頻出現</span></td><td>momo 2,000+ 評論</td><td><span class="level-tag level-high">93%</span></td><td>質地厚重、清洗麻煩</td></tr>
+        <tr><td><strong>Bepanthen 保特疹</strong></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div><div class="dot"></div></div></td><td><div class="heat-dots"><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot on3"></div><div class="dot"></div></div></td><td><span class="level-tag level-mid">中頻出現</span></td><td>蝦皮 2,000+ 評論</td><td><span class="level-tag level-mid">92%</span></td><td>無氧化鋅、嚴重疹效果有限</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section">
+  <div class="section-label">INSIGHT</div>
+  <div class="section-title">選品結論與建議</div>
+  <div class="conclusion-grid">
+    <div class="conclusion-card">
+      <h3>🗑🧺 環境管理三件套</h3>
+      <ul>
+        <li>防臭桶：This is it 設計感強，Ubbi 密封效果更好（不鏽鋼材質）</li>
+        <li>尿布台：Didi 升降 CP 值最高，適合不同身高父母共同照顧</li>
+        <li>洗衣籃：雙層分類是關鍵需求，This is it 外觀最融入空間</li>
+      </ul>
+    </div>
+    <div class="conclusion-card teal">
+      <h3>👕🧻 耗材類大量備貨邏輯</h3>
+      <ul>
+        <li>紗布衣：奇哥品質穩定但款式傳統，可混搭 ding baby 增加色彩</li>
+        <li>濕紙巾：貝恩聲量最高，好奇 Pure 是性價比替代方案</li>
+        <li>建議備貨量：紗布衣 8-10 件、濕紙巾 300 抽/週</li>
+      </ul>
+    </div>
+    <div class="conclusion-card gold">
+      <h3>🧴💛 清潔保護二合一配套</h3>
+      <ul>
+        <li>Mustela 免洗潔膚水：外出炸屎必備，居家備一瓶</li>
+        <li>屁屁膏首選 Mustela VBC：氧化鋅三效合一，PTT 媽咪最多回購</li>
+        <li>兩款 Mustela 可打包配售，品牌信任度互相加乘</li>
+      </ul>
+    </div>
+    <div class="conclusion-card purple">
+      <h3>📊 聲量 vs. 口碑落差分析</h3>
+      <ul>
+        <li>Mustela VBC 屁屁膏聲量口碑雙高，主推風險最低</li>
+        <li>貝恩濕紙巾聲量高但好奇 Pure 正快速追近</li>
+        <li>Didi 尿布台有木屑爭議，需主動揭露 SGS 認證資訊</li>
+        <li>This is it 系列社群聲量尚在累積，設計感是主要差異優勢</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="report-footer">
+  <div>
+    <div class="footer-brand">CYORA Market Intelligence</div>
+    <div class="footer-disclaimer">本報告聲量指數為人工估算，非官方統計數據，僅供 CYORA 內部品類規劃參考。所有數值基於公開平台資訊整合，不代表任何平台官方立場。</div>
+  </div>
+  <div>
+    資料來源：PTT BabyMother、Dcard 親子版、媽咪愛 MamiBuy、MomBB、momo 購物網、蝦皮購物<br>
+    調查日期：2026 年 5 月 ｜ 產製：CYORA Team
+  </div>
+</div>
+
+</div>
+</body>
+</html>

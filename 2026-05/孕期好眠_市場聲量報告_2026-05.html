@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孕期好眠｜市場聲量報告 2026.05</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+  :root {
+    --navy:   #0f1b35;
+    --navy2:  #1a2d52;
+    --accent: #e8834a;
+    --teal:   #3db8c4;
+    --gold:   #f0c040;
+    --light:  #f5f7fa;
+    --white:  #ffffff;
+    --text:   #1a1a2e;
+    --muted:  #6b7280;
+    --rank1:  #e8834a;
+    --rank2:  #3db8c4;
+    --rank3:  #8b7fd4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #e8edf5;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .report-wrap {
+    max-width: 1280px;
+    margin: 32px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    background: var(--white);
+  }
+
+  /* ══ COVER ══ */
+  .cover {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #24416e 100%);
+    color: var(--white);
+    padding: 56px 80px 52px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: rgba(232,131,74,0.12);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    right: 100px; bottom: -100px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(61,184,196,0.10);
+  }
+  .cover-left { position: relative; z-index: 1; }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.85);
+  }
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .cover h1 span { color: var(--accent); }
+  .cover-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .cover-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .cover-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+  }
+  .cover-meta {
+    position: relative; z-index: 1;
+    text-align: right;
+  }
+  .cover-meta .period {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
+  .cover-meta .date-big {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+  .cover-meta .cat-count {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 10px;
+  }
+  .cover-meta .cat-count strong {
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: 900;
+    display: block;
+  }
+
+  /* ══ SECTION ══ */
+  .section {
+    padding: 48px 80px;
+    border-bottom: 1px solid #eef0f4;
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #eef0f4;
+  }
+
+  /* ══ OVERVIEW GRID ══ */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+  }
+  .overview-card {
+    border-radius: 12px;
+    background: var(--light);
+    padding: 16px 12px;
+    text-align: center;
+    border: 1.5px solid #eef0f4;
+    transition: box-shadow .2s;
+  }
+  .overview-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+  .overview-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .overview-cat {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .overview-top1 {
+    font-size: 10px;
+    color: var(--rank1);
+    font-weight: 600;
+  }
+
+  /* ══ CATEGORY HEADER ══ */
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef0f4;
+  }
+  .cat-icon-big {
+    font-size: 36px;
+    width: 60px; height: 60px;
+    background: var(--light);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cat-title { font-size: 22px; font-weight: 800; color: var(--navy); }
+  .cat-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .user-pick-badge {
+    margin-left: auto;
+    background: linear-gradient(135deg, #fff4ee, #ffeee0);
+    border: 1px solid var(--rank1);
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--rank1);
+  }
+
+  /* ══ TOP 3 CARDS ══ */
+  .top3-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .brand-card {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid #eef0f4;
+    transition: box-shadow .2s;
+  }
+  .brand-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+
+  .brand-card-header {
+    padding: 18px 22px 14px;
+    position: relative;
+  }
+  .brand-card:nth-child(1) .brand-card-header { background: linear-gradient(135deg, #fff4ee, #ffeee0); border-bottom: 3px solid var(--rank1); }
+  .brand-card:nth-child(2) .brand-card-header { background: linear-gradient(135deg, #edfbfc, #d6f5f7); border-bottom: 3px solid var(--rank2); }
+  .brand-card:nth-child(3) .brand-card-header { background: linear-gradient(135deg, #f3f0ff, #e8e2fb); border-bottom: 3px solid var(--rank3); }
+
+  .rank-badge {
+    position: absolute; top: 14px; right: 16px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; color: var(--white);
+  }
+  .brand-card:nth-child(1) .rank-badge { background: var(--rank1); }
+  .brand-card:nth-child(2) .rank-badge { background: var(--rank2); }
+  .brand-card:nth-child(3) .rank-badge { background: var(--rank3); }
+
+  .brand-name { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 1px; }
+  .brand-sub { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .user-rec { font-size: 10px; color: var(--rank1); font-weight: 700; margin-top: 4px; }
+
+  .brand-card-body { padding: 16px 22px; background: var(--white); }
+
+  .vol-label { font-size: 10px; font-weight: 600; color: var(--muted); margin-bottom: 5px; letter-spacing: 0.5px; }
+  .vol-bar-track { background: #f0f2f5; border-radius: 6px; height: 8px; margin-bottom: 3px; overflow: hidden; }
+  .vol-bar-fill { height: 100%; border-radius: 6px; }
+  .brand-card:nth-child(1) .vol-bar-fill { background: linear-gradient(90deg, var(--rank1), #f0a070); }
+  .brand-card:nth-child(2) .vol-bar-fill { background: linear-gradient(90deg, var(--rank2), #70d8e0); }
+  .brand-card:nth-child(3) .vol-bar-fill { background: linear-gradient(90deg, var(--rank3), #b0a0e8); }
+
+  .vol-score { font-size: 12px; font-weight: 700; text-align: right; margin-bottom: 12px; }
+  .brand-card:nth-child(1) .vol-score { color: var(--rank1); }
+  .brand-card:nth-child(2) .vol-score { color: var(--rank2); }
+  .brand-card:nth-child(3) .vol-score { color: var(--rank3); }
+
+  .brand-price { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .brand-price span { font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 4px; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 10px; background: #f0f2f5; color: var(--text); }
+  .tag.hot { background: #fff0e8; color: var(--rank1); }
+  .tag.cool { background: #e8f9fb; color: #2a9aa6; }
+  .tag.purple { background: #f0eeff; color: #6b5ad4; }
+
+  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 10px; border-top: 1px dashed #eef0f4; }
+  .pros-cons-col { }
+  .pros-cons-label { font-size: 9px; font-weight: 700; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 4px; }
+  .pros-cons-list { list-style: none; font-size: 11px; line-height: 1.7; }
+  .pros-list li::before { content: '✓ '; color: #3db870; font-weight: 700; }
+  .cons-list li::before { content: '✕ '; color: #e85050; font-weight: 700; }
+
+  /* ══ PLATFORM TABLE (compact) ══ */
+  .platform-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  .platform-table th {
+    padding: 10px 14px;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .platform-table th:first-child { border-radius: 8px 0 0 0; }
+  .platform-table th:last-child { border-radius: 0 8px 0 0; }
+  .platform-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eef0f4;
+    vertical-align: middle;
+  }
+  .platform-table tr:last-child td { border-bottom: none; }
+  .platform-table tr:nth-child(even) td { background: #f8f9fc; }
+
+  .heat-dots { display: flex; gap: 3px; align-items: center; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #ddd; }
+  .dot.on  { background: var(--rank1); }
+  .dot.on2 { background: var(--rank2); }
+  .dot.on3 { background: var(--rank3); }
+
+  .level-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .level-high { background: #fff0e8; color: var(--rank1); }
+  .level-mid  { background: #e8f9fb; color: #2a9aa6; }
+  .level-low  { background: #f5f5f5; color: var(--muted); }
+
+  /* ══ QUOTE ══ */
+  .quote-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .quote-card {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 12px;
+    color: #374151;
+    line-height: 1.7;
+    border-left: 3px solid;
+    position: relative;
+  }
+  .quote-card:nth-child(1) { border-color: var(--rank1); }
+  .quote-card:nth-child(2) { border-color: var(--rank2); }
+  .quote-card:nth-child(3) { border-color: var(--rank3); }
+  .quote-source { font-size: 10px; color: var(--muted); margin-top: 6px; font-style: italic; }
+
+  /* ══ CONCLUSION ══ */
+  .conclusion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .conclusion-card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 22px;
+    border-left: 4px solid var(--accent);
+  }
+  .conclusion-card.teal { border-left-color: var(--teal); }
+  .conclusion-card.purple { border-left-color: var(--rank3); }
+  .conclusion-card.gold { border-left-color: var(--gold); }
+  .conclusion-card h3 {
+    font-size: 14px; font-weight: 800; color: var(--navy);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .conclusion-card p, .conclusion-card li {
+    font-size: 12.5px; color: #374151; line-height: 1.8;
+  }
+  .conclusion-card ul { list-style: none; padding: 0; }
+  .conclusion-card ul li::before { content: '→ '; color: var(--accent); font-weight: 700; }
+  .conclusion-card.teal ul li::before { color: var(--teal); }
+  .conclusion-card.purple ul li::before { color: var(--rank3); }
+  .conclusion-card.gold ul li::before { color: var(--gold); }
+
+  /* ══ FOOTER ══ */
+  .report-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    padding: 18px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+  .footer-brand { color: rgba(255,255,255,0.7); font-weight: 600; }
+  .footer-disclaimer { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 4px; }
+  .footer-sources a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer-sources a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ══ DIVIDER ══ */
+  .cat-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef0f4;
+  }
+  .cat-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .cat-divider-text { flex: 1; }
+  .cat-divider-name { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .cat-divider-desc { font-size: 12px; color: var(--muted); }
+
+  /* ══ BUY LINKS ══ */
+  .buy-links {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px dashed #eef0f4;
+  }
+  .buy-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 600;
+    padding: 3px 9px; border-radius: 10px;
+    text-decoration: none; transition: opacity .15s;
+  }
+  .buy-btn:hover { opacity: .8; }
+  .buy-btn.official { background: #f0f2f5; color: var(--navy); }
+  .buy-btn.momo     { background: #fff0f0; color: #d4303a; }
+  .buy-btn.shopee   { background: #fff4ee; color: var(--rank1); }
+  .buy-btn.review   { background: #edfbfc; color: #2a9aa6; }
+  .buy-btn.cosme    { background: #f3f0ff; color: #6b5ad4; }
+
+  /* ══ METHODOLOGY ══ */
+  .method-section {
+    padding: 36px 80px;
+    background: #f8f9fc;
+    border-bottom: 1px solid #eef0f4;
+  }
+  .method-toggle {
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; user-select: none;
+    list-style: none;
+  }
+  .method-toggle::marker { display: none; }
+  .method-toggle-title {
+    font-size: 13px; font-weight: 700; color: var(--navy);
+  }
+  .method-toggle-sub { font-size: 12px; color: var(--muted); margin-left: auto; }
+  details[open] .method-toggle-sub::before { content: '收合 ▲'; }
+  details:not([open]) .method-toggle-sub::before { content: '展開查看方法論 ▼'; color: var(--accent); }
+  .method-body {
+    margin-top: 20px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .method-card {
+    background: var(--white);
+    border-radius: 10px; padding: 18px 20px;
+    border: 1.5px solid #eef0f4;
+  }
+  .method-card h4 {
+    font-size: 12px; font-weight: 700; color: var(--navy);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+  }
+  .method-weight {
+    margin-left: auto;
+    background: var(--accent); color: white;
+    font-size: 11px; font-weight: 700;
+    padding: 1px 8px; border-radius: 8px;
+  }
+  .method-card p, .method-card li {
+    font-size: 11.5px; color: #374151; line-height: 1.8;
+  }
+  .method-card ul { list-style: none; padding: 0; }
+  .method-card ul li::before { content: '· '; color: var(--muted); }
+  .method-disclaimer {
+    margin-top: 14px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px; padding: 10px 14px;
+    font-size: 11px; color: #92400e; line-height: 1.7;
+  }
+  .score-table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 8px; }
+  .score-table th { background: var(--navy); color: white; padding: 6px 10px; text-align: left; font-size: 11px; }
+  .score-table td { padding: 6px 10px; border-bottom: 1px solid #f0f2f5; }
+  .score-table tr:last-child td { border-bottom: none; }
+
+  @media print {
+    body { background: white; }
+    .report-wrap { box-shadow: none; margin: 0; }
+  }
+
+  /* ══ CROSS-REPORT TAB NAV ══ */
+  .report-nav-wrap {
+    position: sticky; top: 0; z-index: 200;
+    background: #0a1428;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.30);
+  }
+  .report-nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 40px;
+    display: flex; align-items: center;
+  }
+  .report-nav-home {
+    color: rgba(255,255,255,0.40);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 13px 16px 13px 0;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    margin-right: 6px;
+    white-space: nowrap;
+    transition: color .18s;
+    flex-shrink: 0;
+  }
+  .report-nav-home:hover { color: rgba(255,255,255,0.85); }
+  .report-nav-tabs {
+    display: flex; align-items: stretch;
+    overflow-x: auto; gap: 0;
+  }
+  .rnt {
+    padding: 13px 20px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    color: rgba(255,255,255,0.38);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color .18s, border-color .18s, background .18s;
+  }
+  .rnt:hover { color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.04); }
+  .rnt.active { color: #fff; }
+  .rnt-sleep.active { border-bottom-color: #e87c40; }
+  .rnt-food.active  { border-bottom-color: #3ab8b0; }
+  .rnt-bath.active  { border-bottom-color: #52b788; }
+  .rnt-poop.active  { border-bottom-color: #d4a820; }
+
+</style>
+</head>
+<body>
+
+<div class="report-nav-wrap">
+  <div class="report-nav-inner">
+    <a class="report-nav-home" href="../index.html">← Hub 總覽</a>
+    <div class="report-nav-tabs">
+      <a class="rnt rnt-sleep active" href="孕期好眠_市場聲量報告_2026-05.html">🌛 孕期好眠</a>
+      <a class="rnt rnt-food" href="自主進食_市場聲量報告_2026-05.html">🥣 自主進食</a>
+      <a class="rnt rnt-bath" href="新生兒沐浴_市場聲量報告_2026-05.html">🛁 新生兒沐浴</a>
+      <a class="rnt rnt-poop" href="寶寶炸屎危機_市場聲量報告_2026-05.html">💩 寶寶炸屎危機</a>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap">
+
+  <!-- ═══════════ COVER ═══════════ -->
+  <div class="cover">
+    <div class="cover-left">
+      <div class="cover-tag">CYORA MARKET INTEL · 主題報告</div>
+      <h1>孕期<span>好眠</span><br>市場聲量調查</h1>
+      <div class="cover-sub">7 大品類 × Top 3 品牌 × 台灣社群聲量分析</div>
+      <div class="cover-pills">
+        <span class="cover-pill">月亮枕</span>
+        <span class="cover-pill">孕婦美體霜</span>
+        <span class="cover-pill">托腹帶</span>
+        <span class="cover-pill">無咖啡因茶飲</span>
+        <span class="cover-pill">寶寶白噪音機</span>
+        <span class="cover-pill">媽媽白噪音機</span>
+        <span class="cover-pill">待產包</span>
+      </div>
+    </div>
+    <div class="cover-meta">
+      <div class="period">調查期間 2025.01 — 2026.05</div>
+      <div class="date-big">2026.05</div>
+      <div class="cat-count">
+        <strong>7</strong>品類涵蓋
+      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;">
+        資料來源：PTT・Dcard・媒體排行・購物平台
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ OVERVIEW ═══════════ -->
+  <div class="section">
+    <div class="section-label">OVERVIEW</div>
+    <div class="section-title">7 品類聲量概覽</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-icon">🌙</div>
+        <div class="overview-cat">月亮枕</div>
+        <div class="overview-top1"># Hugsie</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🧴</div>
+        <div class="overview-cat">孕婦美體霜</div>
+        <div class="overview-top1"># Mustela</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🤰</div>
+        <div class="overview-cat">托腹帶</div>
+        <div class="overview-top1"># 犬印</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🫖</div>
+        <div class="overview-cat">無咖啡因茶飲</div>
+        <div class="overview-top1"># 香草集</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🐧</div>
+        <div class="overview-cat">寶寶白噪音機</div>
+        <div class="overview-top1"># 費雪海馬</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🎵</div>
+        <div class="overview-cat">媽媽白噪音機</div>
+        <div class="overview-top1"># LectroFan</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-icon">🏥</div>
+        <div class="overview-cat">待產包</div>
+        <div class="overview-top1"># 六甲村</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ METHODOLOGY ═══════════ -->
+  <div class="method-section">
+    <details>
+      <summary class="method-toggle">
+        <span style="font-size:16px;">📐</span>
+        <span class="method-toggle-title">聲量指數估算方法論</span>
+        <span style="font-size:11px;color:#6b7280;">（點擊展開，建議內部討論前閱讀）</span>
+        <span class="method-toggle-sub"></span>
+      </summary>
+      <div class="method-body">
+        <div class="method-card">
+          <h4>📌 資料蒐集流程
+            <span class="method-weight" style="background:var(--navy);">Step 1–3</span>
+          </h4>
+          <ul>
+            <li><strong>Step 1 品類總覽搜尋：</strong>以「[品類] 台灣 品牌 推薦 2024 2025」搜尋，確認主要候選品牌名單</li>
+            <li><strong>Step 2 品牌個別搜尋：</strong>對每個品牌分別搜尋「[品牌] [品類] PTT 評價」與「[品牌] [品類] dcard 推薦」</li>
+            <li><strong>Step 3 深度口碑：</strong>對聲量前 1–2 品牌抓取具代表性的評測或討論串，提取正負評關鍵字</li>
+            <li><strong>搜尋時間窗口：</strong>2024.01 — 2026.05（以近期貼文為主）</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h4>⚖️ 聲量指數計算權重</h4>
+          <table class="score-table">
+            <thead><tr><th>資料來源</th><th>權重</th><th>評估方式</th></tr></thead>
+            <tbody>
+              <tr><td>PTT BabyMother / 相關板討論串數</td><td><strong>30%</strong></td><td>搜尋結果筆數 + 討論串熱度（回文數）</td></tr>
+              <tr><td>Dcard 親子版提及頻率</td><td><strong>25%</strong></td><td>搜尋結果筆數 + 文章互動數</td></tr>
+              <tr><td>媒體/部落格排行出現次數</td><td><strong>25%</strong></td><td>「推薦排行」榜出現頻率</td></tr>
+              <tr><td>momo / 蝦皮評論數量</td><td><strong>20%</strong></td><td>購物平台搜尋結果評論數</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="method-card">
+          <h4>📊 分數計算說明</h4>
+          <ul>
+            <li>各品牌在每個資料源的表現以 0–5 分估算（0＝幾乎無討論，5＝大量高互動討論）</li>
+            <li>依上方權重加權得出 0–100 的綜合聲量指數</li>
+            <li>指數為<strong>同品類品牌間的相對比較</strong>，跨品類指數不可直接比較</li>
+            <li>各品類聲量最高的品牌不一定等於市佔最高</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h4>⚠️ 已知限制與使用建議</h4>
+          <ul>
+            <li>搜尋結果受 Google 演算法影響，部分品牌可能因 SEO 策略高估</li>
+            <li>指數<strong>不等於實際銷售量或市佔率</strong></li>
+            <li>PTT/Dcard 使用者以 25–35 歲女性為主，可能不代表全體目標客群</li>
+            <li>新品牌即使品質好，因進入市場時間短，聲量可能被低估</li>
+            <li>建議搭配銷售數據或實際用戶訪談做交叉驗證</li>
+          </ul>
+        </div>
+      </div>
+      <div class="method-disclaimer">
+        ⚠️ 本報告所有聲量指數均為<strong>非官方人工估算數值</strong>，僅供參考與內部討論使用，不得作為投資決策、財務預測或對外宣傳之依據。數值可能因搜尋時點、演算法更新而有所差異。
+      </div>
+    </details>
+  </div>
+
+  <!-- ═══════════ CAT 1：月亮枕 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">1</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🌙 月亮枕（孕婦枕）</div>
+        <div class="cat-divider-desc">孕期睡眠輔助必備品・PTT BabyMother 高度討論</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- Hugsie #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">Hugsie</div>
+          <div class="brand-sub">防螨可水洗孕婦枕</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:88%"></div></div>
+          <div class="vol-score">88 / 100</div>
+          <div class="brand-price">NT$2,880 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT 最高提及</span>
+            <span class="tag cool">可水洗</span>
+            <span class="tag">防螨</span>
+            <span class="tag">多色可選</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>支撐度佳</li>
+                <li>防螨適合過敏體質</li>
+                <li>可機洗方便</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格偏高</li>
+                <li>體積大收納麻煩</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://hugsie.com.tw/shop/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/search?keyword=Hugsie%E5%AD%95%E5%A9%A6%E6%9E%95" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://m.momoshop.com.tw/search.momo?searchKeyword=Hugsie%E5%AD%95%E5%A9%A6%E6%9E%95" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- 媽媽餵 #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">媽媽餵 Mamaway</div>
+          <div class="brand-sub">多功能哺乳孕婦枕</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:78%"></div></div>
+          <div class="vol-score">78 / 100</div>
+          <div class="brand-price">NT$2,180 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag cool">厚實不易變形</span>
+            <span class="tag">哺乳兩用</span>
+            <span class="tag">台灣品牌</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>厚實不易塌陷</li>
+                <li>孕期+哺乳兩用</li>
+                <li>台灣在地服務</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>枕套材質稍硬</li>
+                <li>價格中高</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mamaway.com.tw/product-depiction/accessorie/baby-bedding/Nursing_Pillow/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/mamaway.tw" target="_blank" class="buy-btn shopee">蝦皮官旗</a>
+            <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2704200233" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- 六甲村 #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">六甲村 Mammy Village</div>
+          <div class="brand-sub">涼感孕婦枕</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$1,580 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag purple">CP值高</span>
+            <span class="tag cool">涼感材質</span>
+            <span class="tag">台灣品牌</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>價格相對平實</li>
+                <li>涼感材質夏天適用</li>
+                <li>品牌有實體店</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>支撐度不如前兩名</li>
+                <li>涼感效果因人而異</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mammyvillage.com/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2109900000" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://hugsie.com.tw/shop/" target="_blank" style="color:var(--navy);text-decoration:none;">Hugsie ↗</a></strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">5,000+ 評</span></td>
+          <td>91%</td>
+          <td>價格偏高</td>
+        </tr>
+        <tr>
+          <td><strong>媽媽餵</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-mid">3,000+ 評</span></td>
+          <td>88%</td>
+          <td>枕套稍硬</td>
+        </tr>
+        <tr>
+          <td><strong>六甲村</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">2,500+ 評</span></td>
+          <td>85%</td>
+          <td>支撐度普通</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 2：孕婦美體霜 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">2</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🧴 孕婦美體霜（妊娠撫紋霜）</div>
+        <div class="cat-divider-desc">預防妊娠紋・孕期肌膚彈性保養・用戶指定品牌：雷莉歐、Mustela慕之恬廊</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- Mustela #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">Mustela 慕之恬廊</div>
+          <div class="brand-sub">慕之孕孕膚霜</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+          <div class="vol-score">85 / 100</div>
+          <div class="brand-price">NT$780 <span>起 / 150ml</span></div>
+          <div class="tag-row">
+            <span class="tag hot">皮膚科推薦 No.1</span>
+            <span class="tag cool">法國品牌</span>
+            <span class="tag">酪梨抗紋</span>
+            <span class="tag">無香版</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>皮膚科醫師推薦</li>
+                <li>質地清爽易吸收</li>
+                <li>無香版選擇</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>效果因膚質而異</li>
+                <li>容量偏小</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mustela.tw/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=3821583" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://shopee.tw/mustela.tw" target="_blank" class="buy-btn shopee">蝦皮官旗</a>
+          </div>
+        </div>
+      </div>
+      <!-- 雷莉歐 #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">L'erbolario 蕾莉歐</div>
+          <div class="brand-sub">美體緊緻彈力霜 250ml</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$2,000 <span>/ 250ml</span></div>
+          <div class="tag-row">
+            <span class="tag cool">義大利天然草本品牌</span>
+            <span class="tag">無動物測試</span>
+            <span class="tag">非洲葵橘果</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>孕期7個月無妊娠紋實證</li>
+                <li>質地好吸收香味淡</li>
+                <li>純天然草本配方</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>台灣售價明顯高於義大利</li>
+                <li>PTT/Dcard討論量少</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.lerbolario.com.tw/allproducts/detail/535" target="_blank" class="buy-btn official">🌿 官網</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=3513854" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://www.cosme.net.tw/products/29223/reviews" target="_blank" class="buy-btn cosme">@cosme 評價</a>
+          </div>
+        </div>
+      </div>
+      <!-- 克蘭詩 #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">克蘭詩 Clarins</div>
+          <div class="brand-sub">身體塑形美肌油/霜</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:60%"></div></div>
+          <div class="vol-score">60 / 100</div>
+          <div class="brand-price">NT$1,600 <span>起 / 200ml</span></div>
+          <div class="tag-row">
+            <span class="tag purple">專櫃品牌</span>
+            <span class="tag">植物配方</span>
+            <span class="tag">孕媽咪口碑</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>法國老牌高信賴感</li>
+                <li>質地滋潤好推展</li>
+                <li>孕婦社群口碑高</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格最高</li>
+                <li>香味較濃孕吐期慎用</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.clarins.com.tw/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/search?keyword=clarins+%E5%AD%95%E5%A9%A6" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=clarins+%E7%BE%8E%E9%AB%94" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://www.mustela.tw/" target="_blank" style="color:var(--navy);text-decoration:none;">Mustela 慕之恬廊 ↗</a></strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">3,000+ 評</span></td>
+          <td>90%</td>
+          <td>容量偏小</td>
+        </tr>
+        <tr>
+          <td><strong>雷莉歐 Rilastil</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">800+ 評</span></td>
+          <td>84%</td>
+          <td>台灣能見度低</td>
+        </tr>
+        <tr>
+          <td><strong>克蘭詩 Clarins</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-mid">1,200+ 評</span></td>
+          <td>86%</td>
+          <td>價格高/香味濃</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 3：托腹帶 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">3</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🤰 托腹帶</div>
+        <div class="cat-divider-desc">孕中後期腰背支撐・用戶指定品牌：奇妮孕哺</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- 犬印 #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">犬印 Inujirushi</div>
+          <div class="brand-sub">日本百年孕產專家</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:80%"></div></div>
+          <div class="vol-score">80 / 100</div>
+          <div class="brand-price">NT$680 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT 高提及</span>
+            <span class="tag cool">日本百年品牌</span>
+            <span class="tag">透氣不起疹</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>輕薄透氣不起疹</li>
+                <li>日本百年信賴感</li>
+                <li>穿戴舒適</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>支撐力普通</li>
+                <li>台灣實體通路少</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.inujirushi.com.tw/chinese/pro/list.php?MID=1" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/search?keyword=%E7%8A%AC%E5%8D%B0+%E6%89%98%E8%85%B9%E5%B8%B6" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E7%8A%AC%E5%8D%B0+%E6%89%98%E8%85%B9%E5%B8%B6" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- 奇妮 #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">奇妮孕哺 Gennies</div>
+          <div class="brand-sub">機能三用托腹帶</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:75%"></div></div>
+          <div class="vol-score">75 / 100</div>
+          <div class="brand-price">NT$880 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag cool">機能三合一</span>
+            <span class="tag">台灣品牌</span>
+            <span class="tag">涼感款</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>支撐力佳</li>
+                <li>三合一多功能</li>
+                <li>涼感款透氣</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>坐下時稍卡</li>
+                <li>部分體質過敏</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6448402" target="_blank" class="buy-btn momo">momo 機能3用款</a>
+            <a href="https://shopee.tw/search?keyword=%E5%A5%87%E5%A6%AE+%E6%89%98%E8%85%B9%E5%B8%B6" target="_blank" class="buy-btn shopee">蝦皮</a>
+          </div>
+        </div>
+      </div>
+      <!-- 媽媽餵 #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">媽媽餵 Mamaway</div>
+          <div class="brand-sub">高支撐彈力托腹帶</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+          <div class="vol-score">68 / 100</div>
+          <div class="brand-price">NT$680 <span>起 / 件</span></div>
+          <div class="tag-row">
+            <span class="tag purple">高支撐力</span>
+            <span class="tag">台灣品牌</span>
+            <span class="tag">多尺寸</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>支撐力強</li>
+                <li>台灣品牌服務好</li>
+                <li>尺寸選擇多</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>長時間勒腹感</li>
+                <li>悶熱感較重</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mamaway.com.tw/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/mamaway.tw" target="_blank" class="buy-btn shopee">蝦皮官旗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://www.inujirushi.com.tw/chinese/pro/list.php?MID=1" target="_blank" style="color:var(--navy);text-decoration:none;">犬印 ↗</a></strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-mid">2,000+ 評</span></td>
+          <td>87%</td>
+          <td>支撐力普通</td>
+        </tr>
+        <tr>
+          <td><strong>奇妮孕哺</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">3,500+ 評</span></td>
+          <td>83%</td>
+          <td>坐下時卡腹</td>
+        </tr>
+        <tr>
+          <td><strong>媽媽餵</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">1,800+ 評</span></td>
+          <td>82%</td>
+          <td>長時間悶熱</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 4：無咖啡因香草茶 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">4</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🫖 無咖啡因健康飲品（香草茶）</div>
+        <div class="cat-divider-desc">孕期安全飲品・舒緩孕吐助消化・無咖啡因花草茶系列</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- 香草集 #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">香草集 JustHerb</div>
+          <div class="brand-sub">天然草本花草茶</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$280 <span>起 / 盒</span></div>
+          <div class="tag-row">
+            <span class="tag hot">台灣創立20年</span>
+            <span class="tag cool">PLA玉米澱粉茶包</span>
+            <span class="tag">無化學成分</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>台灣老牌有口碑</li>
+                <li>純淨無化學添加</li>
+                <li>環保茶包材質</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>網路討論量偏少</li>
+                <li>通路以實體為主</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.justherb.com.tw/categories/just-herb-tea" target="_blank" class="buy-btn official">🌿 官網</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E9%A6%99%E8%8D%89%E9%9B%86" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- BHK's #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">BHK's 孕媽咪養生茶</div>
+          <div class="brand-sub">花草複合配方孕哺茶</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:68%"></div></div>
+          <div class="vol-score">68 / 100</div>
+          <div class="brand-price">NT$350 <span>起 / 袋(10包)</span></div>
+          <div class="tag-row">
+            <span class="tag cool">專為孕婦設計</span>
+            <span class="tag">香蜂草薄荷</span>
+            <span class="tag">無糖無防腐劑</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>專為孕婦配方設計</li>
+                <li>舒緩孕期不適</li>
+                <li>品牌電商完整</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>口感偏淡</li>
+                <li>單包份量小</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.bhks.com.tw/en/product/detail/1711291" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/search?keyword=BHK%27s+%E5%AD%95%E5%AA%BD%E5%92%AA%E8%8C%B6" target="_blank" class="buy-btn shopee">蝦皮</a>
+          </div>
+        </div>
+      </div>
+      <!-- 午茶夫人 #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">午茶夫人</div>
+          <div class="brand-sub">天然花草茶領導品牌</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:60%"></div></div>
+          <div class="vol-score">60 / 100</div>
+          <div class="brand-price">NT$220 <span>起 / 盒</span></div>
+          <div class="tag-row">
+            <span class="tag purple">口感豐富</span>
+            <span class="tag">超市通路廣</span>
+            <span class="tag">花果茶系列</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>超市隨手可買</li>
+                <li>口味選擇多樣</li>
+                <li>價格平實</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>非專為孕婦設計</li>
+                <li>需自行確認成分</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.ladiestea.com.tw/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/search?keyword=%E5%8D%88%E8%8C%B6%E5%A4%AB%E4%BA%BA+%E8%8A%B1%E8%8D%89%E8%8C%B6" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E5%8D%88%E8%8C%B6%E5%A4%AB%E4%BA%BA" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://www.justherb.com.tw/categories/just-herb-tea" target="_blank" style="color:var(--navy);text-decoration:none;">香草集 JustHerb ↗</a></strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">1,200+ 評</span></td>
+          <td>88%</td>
+          <td>線上討論少</td>
+        </tr>
+        <tr>
+          <td><strong>BHK's 孕媽咪茶</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">2,000+ 評</span></td>
+          <td>86%</td>
+          <td>口感偏淡</td>
+        </tr>
+        <tr>
+          <td><strong>午茶夫人</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">3,500+ 評</span></td>
+          <td>85%</td>
+          <td>非孕婦專用</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 5：寶寶白噪音機 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">5</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🐧 寶寶白噪音機（安撫助眠）</div>
+        <div class="cat-divider-desc">新生兒哄睡神器・用戶指定品牌：ZAZU企鵝、費雪海馬（奇哥）</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- 費雪海馬 #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">費雪海馬 Fisher-Price</div>
+          <div class="brand-sub">聲光安撫小海馬（奇哥代理）</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+          <div class="vol-score">82 / 100</div>
+          <div class="brand-price">NT$980 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT 新生兒熱推</span>
+            <span class="tag cool">漸暗夜燈</span>
+            <span class="tag">仿子宮音效</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>仿子宮音效安撫效果強</li>
+                <li>漸暗燈光不干擾睡眠</li>
+                <li>奇哥在地服務完善</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>需裝電池耗電快</li>
+                <li>音量調節不夠細</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.chick.com.tw/product-detail/FEADGH82F" target="_blank" class="buy-btn official">奇哥官網</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6761095" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- ZAZU企鵝 #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">ZAZU 企鵝</div>
+          <div class="brand-sub">荷蘭多模式安撫音樂機</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$1,280 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag cool">荷蘭品牌</span>
+            <span class="tag">6種聲音模式</span>
+            <span class="tag">哭聲感應</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>聲音模式豐富</li>
+                <li>哭聲感應自動播放</li>
+                <li>外型可愛療癒</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>售後服務較麻煩</li>
+                <li>音量偏小</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7136015" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://www.angelbaby.com.tw/categories/zazu" target="_blank" class="buy-btn official">安琪兒</a>
+          </div>
+        </div>
+      </div>
+      <!-- Malang Honey #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">蘇霏 Sufi</div>
+          <div class="brand-sub">新生兒安撫音樂機</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:60%"></div></div>
+          <div class="vol-score">60 / 100</div>
+          <div class="brand-price">NT$880 <span>起 / 個</span></div>
+          <div class="tag-row">
+            <span class="tag purple">CP值高</span>
+            <span class="tag">小夜燈</span>
+            <span class="tag">心跳模擬</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>價格平實</li>
+                <li>含心跳音仿子宮</li>
+                <li>輕巧好攜帶</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>品牌知名度較低</li>
+                <li>音色選擇少</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=%E8%98%87%E9%9C%8F+%E5%AE%89%E6%92%AB" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E8%98%87%E9%9C%8F+%E5%AE%89%E6%92%AB" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://www.chick.com.tw/product-detail/FEADGH82F" target="_blank" style="color:var(--navy);text-decoration:none;">費雪海馬（奇哥）↗</a></strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">4,000+ 評</span></td>
+          <td>89%</td>
+          <td>耗電快</td>
+        </tr>
+        <tr>
+          <td><strong>ZAZU 企鵝</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">1,500+ 評</span></td>
+          <td>85%</td>
+          <td>音量偏小</td>
+        </tr>
+        <tr>
+          <td><strong>蘇霏 Sufi</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">1,200+ 評</span></td>
+          <td>83%</td>
+          <td>品牌能見度低</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 6：媽媽白噪音機 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">6</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🎵 媽媽白噪音機（大人助眠）</div>
+        <div class="cat-divider-desc">孕期淺眠、產後睡眠輔助・聲量調查推薦品牌</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- LectroFan #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">LectroFan</div>
+          <div class="brand-sub">美國白噪音除噪助眠器</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:82%"></div></div>
+          <div class="vol-score">82 / 100</div>
+          <div class="brand-price">NT$2,280 <span>起 / 台</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT/Dcard 雙榜</span>
+            <span class="tag cool">非重複音效</span>
+            <span class="tag">10種音效</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>非重複白噪音效果好</li>
+                <li>遮蔽外部噪音強</li>
+                <li>操作簡單耐用</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>售後服務跨國</li>
+                <li>無夜燈功能</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.nlight.tw/lectrofan" target="_blank" class="buy-btn official">極光生活</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=5015830" target="_blank" class="buy-btn momo">momo</a>
+            <a href="https://www.ptt.cc/bbs/e-shopping/M.1589118802.A.E5B.html" target="_blank" class="buy-btn review">PTT 討論 ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- WSleep #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">WSleep 多合一</div>
+          <div class="brand-sub">白噪音時鐘氣氛燈</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:70%"></div></div>
+          <div class="vol-score">70 / 100</div>
+          <div class="brand-price">NT$1,980 <span>起 / 台</span></div>
+          <div class="tag-row">
+            <span class="tag cool">時鐘+燈光三合一</span>
+            <span class="tag">暖色氣氛燈</span>
+            <span class="tag">床頭美學</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>整合時鐘功能</li>
+                <li>暖燈適合哺乳夜間</li>
+                <li>外型美觀</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>純噪音效果不如專門機</li>
+                <li>亮度不夠可調</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=WSleep+%E7%99%BD%E5%99%AA%E9%9F%B3" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=WSleep" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sleepbank #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">勝得棻 Sleepbank</div>
+          <div class="brand-sub">台灣睡眠撲滿助眠機</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$2,880 <span>起 / 台</span></div>
+          <div class="tag-row">
+            <span class="tag purple">台灣品牌</span>
+            <span class="tag">舒曼波</span>
+            <span class="tag">改善失眠</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>台灣品牌售後方便</li>
+                <li>舒曼波輔助功能</li>
+                <li>設計感佳</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格最高</li>
+                <li>舒曼波效果難量化</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://shopee.tw/search?keyword=sleepbank+%E7%9D%A1%E7%9C%A0%E6%92%B2%E6%BB%BF" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=sleepbank" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT e-shopping</th>
+          <th>Dcard</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>LectroFan</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">2,500+ 評</span></td>
+          <td>92%</td>
+          <td>無夜燈</td>
+        </tr>
+        <tr>
+          <td><strong>WSleep</strong></td>
+          <td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">1,800+ 評</span></td>
+          <td>87%</td>
+          <td>噪音效果一般</td>
+        </tr>
+        <tr>
+          <td><strong>Sleepbank</strong></td>
+          <td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">900+ 評</span></td>
+          <td>84%</td>
+          <td>價格偏高</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CAT 7：待產包 ═══════════ -->
+  <div class="section">
+    <div class="cat-divider">
+      <div class="cat-num">7</div>
+      <div class="cat-divider-text">
+        <div class="cat-divider-name">🏥 待產包</div>
+        <div class="cat-divider-desc">住院生產必備品組合・用戶指定品牌：六甲村</div>
+      </div>
+    </div>
+    <div class="top3-grid">
+      <!-- 六甲村 #1 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">1</div>
+          <div class="brand-name">六甲村 Mammy Village</div>
+          <div class="brand-sub">孕產期全方位品牌</div>
+          <span class="user-rec">✦</span>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:85%"></div></div>
+          <div class="vol-score">85 / 100</div>
+          <div class="brand-price">NT$980 <span>起 / 組</span></div>
+          <div class="tag-row">
+            <span class="tag hot">PTT BabyMother 推薦</span>
+            <span class="tag cool">免洗內褲超高腰</span>
+            <span class="tag">母乳袋</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>免洗內褲超高腰設計</li>
+                <li>托腹帶舒緩腰痠</li>
+                <li>品牌口碑穩定</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>溢乳墊邊緣刺癢</li>
+                <li>孕哺內衣偏悶熱</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mammyvillage.com/categories/maternitybag" target="_blank" class="buy-btn official">🛍 官網待產包</a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=3853631" target="_blank" class="buy-btn momo">momo 免洗內褲</a>
+            <a href="https://www.ptt.cc/bbs/BabyMother/M.1566633218.A.985.html" target="_blank" class="buy-btn review">PTT 評價 ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- 媽媽餵 #2 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">2</div>
+          <div class="brand-name">媽媽餵 Mamaway</div>
+          <div class="brand-sub">哺育用品品牌</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:72%"></div></div>
+          <div class="vol-score">72 / 100</div>
+          <div class="brand-price">NT$880 <span>起 / 組</span></div>
+          <div class="tag-row">
+            <span class="tag cool">哺乳友善設計</span>
+            <span class="tag">台灣品牌</span>
+            <span class="tag">完整配件</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>哺乳設計細膩</li>
+                <li>品項完整豐富</li>
+                <li>蝦皮/momo 易購</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>部分產品耐用性</li>
+                <li>溢乳墊需單獨加購</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.mamaway.com.tw/" target="_blank" class="buy-btn official">🛍 官網</a>
+            <a href="https://shopee.tw/mamaway.tw" target="_blank" class="buy-btn shopee">蝦皮官旗</a>
+          </div>
+        </div>
+      </div>
+      <!-- 奇哥 #3 -->
+      <div class="brand-card">
+        <div class="brand-card-header">
+          <div class="rank-badge">3</div>
+          <div class="brand-name">奇哥 Chicco</div>
+          <div class="brand-sub">義大利品牌孕產用品</div>
+        </div>
+        <div class="brand-card-body">
+          <div class="vol-label">聲量指數（估算）</div>
+          <div class="vol-bar-track"><div class="vol-bar-fill" style="width:65%"></div></div>
+          <div class="vol-score">65 / 100</div>
+          <div class="brand-price">NT$1,280 <span>起 / 組</span></div>
+          <div class="tag-row">
+            <span class="tag purple">義大利品牌</span>
+            <span class="tag">高端質感</span>
+            <span class="tag">全齡覆蓋</span>
+          </div>
+          <div class="pros-cons">
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">正評</div>
+              <ul class="pros-cons-list pros-list">
+                <li>義大利品牌質感好</li>
+                <li>實體門市完善</li>
+                <li>品項齊全</li>
+              </ul>
+            </div>
+            <div class="pros-cons-col">
+              <div class="pros-cons-label">負評</div>
+              <ul class="pros-cons-list cons-list">
+                <li>價格偏高</li>
+                <li>售後態度評價不一</li>
+              </ul>
+            </div>
+          </div>
+          <div class="buy-links">
+            <a href="https://www.chick.com.tw/" target="_blank" class="buy-btn official">奇哥官網</a>
+            <a href="https://shopee.tw/search?keyword=%E5%A5%87%E5%93%A5+%E5%BE%85%E7%94%A2%E5%8C%85" target="_blank" class="buy-btn shopee">蝦皮</a>
+            <a href="https://www.momoshop.com.tw/search/searchShop.jsp?keyword=%E5%A5%87%E5%93%A5+%E5%BE%85%E7%94%A2%E5%8C%85" target="_blank" class="buy-btn momo">momo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>品牌</th>
+          <th>PTT BabyMother</th>
+          <th>Dcard 親子板</th>
+          <th>媒體/部落格</th>
+          <th>蝦皮/momo</th>
+          <th>好評率</th>
+          <th>主要負評</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>六甲村</strong></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">5,000+ 評</span></td>
+          <td>86%</td>
+          <td>溢乳墊刺癢</td>
+        </tr>
+        <tr>
+          <td><strong>媽媽餵</strong></td>
+          <td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot on2"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-high">高</span></td>
+          <td><span class="level-tag level-high">4,000+ 評</span></td>
+          <td>85%</td>
+          <td>耐用性參差</td>
+        </tr>
+        <tr>
+          <td><strong>奇哥 Chicco</strong></td>
+          <td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span></div></td>
+          <td><div class="heat-dots"><span class="dot on3"></span><span class="dot on3"></span><span class="dot on3"></span><span class="dot"></span><span class="dot"></span></div></td>
+          <td><span class="level-tag level-mid">中</span></td>
+          <td><span class="level-tag level-mid">2,500+ 評</span></td>
+          <td>82%</td>
+          <td>售後評價不一</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ CONCLUSION ═══════════ -->
+  <div class="section">
+    <div class="section-label">RECOMMENDATION</div>
+    <div class="section-title">孕期好眠選購總建議</div>
+    <div class="conclusion-grid">
+      <div class="conclusion-card">
+        <h3>🌙 睡眠支撐首選</h3>
+        <ul>
+          <li>月亮枕預算有限選<strong>六甲村</strong>，追求品質選 <strong>Hugsie</strong></li>
+          <li>托腹帶透氣優先選<strong>犬印</strong>，支撐力優先選<strong>奇妮</strong></li>
+          <li>白噪音機：寶寶選<strong>費雪海馬</strong>，媽媽選<strong>LectroFan</strong></li>
+        </ul>
+      </div>
+      <div class="conclusion-card teal">
+        <h3>🧴 孕期保養路線</h3>
+        <ul>
+          <li>妊娠霜首選 <strong>Mustela慕之恬廊</strong>（皮膚科推薦）</li>
+          <li>預算充足可嘗試<strong>雷莉歐</strong>義大利醫學配方</li>
+          <li>敏感肌選無香版 Mustela 更安心</li>
+        </ul>
+      </div>
+      <div class="conclusion-card purple">
+        <h3>🫖 日常飲品選擇</h3>
+        <ul>
+          <li>天然首選<strong>香草集</strong>，20 年台灣草本品牌</li>
+          <li>孕婦專用配方選<strong>BHK's 孕媽咪養生茶</strong></li>
+          <li>隨手購買選<strong>午茶夫人</strong>超市通路廣</li>
+        </ul>
+      </div>
+      <div class="conclusion-card gold">
+        <h3>🏥 待產包採購策略</h3>
+        <ul>
+          <li><strong>六甲村</strong>免洗內褲超高腰設計是待產必買</li>
+          <li>溢乳墊建議另行評估品牌，六甲村口碑不一</li>
+          <li>母乳袋可與托腹帶一起向<strong>六甲村</strong>統一採購</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div class="report-footer">
+    <div>
+      <div class="footer-brand">CYORA Market Intel</div>
+      <div class="footer-disclaimer">※ 聲量指數為非官方估算數據，僅供參考。實際排名可能因時間推移而變動。</div>
+    </div>
+    <div style="text-align:right;">
+      <div>調查日期：2026.05 ｜ 品類主題：孕期好眠</div>
+      <div style="margin-top:4px;" class="footer-sources">
+        資料來源：
+        <a href="https://www.ptt.cc/bbs/BabyMother/" target="_blank">PTT BabyMother</a> ·
+        <a href="https://www.dcard.tw/f/parentchild" target="_blank">Dcard 親子版</a> ·
+        蝦皮 · momo · 各品牌官網
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
